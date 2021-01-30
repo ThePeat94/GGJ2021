@@ -2,7 +2,7 @@
     "name": "PlayerInput",
     "maps": [
         {
-            "name": "Actions",
+            "name": "MainGame",
             "id": "31318777-1404-478a-926d-2557c940dbe7",
             "actions": [
                 {
@@ -14,17 +14,33 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Interact",
+                    "name": "Mouse",
+                    "type": "Value",
+                    "id": "7a216d67-5a73-4d64-8d76-090aa16f4b90",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Attack",
                     "type": "Button",
-                    "id": "eaa44061-bd1f-43b3-ae82-6083ca58b276",
+                    "id": "783d84a5-4a55-40f7-bfef-eb77f2cafe88",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "Inspect",
+                    "name": "Aim",
                     "type": "Button",
-                    "id": "c0f3be09-17f1-4d3a-a71f-5289a0cd2822",
+                    "id": "e0bdfa27-c099-4d2a-abfe-814fe7efd368",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "6ff90f81-aacf-4891-856f-e166fc10ba5c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -88,23 +104,45 @@
                 },
                 {
                     "name": "",
-                    "id": "83e05aca-594e-4b05-8c7e-88115e2ee45d",
-                    "path": "<Keyboard>/e",
+                    "id": "ede2a7c1-207d-4bf4-a628-e583109b3a45",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "Mouse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "d94e583d-fef5-4485-9cf3-4d5b36ef68ae",
-                    "path": "<Keyboard>/f",
+                    "id": "85d90f13-f605-4790-9b70-9f6fd93b1644",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inspect",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf0d1967-4eaf-430f-998d-2641e80d9db4",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7b75a6e-5cf0-4f46-8e58-515a64557aa8",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

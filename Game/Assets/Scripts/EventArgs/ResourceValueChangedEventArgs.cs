@@ -2,9 +2,9 @@
 {
     public class ResourceValueChangedEventArgs : System.EventArgs
     {
-        public float NewValue { get; }
+        public int NewValue { get; }
         
-        public ResourceValueChangedEventArgs(float newValue)
+        public ResourceValueChangedEventArgs(int newValue)
         {
             this.NewValue = newValue;
         }

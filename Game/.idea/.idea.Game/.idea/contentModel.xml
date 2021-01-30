@@ -11,20 +11,77 @@
           <e p="PlayerInput.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="AimCamera.cs" t="Include" />
+          <e p="Arrow.cs" t="Include" />
           <e p="CameraFollower.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="EnemyUI.cs" t="Include" />
+          </e>
           <e p="EventArgs" t="Include">
             <e p="ResourceValueChangedEventArgs.cs" t="Include" />
           </e>
           <e p="InputProcessor.cs" t="Include" />
+          <e p="Minifox" t="Include">
+            <e p="AttackUpgradeFox.cs" t="Include" />
+            <e p="HealthUpgradeFox.cs" t="Include" />
+            <e p="Minifox.cs" t="Include" />
+            <e p="MovementSpeedUpgradeFox.cs" t="Include" />
+            <e p="QuiverUpgradeFox.cs" t="Include" />
+            <e p="ReloadUpgradeFox.cs" t="Include" />
+          </e>
           <e p="PlayerController.cs" t="Include" />
           <e p="ResourceController.cs" t="Include" />
           <e p="Scriptables" t="Include">
+            <e p="EnemyData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
             <e p="ResourceData.cs" t="Include" />
           </e>
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="MainMenu.cs" t="Include" />
+            <e p="PlayerHud.cs" t="Include" />
+          </e>
+          <e p="Upgrades" t="Include">
+            <e p="AttackUpgrade.cs" t="Include" />
+            <e p="FloatUpgrade.cs" t="Include" />
+            <e p="HealthUpgrade.cs" t="Include" />
+            <e p="IntUpgrade.cs" t="Include" />
+            <e p="MovementSpeedUpgrade.cs" t="Include" />
+            <e p="QuiverUpgrade.cs" t="Include" />
+            <e p="ReloadUpgrade.cs" t="Include" />
+            <e p="Upgrade.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
         <e p="TutorialInfo" t="Include">

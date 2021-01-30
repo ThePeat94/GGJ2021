@@ -5,10 +5,10 @@ namespace Scriptables
     [CreateAssetMenu(fileName = "Resource Data", menuName = "Data/Resource Data", order = 0)]
     public class ResourceData : ScriptableObject
     {
-        [SerializeField] private float m_initMaxValue;
-        [SerializeField] private float m_startValue;
+        [SerializeField] private int m_initMaxValue;
+        [SerializeField] private int m_startValue;
 
-        public float InitMaxValue => this.m_initMaxValue;
-        public float StartValue => this.m_startValue;
+        public int InitMaxValue => this.m_initMaxValue;
+        public int StartValue => this.m_startValue;
     }
 }
