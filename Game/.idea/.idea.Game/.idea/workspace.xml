@@ -19,18 +19,82 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="" />
+    <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/FieldUI Animator.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/FieldUI Animator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Happy Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Happy Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/HoverCan.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/HoverCan.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerAnimationController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerAnimationController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shrugging.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shrugging.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Walking.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Walking.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Watering.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Watering.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/xbot@Happy Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/xbot@Happy Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/xbot@Shrugging.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/xbot@Shrugging.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/xbot@Walking.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/xbot@Walking.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/xbot@Watering.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/xbot@Watering.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventArgs/ResourceValueChangedEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventArgs/ResourceValueChangedEventArgs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/ResourceData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/ResourceData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealthController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/ResourceData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EventArgs/ResourceValueChangedEventArgs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SimpleVcamCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Foo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
@@ -95,14 +159,27 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611949161516">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1611949161516" />
+    <state x="-1338" y="510" width="1881" height="1367" key="dock-window-1" timestamp="1611961834960">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1338" y="510" width="1881" height="1367" key="dock-window-1/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1611961834960" />
     <state x="-1708" y="327" key="run.anything.popup" timestamp="1611785020097">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-1708" y="327" key="run.anything.popup/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1611785020097" />
+    <state x="-1701" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1611971382701">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1701" y="308" width="840" height="1034" key="search.everywhere.popup/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1611971382701" />
   </component>
 </project>

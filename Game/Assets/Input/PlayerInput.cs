@@ -15,7 +15,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     ""name"": ""PlayerInput"",
     ""maps"": [
         {
-            ""name"": ""Actions"",
+            ""name"": ""MainGame"",
             ""id"": ""31318777-1404-478a-926d-2557c940dbe7"",
             ""actions"": [
                 {
@@ -27,17 +27,33 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Interact"",
+                    ""name"": ""Mouse"",
+                    ""type"": ""Value"",
+                    ""id"": ""7a216d67-5a73-4d64-8d76-090aa16f4b90"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Attack"",
                     ""type"": ""Button"",
-                    ""id"": ""eaa44061-bd1f-43b3-ae82-6083ca58b276"",
+                    ""id"": ""783d84a5-4a55-40f7-bfef-eb77f2cafe88"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Inspect"",
+                    ""name"": ""Aim"",
                     ""type"": ""Button"",
-                    ""id"": ""c0f3be09-17f1-4d3a-a71f-5289a0cd2822"",
+                    ""id"": ""e0bdfa27-c099-4d2a-abfe-814fe7efd368"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ff90f81-aacf-4891-856f-e166fc10ba5c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -101,23 +117,45 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""83e05aca-594e-4b05-8c7e-88115e2ee45d"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""id"": ""ede2a7c1-207d-4bf4-a628-e583109b3a45"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Interact"",
+                    ""action"": ""Mouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d94e583d-fef5-4485-9cf3-4d5b36ef68ae"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""id"": ""85d90f13-f605-4790-9b70-9f6fd93b1644"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Inspect"",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf0d1967-4eaf-430f-998d-2641e80d9db4"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c7b75a6e-5cf0-4f46-8e58-515a64557aa8"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -126,11 +164,13 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Actions
-        m_Actions = asset.FindActionMap("Actions", throwIfNotFound: true);
-        m_Actions_Move = m_Actions.FindAction("Move", throwIfNotFound: true);
-        m_Actions_Interact = m_Actions.FindAction("Interact", throwIfNotFound: true);
-        m_Actions_Inspect = m_Actions.FindAction("Inspect", throwIfNotFound: true);
+        // MainGame
+        m_MainGame = asset.FindActionMap("MainGame", throwIfNotFound: true);
+        m_MainGame_Move = m_MainGame.FindAction("Move", throwIfNotFound: true);
+        m_MainGame_Mouse = m_MainGame.FindAction("Mouse", throwIfNotFound: true);
+        m_MainGame_Attack = m_MainGame.FindAction("Attack", throwIfNotFound: true);
+        m_MainGame_Aim = m_MainGame.FindAction("Aim", throwIfNotFound: true);
+        m_MainGame_Reload = m_MainGame.FindAction("Reload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -177,58 +217,76 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // Actions
-    private readonly InputActionMap m_Actions;
-    private IActionsActions m_ActionsActionsCallbackInterface;
-    private readonly InputAction m_Actions_Move;
-    private readonly InputAction m_Actions_Interact;
-    private readonly InputAction m_Actions_Inspect;
-    public struct ActionsActions
+    // MainGame
+    private readonly InputActionMap m_MainGame;
+    private IMainGameActions m_MainGameActionsCallbackInterface;
+    private readonly InputAction m_MainGame_Move;
+    private readonly InputAction m_MainGame_Mouse;
+    private readonly InputAction m_MainGame_Attack;
+    private readonly InputAction m_MainGame_Aim;
+    private readonly InputAction m_MainGame_Reload;
+    public struct MainGameActions
     {
         private @PlayerInput m_Wrapper;
-        public ActionsActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Actions_Move;
-        public InputAction @Interact => m_Wrapper.m_Actions_Interact;
-        public InputAction @Inspect => m_Wrapper.m_Actions_Inspect;
-        public InputActionMap Get() { return m_Wrapper.m_Actions; }
+        public MainGameActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_MainGame_Move;
+        public InputAction @Mouse => m_Wrapper.m_MainGame_Mouse;
+        public InputAction @Attack => m_Wrapper.m_MainGame_Attack;
+        public InputAction @Aim => m_Wrapper.m_MainGame_Aim;
+        public InputAction @Reload => m_Wrapper.m_MainGame_Reload;
+        public InputActionMap Get() { return m_Wrapper.m_MainGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(ActionsActions set) { return set.Get(); }
-        public void SetCallbacks(IActionsActions instance)
+        public static implicit operator InputActionMap(MainGameActions set) { return set.Get(); }
+        public void SetCallbacks(IMainGameActions instance)
         {
-            if (m_Wrapper.m_ActionsActionsCallbackInterface != null)
+            if (m_Wrapper.m_MainGameActionsCallbackInterface != null)
             {
-                @Move.started -= m_Wrapper.m_ActionsActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_ActionsActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_ActionsActionsCallbackInterface.OnMove;
-                @Interact.started -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInteract;
-                @Interact.performed -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInteract;
-                @Interact.canceled -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInteract;
-                @Inspect.started -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInspect;
-                @Inspect.performed -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInspect;
-                @Inspect.canceled -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInspect;
+                @Move.started -= m_Wrapper.m_MainGameActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_MainGameActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_MainGameActionsCallbackInterface.OnMove;
+                @Mouse.started -= m_Wrapper.m_MainGameActionsCallbackInterface.OnMouse;
+                @Mouse.performed -= m_Wrapper.m_MainGameActionsCallbackInterface.OnMouse;
+                @Mouse.canceled -= m_Wrapper.m_MainGameActionsCallbackInterface.OnMouse;
+                @Attack.started -= m_Wrapper.m_MainGameActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_MainGameActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_MainGameActionsCallbackInterface.OnAttack;
+                @Aim.started -= m_Wrapper.m_MainGameActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_MainGameActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_MainGameActionsCallbackInterface.OnAim;
+                @Reload.started -= m_Wrapper.m_MainGameActionsCallbackInterface.OnReload;
+                @Reload.performed -= m_Wrapper.m_MainGameActionsCallbackInterface.OnReload;
+                @Reload.canceled -= m_Wrapper.m_MainGameActionsCallbackInterface.OnReload;
             }
-            m_Wrapper.m_ActionsActionsCallbackInterface = instance;
+            m_Wrapper.m_MainGameActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @Interact.started += instance.OnInteract;
-                @Interact.performed += instance.OnInteract;
-                @Interact.canceled += instance.OnInteract;
-                @Inspect.started += instance.OnInspect;
-                @Inspect.performed += instance.OnInspect;
-                @Inspect.canceled += instance.OnInspect;
+                @Mouse.started += instance.OnMouse;
+                @Mouse.performed += instance.OnMouse;
+                @Mouse.canceled += instance.OnMouse;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
             }
         }
     }
-    public ActionsActions @Actions => new ActionsActions(this);
-    public interface IActionsActions
+    public MainGameActions @MainGame => new MainGameActions(this);
+    public interface IMainGameActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnInteract(InputAction.CallbackContext context);
-        void OnInspect(InputAction.CallbackContext context);
+        void OnMouse(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
 }

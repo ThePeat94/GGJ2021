@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ResourceController
 {
-    private float m_currentValue;
+    private int m_currentValue;
     private EventHandler<ResourceValueChangedEventArgs> m_resourceValueChanged;
     private EventHandler<ResourceValueChangedEventArgs> m_maxValueChanged;
     
@@ -17,8 +17,8 @@ public class ResourceController
         this.m_currentValue = data.StartValue;
     }
     
-    public float CurrentValue => this.m_currentValue;
-    public float MaxValue { get; set; }
+    public int CurrentValue => this.m_currentValue;
+    public int MaxValue { get; set; }
     
     public event EventHandler<ResourceValueChangedEventArgs> ResourceValueChanged
     {
@@ -38,7 +38,7 @@ public class ResourceController
         this.m_resourceValueChanged?.Invoke(this, new ResourceValueChangedEventArgs(this.m_currentValue));
     }
     
-    public bool UseResource(float amount)
+    public bool UseResource(int amount)
     {
         if(!this.CanAfford(amount))
             return false;
@@ -48,18 +48,18 @@ public class ResourceController
         return true;
     }
     
-    public bool CanAfford(float amount)
+    public bool CanAfford(int amount)
     {
         return this.m_currentValue > 0 && amount <= this.m_currentValue;
     }
 
-    public void Add(float value)
+    public void Add(int value)
     {
         this.m_currentValue += value;
         this.m_resourceValueChanged?.Invoke(this, new ResourceValueChangedEventArgs(this.m_currentValue));
     }
 
-    public void IncreaseMaximum(float value)
+    public void IncreaseMaximum(int value)
     {
         this.MaxValue += value;
         this.m_maxValueChanged?.Invoke(this, new ResourceValueChangedEventArgs(this.MaxValue));
