@@ -22,7 +22,7 @@ MonoBehaviour:
   m_jumpAttackCooldown: 20
   m_generalAttackCooldown: 2
   m_jumpAttackDamage: 50
-  m_roarDamage: 40
+  m_roarDamage: 10
   m_swipeDamage: 30
   m_punchDamage: 20
   m_initialRoarCooldown: 20

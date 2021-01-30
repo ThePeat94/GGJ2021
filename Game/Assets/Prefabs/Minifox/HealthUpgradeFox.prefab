@@ -950,9 +950,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6111101672377450633}
-  m_LocalRotation: {x: -0, y: -0.9238787, z: -0, w: 0.3826854}
+  m_LocalRotation: {x: 0, y: -0.92387956, z: 0, w: 0.38268343}
   m_LocalPosition: {x: 98.35376, y: 0, z: 98.58496}
-  m_LocalScale: {x: 0.44634, y: 0.44634, z: 0.44634}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 6111101672664142980}
   - {fileID: 6111101671620013200}
@@ -1003,6 +1003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1e1e2f017069348b1101027f3ee724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_playerHud: {fileID: 0}
+  m_upgradeText: I increased and refreshed your health, so you can endure fights
+    longer.
   m_upgradeValue: 50
 --- !u!1 &6111101672385132983
 GameObject:

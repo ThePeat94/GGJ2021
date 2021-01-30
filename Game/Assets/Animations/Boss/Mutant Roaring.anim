@@ -96595,14 +96595,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 1
   m_Events:
   - time: 1.5333333
-    functionName: StartRoarParticles
+    functionName: StartRoarAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 4.1833334
-    functionName: StopRoarParticles
+    functionName: StopRoarAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

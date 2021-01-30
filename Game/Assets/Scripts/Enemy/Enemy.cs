@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using EventArgs;
 using Scriptables;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyData m_enemyData;
-    [SerializeField] private Collider m_attackCollider;
+    [SerializeField] private BossAttackCollider m_attackCollider;
     [SerializeField] private LayerMask m_wanderMasksToHit;
     
     private Transform m_targetTransform;
@@ -20,18 +21,24 @@ public class Enemy : MonoBehaviour
     private Coroutine m_attackCoroutine;
     private Animator m_animator;
     private Vector3 m_origin;
-
-    private bool m_isWandering;
-    private bool m_isAttacking;
-    private bool m_isIdle;
-    private bool m_isFollowingPlayer;
+    
     private bool m_isDead;
     
     private static WaitForSeconds s_delayDetection = new WaitForSeconds(0.5f);
-    
     public ResourceController HealthController { get; private set; }
-    public int Damage => this.m_enemyData.AttackDamage;
 
+    public void ActivateAttackCollider()
+    {
+        StartCoroutine(this.TriggerAttackCollider());
+    }
+    
+    private IEnumerator TriggerAttackCollider()
+    {
+        this.m_attackCollider.gameObject.SetActive(true);
+        yield return new WaitForFixedUpdate();
+        this.m_attackCollider.gameObject.SetActive(false);
+    }
+    
     private void Awake()
     {
         this.HealthController = new ResourceController(this.m_enemyData.HealthData);
@@ -43,18 +50,35 @@ public class Enemy : MonoBehaviour
 
         this.m_animator = this.GetComponent<Animator>();
         this.m_origin = this.transform.position;
+
+        this.m_attackCollider.Damage = this.m_enemyData.AttackDamage;
     }
 
     private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
     {
+        if (this.m_isDead)
+            return;
+        
         if (e.NewValue <= 0)
         {
             this.m_isDead = true;
             if (this.m_playerDetectionCoroutine != null)
+            {
                 this.StopCoroutine(this.m_playerDetectionCoroutine);
+                this.m_playerDetectionCoroutine = null;
+            }
+
+            if(this.m_attackCoroutine != null) 
+            {
+                this.StopCoroutine(this.m_attackCoroutine);
+                this.m_attackCoroutine = null;
+            }
             
             this.StopWandering();
-            // Play die animation
+
+            this.m_animator.SetBool("IsWalking", false);
+            this.m_animator.ResetTrigger("Attack");
+            this.m_animator.SetTrigger("Die");
         }
     }
 
@@ -73,7 +97,7 @@ public class Enemy : MonoBehaviour
             this.RotateTowardsTarget();
             this.ProcessDistanceToTarget();
         }
-        else if(this.m_wanderCoroutine == null)
+        else if(this.m_wanderCoroutine == null && this.m_attackCoroutine == null)
         {
             this.m_wanderCoroutine = StartCoroutine(this.Wander());
         }
@@ -83,6 +107,7 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
+            this.m_animator.SetBool("IsWalking", true);
             yield return new WaitForSeconds(5f);
             var rndPoint = UnityEngine.Random.insideUnitSphere * this.m_enemyData.WanderRadius + this.m_origin;
             NavMeshHit navHit;
@@ -111,25 +136,18 @@ public class Enemy : MonoBehaviour
                 this.StopCoroutine(this.m_attackCoroutine);
                 this.m_attackCoroutine = null;
             }
-            // this.m_isAttackingIdle = false;
         }
         else if (distance <= this.m_enemyData.AttackRange)
         {
-            //this.m_isAttackingIdle = true;
+            this.StopWandering();
             this.m_navMeshAgent.isStopped = true;
             if (this.m_attackCoroutine == null)
                 this.m_attackCoroutine = this.StartCoroutine(this.HandleAttacking());
-            // this.m_animator.SetBool(s_isAttackingIdleHash, true);
         }
         else
         {
             this.m_navMeshAgent.isStopped = false;
-            if (this.m_attackCoroutine != null)
-            {
-                this.StopCoroutine(this.m_attackCoroutine);
-                this.m_attackCoroutine = null;
-            }
-            // this.m_isAttackingIdle = false;
+            this.StopAttacking();
         }
     }
 
@@ -152,27 +170,18 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator HandleAttacking()
     {
-        while (true)
-        {
-            // this.m_animator.SetTrigger("Attack");
-            StartCoroutine(this.Attack());
-            Debug.Log("ATTACK");
-            yield return new WaitForSeconds(1f/this.m_enemyData.AttacksPerSecond);
-        }
+        this.m_animator.SetBool("IsWalking", false);
+        Debug.Log("SPIKE ATTACK!!");
+        Debug.Log(this.m_enemyData.AttackClip.length);
+        this.m_animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(this.m_enemyData.AttackClip.length + 1f);
+        this.m_attackCoroutine = null;
     }
-    
-    protected virtual IEnumerator Attack()
-    {
-        this.m_attackCollider.gameObject.SetActive(true);
-        yield return new WaitForFixedUpdate();
-        this.m_attackCollider.gameObject.SetActive(false);
-    }
-    
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(this.transform.position, this.m_enemyData.DetectionRadius);
     }
-
     private void OnCollisionEnter(Collision other)
     {
         var arrow = other.gameObject.GetComponent<Arrow>();
@@ -188,6 +197,16 @@ public class Enemy : MonoBehaviour
         {
             StopCoroutine(this.m_wanderCoroutine);
             this.m_wanderCoroutine = null;
+        }
+    }
+
+    private void StopAttacking()
+    {
+        if (this.m_attackCoroutine != null)
+        {
+            this.StopCoroutine(this.m_attackCoroutine);
+            this.m_attackCoroutine = null;
+            this.m_animator.ResetTrigger("Attack");
         }
     }
 }

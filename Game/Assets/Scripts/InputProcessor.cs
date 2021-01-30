@@ -28,6 +28,7 @@ public class InputProcessor : MonoBehaviour
     public Vector2 MouseDelta { get; private set; }
     public bool ShootTriggered => this.m_playerInput.MainGame.Attack.triggered;
     public bool ReloadTriggered => this.m_playerInput.MainGame.Reload.triggered;
+    public bool QuitTriggered => this.m_playerInput.MainGame.Quit.triggered;
 
     private void Awake()
     {

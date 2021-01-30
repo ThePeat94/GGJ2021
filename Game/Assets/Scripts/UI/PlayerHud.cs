@@ -13,7 +13,12 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_bossName;
     [SerializeField] private Slider m_bossHealthBar;
     [SerializeField] private GameObject m_playerBossHud;
+    [SerializeField] private GameObject m_dialogueBox;
+    [SerializeField] private TextMeshProUGUI m_dialogueText;
+    [SerializeField] private GameObject m_youDiedPanel;
 
+    private Coroutine m_hideCoroutine;
+    
     public void ShowBossHud(MagmaBoss boss)
     {
         this.m_bossName.text = boss.Name;
@@ -22,6 +27,24 @@ public class PlayerHud : MonoBehaviour
         this.m_bossHealthBar.minValue = 0;
         this.m_bossHealthBar.value = boss.HealthController.CurrentValue;
         this.m_playerBossHud.SetActive(true);
+    }
+
+    public void ShowDialogue(string text)
+    {
+        if(this.m_hideCoroutine != null)
+            StopCoroutine(this.m_hideCoroutine);
+        
+        this.m_dialogueText.text = text;
+        this.m_dialogueBox.SetActive(true);
+
+        this.m_hideCoroutine = this.StartCoroutine(this.HideDialogue());
+    }
+
+    private IEnumerator HideDialogue()
+    {
+        yield return new WaitForSeconds(10f);
+        this.m_dialogueBox.SetActive(false);
+        this.m_hideCoroutine = null;
     }
     
     // Start is called before the first frame update
@@ -61,5 +84,9 @@ public class PlayerHud : MonoBehaviour
     private void PlayerHealthChanged(object sender, ResourceValueChangedEventArgs e)
     {
         this.m_healthBar.value = e.NewValue;
+        if (e.NewValue <= 0)
+        {
+            this.m_youDiedPanel.SetActive(true);
+        }
     }
 }

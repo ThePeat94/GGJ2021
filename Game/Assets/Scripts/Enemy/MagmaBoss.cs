@@ -66,6 +66,9 @@ public class MagmaBoss : MonoBehaviour
 
     private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
     {
+        if (this.m_isDead)
+            return;
+        
         if (e.NewValue <= 0)
         {
             this.m_isDead = true;
@@ -75,6 +78,7 @@ public class MagmaBoss : MonoBehaviour
                 this.m_attackCoroutine = null;
             }
             this.m_animator.SetBool("IsIdle", false);
+            this.m_animator.SetBool("IsRunning", false);
             this.m_animator.SetTrigger("Die");
             this.m_isDead = true;
         }
@@ -136,14 +140,6 @@ public class MagmaBoss : MonoBehaviour
     }
 
     private IEnumerator HandleAttacking()
-    {
-        // this.m_animator.SetTrigger("Attack");
-        Debug.Log("ATTACK STARTED");
-        yield return this.Attack();
-        Debug.Log("ATTACK FINISHED");
-    }
-    
-    protected virtual IEnumerator Attack()
     {
         this.m_animator.SetBool("IsIdle", false);
         if (this.m_currentJumpAttackCooldown <= 0f)

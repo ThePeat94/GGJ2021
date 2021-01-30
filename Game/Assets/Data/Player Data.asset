@@ -21,3 +21,4 @@ MonoBehaviour:
   m_attackDamage: 50
   m_shootCooldown: 0.75
   m_shootForce: 50
+  m_mouseSensivity: 0.33

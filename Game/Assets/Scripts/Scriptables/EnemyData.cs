@@ -11,11 +11,11 @@ namespace Scriptables
         [SerializeField] private float m_wanderRadius;
         [SerializeField] private float m_attackRange;
         [SerializeField] private ResourceData m_healthData;
-        [SerializeField] private float m_attacksPerSecond;
+        [SerializeField] private AnimationClip m_attackClip;
 
         public float MovementSpeed => this.m_movementSpeed;
         public float WanderRadius => this.m_wanderRadius;
-        public float AttacksPerSecond => this.m_attacksPerSecond;
+        public AnimationClip AttackClip => this.m_attackClip;
         public float AttackRange => this.m_attackRange;
         public float DetectionRadius => this.m_detectionRadius;
 

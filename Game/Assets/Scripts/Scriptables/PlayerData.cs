@@ -14,7 +14,9 @@ namespace Scriptables
         [SerializeField] private int m_attackDamage;
         [SerializeField] private float m_shootCooldown;
         [SerializeField] private float m_shootForce;
+        [SerializeField] private float m_mouseSensivity;
 
+        public float MouseSensivity => this.m_mouseSensivity;
         public float AimingMovementSpeed => this.m_aimingMovementSpeed;
         public float MovementSpeed => this.m_movementSpeed;
         public float RotationSpeed => this.m_rotationSpeed;
