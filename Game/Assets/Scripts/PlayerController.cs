@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Cinemachine;
+using EventArgs;
 using Scriptables;
 using UI;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AimCamera m_aimCamera;
     [SerializeField] private GameObject m_arrowPrefab;
     [SerializeField] private GameObject m_spawnPoint;
+    [SerializeField] private GameObject m_crossHair;
 
     private Vector3 m_moveDirection;
     private CharacterController m_characterController;
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Transform m_camera;
 
     private bool m_isAiming;
+    private bool m_isDead;
 
     private static readonly int s_isIdleHash = Animator.StringToHash("IsIdle");
     private static readonly int s_isRunningHash = Animator.StringToHash("IsRunning");
@@ -58,12 +61,29 @@ public class PlayerController : MonoBehaviour
         this.m_camera = Camera.main.transform;
         this.m_inputProcessor.AimingStarted += (sender, args) => this.StartAiming();
         this.m_inputProcessor.AimingEnded += (sender, args) => this.StopAiming();
+        this.HealthController.ResourceValueChanged += HealthControllerOnResourceValueChanged;
 
     }
-    
+
+    private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
+    {
+        if (this.m_isDead)
+            return;
+
+        if (e.NewValue <= 0f)
+        {
+            this.m_isDead = true;
+            this.StopAiming();
+            this.m_animator.SetTrigger("Die");
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (this.m_isDead)
+            return;
+        
         if (!this.m_isAiming)
         {
             this.Move();
@@ -146,6 +166,7 @@ public class PlayerController : MonoBehaviour
         this.m_camera.SetParent(this.m_aimCameraGameObject.transform);
         this.m_camera.localRotation = Quaternion.identity;
         this.m_camera.localPosition = Vector3.zero;
+        this.m_crossHair.SetActive(true);
     }
 
     private void StopAiming()
@@ -154,6 +175,7 @@ public class PlayerController : MonoBehaviour
         this.m_freeLookCamera.enabled = true;
         this.m_aimCamera.enabled = false;
         this.m_camera.SetParent(null);
+        this.m_crossHair.SetActive(false);
     }
 
     private void Shoot()
@@ -187,7 +209,7 @@ public class PlayerController : MonoBehaviour
         
         var instantiatedArrow = Instantiate(this.m_arrowPrefab, this.m_spawnPoint.transform.position, Quaternion.identity);
         var rig = instantiatedArrow.GetComponent<Rigidbody>();
-        rig.AddForce(shootdirection.normalized * 100f, ForceMode.Impulse);
+        rig.AddForce(shootdirection.normalized * 50f, ForceMode.Impulse);
 
     }
 

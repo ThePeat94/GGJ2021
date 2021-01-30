@@ -29,6 +29,7 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        Debug.Log(other.gameObject);
         this.m_rigidbody.velocity = Vector3.zero;
         this.m_rigidbody.isKinematic = true;
         this.transform.SetParent(other.transform);

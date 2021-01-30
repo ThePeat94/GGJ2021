@@ -20,12 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Blender/Character/Model/fox_rigged.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blender/Bow&amp;Arrow/Model/bow.blend" beforeDir="false" afterPath="$PROJECT_DIR$/../Blender/Bow&amp;Arrow/Model/bow.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blender/Bow&amp;Arrow/Model/bow.fbx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fox/standing aim walk left.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fox/standing aim walk left.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Dummy Enemy Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Dummy Enemy Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Fox/fox_rigged.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Fox/fox_rigged.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Fox/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Fox/Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +48,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -62,10 +67,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Foo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -226,10 +231,10 @@
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612003571090" />
-    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612003586503">
+    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612005609811">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612003586503" />
+    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612005609811" />
     <state x="-1338" y="510" width="1881" height="1367" key="dock-window-1" timestamp="1611961834960">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
