@@ -19,39 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/AttackUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/AttackUpgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/FloatUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/FloatUpgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/HealthUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/HealthUpgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/IntUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/IntUpgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/MovementSpeedUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/MovementSpeedUpgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/QuiverUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/QuiverUpgrade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ReloadUpgrade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ReloadUpgrade.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fox/Fox.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Fox/Fox.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Player Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_darkBrown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_darkBrown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_feather.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_feather.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_top.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_top.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThirdPersonCam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThirdPersonCam.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +43,7 @@
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
@@ -184,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612009379150</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="enemy and boss">
+      <created>1612014850287</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612014850287</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +185,8 @@
     <MESSAGE value="game" />
     <MESSAGE value="chasing Enemy&#10;animations" />
     <MESSAGE value="bow and Arrow&#10;die animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="bow and Arrow&#10;die animation" />
+    <MESSAGE value="enemy and boss" />
+    <option name="LAST_COMMIT_MESSAGE" value="enemy and boss" />
   </component>
   <component name="WindowStateProjectService">
     <state width="2505" height="484" key="GridCell.Tab.0.bottom" timestamp="1612004787613">
@@ -284,14 +261,14 @@
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612013508059" />
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612009381167">
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612014851345">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612009381167" />
-    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612005609811">
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612014851345" />
+    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612014863198">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612005609811" />
+    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612014863198" />
     <state x="-1338" y="510" width="1881" height="1367" key="dock-window-1" timestamp="1611961834960">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
