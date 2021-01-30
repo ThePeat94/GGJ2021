@@ -15,7 +15,6 @@ public class AimCamera : MonoBehaviour
     {
         this.m_currentXRotation -= this.m_playerInput.MouseDelta.y;
         this.m_currentXRotation = Mathf.Clamp(this.m_currentXRotation, this.m_maxDownwardsAngle, this.m_maxUpwardsAngle);
-        Debug.Log(this.m_currentXRotation);
         this.transform.rotation = Quaternion.Euler(this.m_currentXRotation, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
     }
 }

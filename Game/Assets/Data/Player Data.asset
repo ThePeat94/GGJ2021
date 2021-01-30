@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878567964c886e74aab1a960ac6b01d3, type: 3}
   m_Name: Player Data
   m_EditorClassIdentifier: 
+  m_aimingMovementSpeed: 3
   m_movementSpeed: 10
   m_rotationSpeed: 50
+  m_reloadingDuration: 1.5
   m_healthData: {fileID: 11400000, guid: bbba444a40904cf4da183e8ae4daaaff, type: 2}
   m_arrowData: {fileID: 11400000, guid: 0a524c9404064744bb4552335ea76a62, type: 2}

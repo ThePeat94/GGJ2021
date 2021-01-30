@@ -10,6 +10,8 @@ public class Arrow : MonoBehaviour
     private int m_damage = 5;
 
     private bool m_hasHit;
+
+    public int Damage => this.m_damage;
     
     private void Awake()
     {
@@ -27,12 +29,6 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        var hitEnemy = other.gameObject.GetComponent<Enemy>();
-        if (hitEnemy != null)
-        {
-            hitEnemy.HealthController.UseResource(this.m_damage);
-        }
-        Debug.Log("Arrow has hit: " + other.gameObject.name);
         this.m_rigidbody.velocity = Vector3.zero;
         this.m_rigidbody.isKinematic = true;
         this.transform.SetParent(other.transform);

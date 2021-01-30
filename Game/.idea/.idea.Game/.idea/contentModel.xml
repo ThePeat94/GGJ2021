@@ -25,6 +25,7 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="ResourceController.cs" t="Include" />
           <e p="Scriptables" t="Include">
+            <e p="EnemyData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
             <e p="ResourceData.cs" t="Include" />
           </e>
