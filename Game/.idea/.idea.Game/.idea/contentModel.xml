@@ -7,16 +7,37 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Grass And Flowers Pack 1" t="Include">
+          <e p="Example Scene" t="Include">
+            <e p="SimpleTextureDrawing.cs" t="Include" />
+            <e p="Skyboxes" t="Include">
+              <e p="_skybox info.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Input" t="Include">
           <e p="PlayerInput.cs" t="Include" />
+        </e>
+        <e p="Samples" t="Include">
+          <e p="Terrain Tools" t="Include">
+            <e p="0.1.0-preview" t="Include">
+              <e p="Terrain Assets" t="Include">
+                <e p="ThirdPartyNotices.txt" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="AimCamera.cs" t="Include" />
           <e p="Arrow.cs" t="Include" />
           <e p="CameraFollower.cs" t="Include" />
           <e p="Enemy" t="Include">
+            <e p="BossAttackCollider.cs" t="Include" />
+            <e p="BossCollider.cs" t="Include" />
+            <e p="BossRoarAttackCollider.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemyUI.cs" t="Include" />
+            <e p="MagmaBoss.cs" t="Include" />
           </e>
           <e p="EventArgs" t="Include">
             <e p="ResourceValueChangedEventArgs.cs" t="Include" />
@@ -34,10 +55,12 @@
           <e p="ResourceController.cs" t="Include" />
           <e p="Scriptables" t="Include">
             <e p="EnemyData.cs" t="Include" />
+            <e p="MagmaBossData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
             <e p="ResourceData.cs" t="Include" />
           </e>
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="TriggerBossFight.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="MainMenu.cs" t="Include" />
             <e p="PlayerHud.cs" t="Include" />

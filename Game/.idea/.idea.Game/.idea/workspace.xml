@@ -19,7 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="" />
+    <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blender/Enemy/Model/enemy.blend" beforeDir="false" afterPath="$PROJECT_DIR$/../Blender/Enemy/Model/enemy.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Blender/Enemy/Model/enemy.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/../Blender/Enemy/Model/enemy.blend1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fox/Fox.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Fox/Fox.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,20 +52,25 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/Upgrade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/ReloadUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.4.0/Runtime/Core/TriggerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,13 +99,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/AttackUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/ReloadUpgradeFox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/ReloadUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerBossFight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossAttackCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" />
       </list>
     </option>
   </component>
@@ -112,10 +140,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="44428">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35804">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="44428" />
+      <option name="pid" value="35804" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -160,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612014850287</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed enemy">
+      <created>1612015070457</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612015070457</updated>
+    </task>
+    <task id="LOCAL-00006" summary="assets imported">
+      <created>1612015409272</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612015409272</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,85 +228,96 @@
     <MESSAGE value="chasing Enemy&#10;animations" />
     <MESSAGE value="bow and Arrow&#10;die animation" />
     <MESSAGE value="enemy and boss" />
-    <option name="LAST_COMMIT_MESSAGE" value="enemy and boss" />
+    <MESSAGE value="fixed enemy" />
+    <MESSAGE value="assets imported" />
+    <option name="LAST_COMMIT_MESSAGE" value="assets imported" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2505" height="484" key="GridCell.Tab.0.bottom" timestamp="1612004787613">
+    <state width="470" height="797" key="DebuggerActiveHint" timestamp="1612037377423">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.0.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787613" />
-    <state width="2505" height="484" key="GridCell.Tab.0.center" timestamp="1612004787613">
+    <state width="470" height="797" key="DebuggerActiveHint/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037377423" />
+    <state width="2505" height="484" key="GridCell.Tab.0.bottom" timestamp="1612037343029">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.0.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787613" />
-    <state width="2505" height="484" key="GridCell.Tab.0.left" timestamp="1612004787613">
+    <state width="2505" height="484" key="GridCell.Tab.0.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037343029" />
+    <state width="2505" height="484" key="GridCell.Tab.0.center" timestamp="1612037343029">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.0.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787613" />
-    <state width="2505" height="484" key="GridCell.Tab.0.right" timestamp="1612004787613">
+    <state width="2505" height="484" key="GridCell.Tab.0.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037343029" />
+    <state width="2505" height="484" key="GridCell.Tab.0.left" timestamp="1612037343029">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.0.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787613" />
-    <state width="2505" height="484" key="GridCell.Tab.1.bottom" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.0.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037343029" />
+    <state width="2505" height="484" key="GridCell.Tab.0.right" timestamp="1612037343029">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.1.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.1.center" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.0.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037343029" />
+    <state width="2505" height="484" key="GridCell.Tab.1.bottom" timestamp="1612037367036">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.1.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.1.left" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.1.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037367036" />
+    <state width="2505" height="484" key="GridCell.Tab.1.center" timestamp="1612037367035">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.1.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.1.right" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.1.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037367035" />
+    <state width="2505" height="484" key="GridCell.Tab.1.left" timestamp="1612037367035">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.1.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.2.bottom" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.1.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037367035" />
+    <state width="2505" height="484" key="GridCell.Tab.1.right" timestamp="1612037367036">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.2.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.2.center" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.1.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037367036" />
+    <state width="2505" height="484" key="GridCell.Tab.2.bottom" timestamp="1612037342871">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.2.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.2.left" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.2.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037342871" />
+    <state width="2505" height="484" key="GridCell.Tab.2.center" timestamp="1612037342871">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.2.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.2.right" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.2.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037342871" />
+    <state width="2505" height="484" key="GridCell.Tab.2.left" timestamp="1612037342871">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.2.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.3.bottom" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.2.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037342871" />
+    <state width="2505" height="484" key="GridCell.Tab.2.right" timestamp="1612037342871">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.3.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.3.center" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.2.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037342871" />
+    <state width="2505" height="484" key="GridCell.Tab.3.bottom" timestamp="1612037342871">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.3.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.3.left" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.3.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037342871" />
+    <state width="2505" height="484" key="GridCell.Tab.3.center" timestamp="1612037342871">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.3.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.3.right" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.3.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037342871" />
+    <state width="2505" height="484" key="GridCell.Tab.3.left" timestamp="1612037342871">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.3.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state x="-1534" y="172" key="RiderGenerateDialog" timestamp="1612011908260">
+    <state width="2505" height="484" key="GridCell.Tab.3.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037342871" />
+    <state width="2505" height="484" key="GridCell.Tab.3.right" timestamp="1612037342871">
       <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="484" key="GridCell.Tab.3.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037342871" />
+    <state x="-1741" y="389" key="MultipleFileMergeDialog" timestamp="1612014876430">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1741" y="389" key="MultipleFileMergeDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612014876430" />
+    <state x="1026" y="172" key="RiderGenerateDialog" timestamp="1612025447108">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="-1534" y="172" key="RiderGenerateDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612011908260" />
+    <state x="1026" y="172" key="RiderGenerateDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612025447108" />
     <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog" timestamp="1612013508059">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612013508059" />
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612014851345">
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612015412407">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612014851345" />
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612015412407" />
     <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612014863198">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
@@ -273,6 +326,10 @@
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-1338" y="510" width="1881" height="1367" key="dock-window-1/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1611961834960" />
+    <state x="-1770" y="-18" width="1881" height="1367" maximized="true" key="dock-window-2" timestamp="1612022859026">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1770" y="-18" width="1881" height="1367" maximized="true" key="dock-window-2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612022859026" />
     <state x="-1708" y="327" key="run.anything.popup" timestamp="1612003927127">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
