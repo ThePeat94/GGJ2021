@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b419e5ce4bdf49b9866ee8eadabafed4, type: 3}
   m_Name: Dummy Enemy Data
   m_EditorClassIdentifier: 
-  m_movementSpeed: 10
+  m_movementSpeed: 5
   m_detectionRadius: 10
   m_attackDamage: 10
   m_wanderRadius: 10
-  m_attackRange: 1.5
+  m_attackRange: 3.5
   m_healthData: {fileID: 11400000, guid: f3cb15ea01e739d458ac75e53e3b7e8c, type: 2}
   m_attacksPerSecond: 0.5

@@ -196,4 +196,13 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(this.m_playerData.ReloadingDuration);
         this.ArrowController.ResetValue();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var enemy = other.GetComponentInParent<Enemy>();
+        if (enemy != null)
+        {
+            this.HealthController.UseResource(enemy.Damage);
+        }
+    }
 }

@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyData m_enemyData;
     [SerializeField] private Collider m_attackCollider;
-    [SerializeField] private LayerMask m_masksToHit;
+    [SerializeField] private LayerMask m_wanderMasksToHit;
     
     private Transform m_targetTransform;
     private NavMeshAgent m_navMeshAgent;
@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     private Coroutine m_wanderCoroutine;
     private Coroutine m_attackCoroutine;
     private Animator m_animator;
+    private Vector3 m_origin;
 
     private bool m_isWandering;
     private bool m_isAttacking;
@@ -29,15 +30,7 @@ public class Enemy : MonoBehaviour
     private static WaitForSeconds s_delayDetection = new WaitForSeconds(0.5f);
     
     public ResourceController HealthController { get; private set; }
-
-    public virtual void Attack()
-    {
-        var hit = Physics.OverlapBox(this.m_attackCollider.bounds.center, this.m_attackCollider.bounds.extents, Quaternion.LookRotation(this.transform.forward), this.m_masksToHit);
-        if (hit.Length > 0)
-        {
-            hit.First().GetComponent<PlayerController>().HealthController.UseResource(this.m_enemyData.AttackDamage);
-        }
-    }
+    public int Damage => this.m_enemyData.AttackDamage;
 
     private void Awake()
     {
@@ -49,6 +42,7 @@ public class Enemy : MonoBehaviour
         this.m_navMeshAgent.stoppingDistance = this.m_enemyData.AttackRange;
 
         this.m_animator = this.GetComponent<Animator>();
+        this.m_origin = this.transform.position;
     }
 
     private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
@@ -59,6 +53,7 @@ public class Enemy : MonoBehaviour
             if (this.m_playerDetectionCoroutine != null)
                 this.StopCoroutine(this.m_playerDetectionCoroutine);
             
+            this.StopWandering();
             // Play die animation
         }
     }
@@ -78,6 +73,22 @@ public class Enemy : MonoBehaviour
             this.RotateTowardsTarget();
             this.ProcessDistanceToTarget();
         }
+        else if(this.m_wanderCoroutine == null)
+        {
+            this.m_wanderCoroutine = StartCoroutine(this.Wander());
+        }
+    }
+
+    private IEnumerator Wander()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(5f);
+            var rndPoint = UnityEngine.Random.insideUnitSphere * this.m_enemyData.WanderRadius + this.m_origin;
+            NavMeshHit navHit;
+            NavMesh.SamplePosition(rndPoint, out navHit, this.m_enemyData.WanderRadius, this.m_wanderMasksToHit);
+            this.m_navMeshAgent.destination = navHit.position;
+        }
     }
     
     private void RotateTowardsTarget()
@@ -91,18 +102,15 @@ public class Enemy : MonoBehaviour
     private void ProcessDistanceToTarget()
     {
         var distance = Vector3.Distance(this.transform.position, this.m_targetTransform.position);
-        Debug.Log(distance);
         if (distance > this.m_enemyData.DetectionRadius)
         {
-            this.m_navMeshAgent.isStopped = true;
+            this.m_navMeshAgent.destination = this.transform.position;
             this.m_targetTransform = null;
-            this.m_navMeshAgent.stoppingDistance = 1f;
             if (this.m_attackCoroutine != null)
             {
                 this.StopCoroutine(this.m_attackCoroutine);
                 this.m_attackCoroutine = null;
             }
-
             // this.m_isAttackingIdle = false;
         }
         else if (distance <= this.m_enemyData.AttackRange)
@@ -137,6 +145,7 @@ public class Enemy : MonoBehaviour
                 this.m_targetTransform = hitPlayer.transform;
                 this.m_navMeshAgent.destination = hitPlayer.transform.position;
                 this.m_navMeshAgent.isStopped = false;
+                this.StopWandering();
             }
         }
     }
@@ -146,10 +155,17 @@ public class Enemy : MonoBehaviour
         while (true)
         {
             // this.m_animator.SetTrigger("Attack");
-            this.Attack();
+            StartCoroutine(this.Attack());
             Debug.Log("ATTACK");
             yield return new WaitForSeconds(1f/this.m_enemyData.AttacksPerSecond);
         }
+    }
+    
+    protected virtual IEnumerator Attack()
+    {
+        this.m_attackCollider.gameObject.SetActive(true);
+        yield return new WaitForFixedUpdate();
+        this.m_attackCollider.gameObject.SetActive(false);
     }
     
     private void OnDrawGizmos()
@@ -163,6 +179,15 @@ public class Enemy : MonoBehaviour
         if (arrow != null)
         {
             this.HealthController.UseResource(arrow.Damage);
+        }
+    }
+
+    private void StopWandering()
+    {
+        if(this.m_wanderCoroutine != null)
+        {
+            StopCoroutine(this.m_wanderCoroutine);
+            this.m_wanderCoroutine = null;
         }
     }
 }
