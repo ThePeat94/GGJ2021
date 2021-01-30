@@ -38,14 +38,10 @@ public class ResourceController
         this.m_resourceValueChanged?.Invoke(this, new ResourceValueChangedEventArgs(this.m_currentValue));
     }
     
-    public bool UseResource(int amount)
+    public void UseResource(int amount)
     {
-        if(!this.CanAfford(amount))
-            return false;
-
         this.m_currentValue -= amount;
         this.m_resourceValueChanged?.Invoke(this, new ResourceValueChangedEventArgs(this.m_currentValue));
-        return true;
     }
     
     public bool CanAfford(int amount)

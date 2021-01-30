@@ -19,14 +19,20 @@ public class PlayerHud : MonoBehaviour
         this.m_healthBar.value = this.m_player.HealthController.CurrentValue;
         
         this.m_player.HealthController.ResourceValueChanged += HealthControllerOnResourceValueChanged;
-        this.m_ammoText.text = $"{this.m_player.ArrowController.CurrentValue}/{this.m_player.ArrowController.MaxValue}";
-        this.m_player.ArrowController.MaxValueChanged += ArrowControllerValueChanged;
-        this.m_player.ArrowController.ResourceValueChanged += this.ArrowControllerValueChanged;
+        this.m_player.HealthController.MaxValueChanged += HealthControllerOnMaxValueChanged;
+        this.m_ammoText.text = $"{this.m_player.QuiverController.CurrentValue}/{this.m_player.QuiverController.MaxValue}";
+        this.m_player.QuiverController.MaxValueChanged += this.ArrowControllerValueChanged;
+        this.m_player.QuiverController.ResourceValueChanged += this.ArrowControllerValueChanged;
+    }
+
+    private void HealthControllerOnMaxValueChanged(object sender, ResourceValueChangedEventArgs e)
+    {
+        this.m_healthBar.maxValue = e.NewValue;
     }
 
     private void ArrowControllerValueChanged(object sender, ResourceValueChangedEventArgs e)
     {
-        this.m_ammoText.text = $"{this.m_player.ArrowController.CurrentValue}/{this.m_player.ArrowController.MaxValue}";
+        this.m_ammoText.text = $"{this.m_player.QuiverController.CurrentValue}/{this.m_player.QuiverController.MaxValue}";
     }
 
     private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)

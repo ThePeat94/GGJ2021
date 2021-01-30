@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
     private Animator m_animator;
     private Transform m_camera;
 
+    private Coroutine m_reloadCoroutine;
+
+    private float m_currentShootcooldown;
+
     private bool m_isAiming;
     private bool m_isDead;
 
@@ -38,7 +42,25 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController Instance => s_instance;
     public ResourceController HealthController { get; set; }
-    public ResourceController ArrowController { get; set; }
+    public ResourceController QuiverController { get; set; }
+
+    public float MovementSpeed
+    {
+        get;
+        set;
+    }
+
+    public float ReloadTime
+    {
+        get;
+        set;
+    }
+    
+    public int AttackDamage
+    {
+        get;
+        set;
+    }
     
     
     private void Awake()
@@ -54,7 +76,7 @@ public class PlayerController : MonoBehaviour
         }
         
         this.HealthController = new ResourceController(this.m_playerData.HealthData);
-        this.ArrowController = new ResourceController(this.m_playerData.ArrowData);
+        this.QuiverController = new ResourceController(this.m_playerData.QuiverData);
         this.m_inputProcessor = this.GetComponent<InputProcessor>();
         this.m_characterController = this.GetComponent<CharacterController>();
         this.m_animator = this.GetComponent<Animator>();
@@ -62,6 +84,9 @@ public class PlayerController : MonoBehaviour
         this.m_inputProcessor.AimingStarted += (sender, args) => this.StartAiming();
         this.m_inputProcessor.AimingEnded += (sender, args) => this.StopAiming();
         this.HealthController.ResourceValueChanged += HealthControllerOnResourceValueChanged;
+        this.MovementSpeed = this.m_playerData.MovementSpeed;
+        this.ReloadTime = this.m_playerData.ReloadingDuration;
+        this.AttackDamage = this.m_playerData.AttackDamage;
 
     }
 
@@ -83,6 +108,9 @@ public class PlayerController : MonoBehaviour
     {
         if (this.m_isDead)
             return;
+
+        if(this.m_currentShootcooldown > 0f)
+            this.m_currentShootcooldown -= Time.deltaTime;
         
         if (!this.m_isAiming)
         {
@@ -95,14 +123,14 @@ public class PlayerController : MonoBehaviour
             this.AimRotate();
         }
 
-        if (this.m_inputProcessor.ShootTriggered)
+        if (this.m_inputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f)
         {
             this.Shoot();
         }
 
-        if (this.m_inputProcessor.ReloadTriggered)
+        if (this.m_inputProcessor.ReloadTriggered && this.m_reloadCoroutine == null)
         {
-            StartCoroutine(this.Reload());
+            this.m_reloadCoroutine = StartCoroutine(this.Reload());
         }
     }
 
@@ -116,7 +144,7 @@ public class PlayerController : MonoBehaviour
         this.m_moveDirection = this.m_camera.forward * this.m_inputProcessor.Movement.y;
         this.m_moveDirection += this.m_camera.right * this.m_inputProcessor.Movement.x;
         this.m_moveDirection.y = 0;
-        this.m_characterController.Move(this.m_moveDirection * Time.deltaTime * this.m_playerData.MovementSpeed);
+        this.m_characterController.Move(this.m_moveDirection * Time.deltaTime * this.MovementSpeed);
     }
 
     private void MoveSidewards()
@@ -180,10 +208,11 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
-        if(!this.ArrowController.CanAfford(1))
+        if(!this.QuiverController.CanAfford(1))
             return;
 
-        this.ArrowController.UseResource(1);
+        this.m_currentShootcooldown = this.m_playerData.ShootCooldown;
+        this.QuiverController.UseResource(1);
         
         Vector3 shootdirection = Vector3.zero;
         if (!this.m_isAiming)
@@ -207,16 +236,18 @@ public class PlayerController : MonoBehaviour
             }
         }
         
-        var instantiatedArrow = Instantiate(this.m_arrowPrefab, this.m_spawnPoint.transform.position, Quaternion.identity);
+        var instantiatedArrow = Instantiate(this.m_arrowPrefab, this.m_spawnPoint.transform.position, Quaternion.identity).GetComponent<Arrow>();
+        instantiatedArrow.Damage = this.AttackDamage;
         var rig = instantiatedArrow.GetComponent<Rigidbody>();
-        rig.AddForce(shootdirection.normalized * 50f, ForceMode.Impulse);
+        rig.AddForce(shootdirection.normalized * this.m_playerData.ShootForce, ForceMode.Impulse);
 
     }
 
     private IEnumerator Reload()
     {
-        yield return new WaitForSeconds(this.m_playerData.ReloadingDuration);
-        this.ArrowController.ResetValue();
+        yield return new WaitForSeconds(this.ReloadTime);
+        this.QuiverController.ResetValue();
+        this.m_reloadCoroutine = null;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -225,6 +256,15 @@ public class PlayerController : MonoBehaviour
         if (enemy != null)
         {
             this.HealthController.UseResource(enemy.Damage);
+            return;
+        }
+        
+        var minifox = other.GetComponent<Minifox>();
+        if (minifox != null)
+        {
+            minifox.Upgrade.ApplyUpgrade();
+            Destroy(minifox.gameObject);
+            return;
         }
     }
 }

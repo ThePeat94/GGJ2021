@@ -17,4 +17,7 @@ MonoBehaviour:
   m_rotationSpeed: 50
   m_reloadingDuration: 1.5
   m_healthData: {fileID: 11400000, guid: bbba444a40904cf4da183e8ae4daaaff, type: 2}
-  m_arrowData: {fileID: 11400000, guid: 0a524c9404064744bb4552335ea76a62, type: 2}
+  m_quiverData: {fileID: 11400000, guid: 0a524c9404064744bb4552335ea76a62, type: 2}
+  m_attackDamage: 50
+  m_shootCooldown: 0.75
+  m_shootForce: 50

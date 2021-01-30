@@ -20,16 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Blender/Bow&amp;Arrow/Model/bow.blend" beforeDir="false" afterPath="$PROJECT_DIR$/../Blender/Bow&amp;Arrow/Model/bow.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Blender/Bow&amp;Arrow/Model/bow.fbx" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/AttackUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/AttackUpgrade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/FloatUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/FloatUpgrade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/HealthUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/HealthUpgrade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/IntUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/IntUpgrade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/MovementSpeedUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/MovementSpeedUpgrade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/QuiverUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/QuiverUpgrade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ReloadUpgrade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ReloadUpgrade.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fox/standing aim walk left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fox/standing aim walk left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Dummy Enemy Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Dummy Enemy Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Fox/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Fox/Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fox/Fox.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Fox/Fox.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Player Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_darkBrown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_darkBrown.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_feather.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_feather.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_top.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Arrow/Arrow_top.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThirdPersonCam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ThirdPersonCam.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +66,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/Upgrade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/ReloadUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -59,18 +88,34 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealthController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/ResourceData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventArgs/ResourceValueChangedEventArgs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SimpleVcamCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Foo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/UpgradeData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/HealthUpgradeData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/Upgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/FloatUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/IntUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/HealthUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/MovementSpeedUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/QuiverUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/Minifox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/AttackUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/ReloadUpgradeFox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/ReloadUpgrade.cs" />
       </list>
     </option>
   </component>
@@ -132,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612003567869</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bow and Arrow&#10;die animation">
+      <created>1612009379150</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612009379150</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +208,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="game" />
     <MESSAGE value="chasing Enemy&#10;animations" />
-    <option name="LAST_COMMIT_MESSAGE" value="chasing Enemy&#10;animations" />
+    <MESSAGE value="bow and Arrow&#10;die animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="bow and Arrow&#10;die animation" />
   </component>
   <component name="WindowStateProjectService">
     <state width="2505" height="484" key="GridCell.Tab.0.bottom" timestamp="1612004787613">
@@ -223,14 +276,18 @@
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state width="2505" height="484" key="GridCell.Tab.3.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state x="-1534" y="172" key="RiderGenerateDialog" timestamp="1611997864349">
+    <state x="-1534" y="172" key="RiderGenerateDialog" timestamp="1612011908260">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1534" y="172" key="RiderGenerateDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1611997864349" />
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612003571090">
+    <state x="-1534" y="172" key="RiderGenerateDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612011908260" />
+    <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog" timestamp="1612013508059">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612003571090" />
+    <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612013508059" />
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612009381167">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612009381167" />
     <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612005609811">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>

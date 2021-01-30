@@ -7,11 +7,10 @@ public class Arrow : MonoBehaviour
 {
     private Rigidbody m_rigidbody;
     private Collider m_collider;
-    private int m_damage = 5;
 
     private bool m_hasHit;
 
-    public int Damage => this.m_damage;
+    public int Damage { get; set; }
     
     private void Awake()
     {
@@ -29,7 +28,6 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject);
         this.m_rigidbody.velocity = Vector3.zero;
         this.m_rigidbody.isKinematic = true;
         this.transform.SetParent(other.transform);
