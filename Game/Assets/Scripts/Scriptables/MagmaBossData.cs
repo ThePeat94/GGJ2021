@@ -24,6 +24,10 @@ namespace Scriptables
         [SerializeField] private AnimationClip m_roarAttackAnimation;
         [SerializeField] private AnimationClip m_swipeAttackAnimation;
         [SerializeField] private AnimationClip m_punchAttackAnimation;
+        [SerializeField] private AudioSource m_breathSound;
+        [SerializeField] private AudioSource m_punchSound;
+        [SerializeField] private AudioSource m_swipeSound;
+        [SerializeField] private AudioSource m_jumpAttackSound;
 
         public string Name => this.m_name;
         public float MovementSpeed => this.m_movementSpeed;
