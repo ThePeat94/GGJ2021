@@ -10,5 +10,6 @@ public class GameStart : MonoBehaviour
     void Start()
     {
         MusicPlayer.Instance.QueueClips(this.m_startingClipQueue);
+        Cursor.visible = false;
     }
 }

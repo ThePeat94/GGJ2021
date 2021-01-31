@@ -51,6 +51,7 @@ public class PlayerHud : MonoBehaviour
     public void ShowWinScreen()
     {
         this.m_youWonPanel.SetActive(true);
+        StartCoroutine(this.HideWinScreen());
     }
 
     private IEnumerator HideWinScreen()

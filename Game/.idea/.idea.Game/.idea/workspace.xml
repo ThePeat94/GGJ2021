@@ -21,33 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Enemy/Lord Magma.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Enemy/Lord Magma.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Player/Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Player/Player Data.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNature-Rppe6 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNature-Rppe6 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss/Material Base Color.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Boss/Material Base Color.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Boss/Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNatureItalic-BWW98 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNatureItalic-BWW98 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss/boss_rigged.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Boss/boss_rigged.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerHud.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerHud.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikey.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikey.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld_example.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld_example.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Title Theme.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SFX/Title Theme.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World/NavMesh.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Music/Flamethrower.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Music/Fox Collect.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Music/Overworld Battle Theme.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Music/Overworld Theme v.2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Music/Title Theme.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Music/Victory Theme.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Music/boss theme final.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_724f6e5d-6795-44f4-9c84-6399d0488bb7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainData_724f6e5d-6795-44f4-9c84-6399d0488bb7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +52,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,24 +66,32 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Tree 2.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/AimCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Enemy/Lord Magma.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.4.0/Runtime/Core/TriggerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Boss.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/Upgrade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/MagmaBoss.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -131,7 +125,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/Minifox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" />
@@ -144,6 +137,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
       </list>
     </option>
   </component>
