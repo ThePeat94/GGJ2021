@@ -5,6 +5,7 @@ https://freesound.org/people/Lydmakeren/sounds/511489/ -Arrow hit
 https://freesound.org/people/kuzyaburst/sounds/196120/ -Boss punch
 https://soundbible.com/1953-Neck-Snap.html -Hit Enemy Sound
 https://soundbible.com/1414-Batman-Punch.html -Enemy hits you
+https://freesound.org/people/AslakHostaker/sounds/395039/ -Flamethrower
 
 http://ftpmirror.your.org/pub/misc/sonniss/ -various SFX
 https://99sounds.org/free-sound-effects/ -various SFX
