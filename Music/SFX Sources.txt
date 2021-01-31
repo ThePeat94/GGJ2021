@@ -8,4 +8,6 @@ https://soundbible.com/1414-Batman-Punch.html -Enemy hits you
 
 http://ftpmirror.your.org/pub/misc/sonniss/ -various SFX
 https://99sounds.org/free-sound-effects/ -various SFX
-https://offers.adobe.com/en/na/audition/offers/audition_dlc/AdobeAuditionDLCSFX.html -Fire and Explosions 
+https://offers.adobe.com/en/na/audition/offers/audition_dlc/AdobeAuditionDLCSFX.html 
+-Fire and Explosions 
+-Animals
