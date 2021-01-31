@@ -31,3 +31,11 @@ MonoBehaviour:
   m_roarAttackAnimation: {fileID: 7400000, guid: 20ab75db57e2be1439d058690adf8019, type: 2}
   m_swipeAttackAnimation: {fileID: 7400000, guid: a17b4dad65130ca44bc1888fcc8f12ac, type: 2}
   m_punchAttackAnimation: {fileID: 7400000, guid: 079d06bb17e062242b426b639a91335d, type: 2}
+  m_roarSound: {fileID: 8300000, guid: 5f0131cda499bac41a2a252b31e58e15, type: 3}
+  m_punchSound: {fileID: 8300000, guid: 13f8d7f0962e87642a42abfe7271dc5c, type: 3}
+  m_swipeSound: {fileID: 8300000, guid: 4e50c22f09379f04d90d06713916c104, type: 3}
+  m_jumpAttackSound: {fileID: 8300000, guid: 40a7a88c6ced87741a60e0ee8eff0a21, type: 3}
+  m_encounterSound: {fileID: 8300000, guid: 605ad40f530e87a4bb0e79973c05c9c3, type: 3}
+  m_bossIntro: {fileID: 8300000, guid: 1ac9bca9be00a5e498800120ea078444, type: 3}
+  m_bossTheme: {fileID: 8300000, guid: 5fdf8fd7b4578384e9b7595ac0502480, type: 3}
+  m_hitByArrowSound: {fileID: 8300000, guid: 2027e2c152ecdd548978c26b51ba29f3, type: 3}

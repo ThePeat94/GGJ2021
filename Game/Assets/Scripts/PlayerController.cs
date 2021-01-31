@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
             this.m_isDead = true;
             this.StopAiming();
             this.m_animator.SetTrigger("Die");
+            MusicPlayer.Instance.PlayInstant(this.m_playerData.GameOverTheme, false);
         }
     }
 
@@ -131,11 +132,10 @@ public class PlayerController : MonoBehaviour
         {
             this.MoveSidewards();
             this.AimRotate();
-        }
-
-        if (this.m_inputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f)
-        {
-            this.Shoot();
+            if (this.m_inputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f)
+            {
+                this.Shoot();
+            }
         }
 
         if (this.m_inputProcessor.ReloadTriggered && this.m_reloadCoroutine == null)
@@ -251,11 +251,12 @@ public class PlayerController : MonoBehaviour
         instantiatedArrow.Damage = this.AttackDamage;
         var rig = instantiatedArrow.GetComponent<Rigidbody>();
         rig.AddForce(shootdirection.normalized * this.m_playerData.ShootForce, ForceMode.Impulse);
-
+        CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.ArrowShootSound, 1f);
     }
 
     private IEnumerator Reload()
     {
+        CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.ReloadSound);
         yield return new WaitForSeconds(this.ReloadTime);
         this.QuiverController.ResetValue();
         this.m_reloadCoroutine = null;
@@ -269,6 +270,7 @@ public class PlayerController : MonoBehaviour
             minifox.Upgrade.ApplyUpgrade();
             minifox.ShowDialogue();
             Destroy(minifox.gameObject);
+            CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.CollectFoxSound);
             return;
         }
     }

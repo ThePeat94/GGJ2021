@@ -34,6 +34,7 @@
           <e p="AimCamera.cs" t="Include" />
           <e p="Arrow.cs" t="Include" />
           <e p="CameraFollower.cs" t="Include" />
+          <e p="CameraSoundPlayer.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="BossAttackCollider.cs" t="Include" />
             <e p="BossCollider.cs" t="Include" />
@@ -45,6 +46,7 @@
           <e p="EventArgs" t="Include">
             <e p="ResourceValueChangedEventArgs.cs" t="Include" />
           </e>
+          <e p="GameStart.cs" t="Include" />
           <e p="InputProcessor.cs" t="Include" />
           <e p="Minifox" t="Include">
             <e p="AttackUpgradeFox.cs" t="Include" />
@@ -54,9 +56,11 @@
             <e p="QuiverUpgradeFox.cs" t="Include" />
             <e p="ReloadUpgradeFox.cs" t="Include" />
           </e>
+          <e p="MusicPlayer.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ResourceController.cs" t="Include" />
           <e p="Scriptables" t="Include">
+            <e p="AudioPlayerSettings.cs" t="Include" />
             <e p="EnemyData.cs" t="Include" />
             <e p="MagmaBossData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />

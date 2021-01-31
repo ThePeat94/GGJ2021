@@ -12,6 +12,7 @@ public class BossCollider : MonoBehaviour
         var arrow = other.gameObject.GetComponent<Arrow>();
         if (arrow != null)
         {
+            AudioSource.PlayClipAtPoint(this.m_magmaboss.Data.HitByArrowSound, this.m_magmaboss.transform.position, 0.33f);
             this.m_magmaboss.HealthController.UseResource(arrow.Damage);
             Destroy(arrow.gameObject);
         }

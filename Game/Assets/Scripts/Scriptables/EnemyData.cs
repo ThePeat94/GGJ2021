@@ -12,7 +12,9 @@ namespace Scriptables
         [SerializeField] private float m_attackRange;
         [SerializeField] private ResourceData m_healthData;
         [SerializeField] private AnimationClip m_attackClip;
-
+        [SerializeField] private AudioClip m_hitByArrowSound;
+        [SerializeField] private AudioClip m_attackSound;
+        
         public float MovementSpeed => this.m_movementSpeed;
         public float WanderRadius => this.m_wanderRadius;
         public AnimationClip AttackClip => this.m_attackClip;
@@ -22,5 +24,8 @@ namespace Scriptables
         public int AttackDamage => this.m_attackDamage;
 
         public ResourceData HealthData => this.m_healthData;
+        public AudioClip HitByArrowSound => this.m_hitByArrowSound;
+        public AudioClip AttackSound => this.m_attackSound;
+
     }
 }

@@ -15,6 +15,10 @@ namespace Scriptables
         [SerializeField] private float m_shootCooldown;
         [SerializeField] private float m_shootForce;
         [SerializeField] private float m_mouseSensivity;
+        [SerializeField] private AudioClip m_arrowShootSound;
+        [SerializeField] private AudioClip m_reloadSound;
+        [SerializeField] private AudioClip m_gameOverTheme;
+        [SerializeField] private AudioClip m_collectFoxSound;
 
         public float MouseSensivity => this.m_mouseSensivity;
         public float AimingMovementSpeed => this.m_aimingMovementSpeed;
@@ -27,5 +31,10 @@ namespace Scriptables
         public int AttackDamage => this.m_attackDamage;
         public float ShootCooldown => this.m_shootCooldown;
         public float ShootForce => this.m_shootForce;
+        
+        public AudioClip ArrowShootSound => this.m_arrowShootSound;
+        public AudioClip ReloadSound => this.m_reloadSound;
+        public AudioClip GameOverTheme => this.m_gameOverTheme;
+        public AudioClip CollectFoxSound => this.m_collectFoxSound;
     }
 }

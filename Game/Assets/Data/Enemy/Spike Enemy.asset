@@ -19,3 +19,5 @@ MonoBehaviour:
   m_attackRange: 3.5
   m_healthData: {fileID: 11400000, guid: f3cb15ea01e739d458ac75e53e3b7e8c, type: 2}
   m_attackClip: {fileID: 7400000, guid: e7d82338db309df488b432e98f236bd8, type: 2}
+  m_hitByArrowSound: {fileID: 8300000, guid: 2a0065fe3aa1ab54c8139644a6f6f2a9, type: 3}
+  m_attackSound: {fileID: 8300000, guid: fe660e3c639301944bdd5c63fc6d2618, type: 3}

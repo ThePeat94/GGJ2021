@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyData m_enemyData;
     [SerializeField] private BossAttackCollider m_attackCollider;
     [SerializeField] private LayerMask m_wanderMasksToHit;
-    
+
     private Transform m_targetTransform;
     private NavMeshAgent m_navMeshAgent;
     private Coroutine m_playerDetectionCoroutine;
@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
 
     public void ActivateAttackCollider()
     {
+        CameraSoundPlayer.Instance.PlayClipAtCam(this.m_enemyData.AttackSound);
         StartCoroutine(this.TriggerAttackCollider());
     }
     
@@ -171,13 +172,11 @@ public class Enemy : MonoBehaviour
     private IEnumerator HandleAttacking()
     {
         this.m_animator.SetBool("IsWalking", false);
-        Debug.Log("SPIKE ATTACK!!");
-        Debug.Log(this.m_enemyData.AttackClip.length);
         this.m_animator.SetTrigger("Attack");
         yield return new WaitForSeconds(this.m_enemyData.AttackClip.length + 1f);
         this.m_attackCoroutine = null;
     }
-
+    
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(this.transform.position, this.m_enemyData.DetectionRadius);
@@ -187,6 +186,7 @@ public class Enemy : MonoBehaviour
         var arrow = other.gameObject.GetComponent<Arrow>();
         if (arrow != null)
         {
+            CameraSoundPlayer.Instance.PlayClipAtCam(this.m_enemyData.HitByArrowSound);
             this.HealthController.UseResource(arrow.Damage);
         }
     }

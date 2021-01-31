@@ -16,6 +16,7 @@ public class MagmaBoss : MonoBehaviour
     [SerializeField] private BossAttackCollider m_punchAttackCollider;
     [SerializeField] private BossRoarAttackCollider m_roarAttackCollider;
     [SerializeField] private ParticleSystem m_roarParticles;
+    [SerializeField] private AudioSource m_audioSource;
 
     private Transform m_targetTransform;
     private NavMeshAgent m_navMeshAgent;
@@ -35,9 +36,14 @@ public class MagmaBoss : MonoBehaviour
 
     public string Name => this.m_bossData.Name;
 
+    public MagmaBossData Data => this.m_bossData;
+
     public void StartFight()
     {
         this.m_isInFight = true;
+        this.m_audioSource.PlayOneShot(this.m_bossData.EncounterSound);
+        MusicPlayer.Instance.PlayInstant(this.m_bossData.BossIntro);
+        MusicPlayer.Instance.QueueClip(this.m_bossData.BossTheme);
     }
     
     private void Awake()
@@ -57,6 +63,8 @@ public class MagmaBoss : MonoBehaviour
         this.m_jumpAttackCollider.Damage = this.m_bossData.JumpAttackDamage;
         this.m_swipeAttackCollider.Damage = this.m_bossData.SwipeDamage;
         this.m_punchAttackCollider.Damage = this.m_bossData.PunchDamage;
+
+        this.m_audioSource = this.GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -81,6 +89,7 @@ public class MagmaBoss : MonoBehaviour
             this.m_animator.SetBool("IsRunning", false);
             this.m_animator.SetTrigger("Die");
             this.m_isDead = true;
+            MusicPlayer.Instance.PlayDefault();
         }
     }
     private void Update()
@@ -212,6 +221,7 @@ public class MagmaBoss : MonoBehaviour
 
     private IEnumerator TriggerJumpAttackCollider()
     {
+        this.m_audioSource.PlayOneShot(this.m_bossData.JumpAttackSound);
         this.m_jumpAttackCollider.gameObject.SetActive(true);
         yield return new WaitForFixedUpdate();
         this.m_jumpAttackCollider.gameObject.SetActive(false);
@@ -224,6 +234,7 @@ public class MagmaBoss : MonoBehaviour
     
     private IEnumerator TriggerPunchAttackCollider()
     {
+        this.m_audioSource.PlayOneShot(this.m_bossData.PunchSound);
         this.m_punchAttackCollider.gameObject.SetActive(true);
         yield return new WaitForFixedUpdate();
         this.m_punchAttackCollider.gameObject.SetActive(false);
@@ -236,13 +247,15 @@ public class MagmaBoss : MonoBehaviour
     
     private IEnumerator TriggerSwipeAttackCollider()
     {
+        this.m_audioSource.PlayOneShot(this.m_bossData.SwipeSound);
         this.m_swipeAttackCollider.gameObject.SetActive(true);
         yield return new WaitForFixedUpdate();
         this.m_swipeAttackCollider.gameObject.SetActive(false);
     }
-
+    
     public void StartRoarAttack()
     {
+        this.m_audioSource.PlayOneShot(this.m_bossData.RoarSound);
         this.m_roarAttackCollider.gameObject.SetActive(true);
         this.m_roarParticles.Play();
     }
