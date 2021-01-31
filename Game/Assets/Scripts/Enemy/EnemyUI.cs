@@ -18,6 +18,11 @@ public class EnemyUI : MonoBehaviour
         this.m_healthBar.value = this.m_attachedEnemy.HealthController.CurrentValue;
     }
 
+    private void LateUpdate()
+    {
+        this.transform.LookAt(Camera.main.transform);
+    }
+
     private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
     {
         this.m_healthBar.value = e.NewValue;

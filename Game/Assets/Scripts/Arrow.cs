@@ -16,7 +16,7 @@ public class Arrow : MonoBehaviour
     {
         this.m_collider = this.GetComponent<Collider>();
         this.m_rigidbody = this.GetComponent<Rigidbody>();
-        Destroy(this,5f);
+        Destroy(this.gameObject,5f);
     }
     
     // Update is called once per frame

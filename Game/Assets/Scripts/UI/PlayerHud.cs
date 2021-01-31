@@ -10,6 +10,42 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private Slider m_healthBar;
     [SerializeField] private TextMeshProUGUI m_ammoText;
     [SerializeField] private PlayerController m_player;
+    [SerializeField] private TextMeshProUGUI m_bossName;
+    [SerializeField] private Slider m_bossHealthBar;
+    [SerializeField] private GameObject m_playerBossHud;
+    [SerializeField] private GameObject m_dialogueBox;
+    [SerializeField] private TextMeshProUGUI m_dialogueText;
+    [SerializeField] private GameObject m_youDiedPanel;
+
+    private Coroutine m_hideCoroutine;
+    
+    public void ShowBossHud(MagmaBoss boss)
+    {
+        this.m_bossName.text = boss.Name;
+        boss.HealthController.ResourceValueChanged += this.BossHealthChanged;
+        this.m_bossHealthBar.maxValue = boss.HealthController.MaxValue;
+        this.m_bossHealthBar.minValue = 0;
+        this.m_bossHealthBar.value = boss.HealthController.CurrentValue;
+        this.m_playerBossHud.SetActive(true);
+    }
+
+    public void ShowDialogue(string text)
+    {
+        if(this.m_hideCoroutine != null)
+            StopCoroutine(this.m_hideCoroutine);
+        
+        this.m_dialogueText.text = text;
+        this.m_dialogueBox.SetActive(true);
+
+        this.m_hideCoroutine = this.StartCoroutine(this.HideDialogue());
+    }
+
+    private IEnumerator HideDialogue()
+    {
+        yield return new WaitForSeconds(10f);
+        this.m_dialogueBox.SetActive(false);
+        this.m_hideCoroutine = null;
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -18,14 +54,24 @@ public class PlayerHud : MonoBehaviour
         this.m_healthBar.minValue = 0;
         this.m_healthBar.value = this.m_player.HealthController.CurrentValue;
         
-        this.m_player.HealthController.ResourceValueChanged += HealthControllerOnResourceValueChanged;
-        this.m_player.HealthController.MaxValueChanged += HealthControllerOnMaxValueChanged;
+        this.m_player.HealthController.ResourceValueChanged += this.PlayerHealthChanged;
+        this.m_player.HealthController.MaxValueChanged += this.PlayerMaxHealthChanged;
         this.m_ammoText.text = $"{this.m_player.QuiverController.CurrentValue}/{this.m_player.QuiverController.MaxValue}";
         this.m_player.QuiverController.MaxValueChanged += this.ArrowControllerValueChanged;
         this.m_player.QuiverController.ResourceValueChanged += this.ArrowControllerValueChanged;
     }
+    
+    private void BossHealthChanged(object sender, ResourceValueChangedEventArgs e)
+    {
+        this.m_bossHealthBar.value = e.NewValue;
 
-    private void HealthControllerOnMaxValueChanged(object sender, ResourceValueChangedEventArgs e)
+        if (e.NewValue <= 0)
+        {
+            this.m_playerBossHud.SetActive(false);
+        }
+    }
+
+    private void PlayerMaxHealthChanged(object sender, ResourceValueChangedEventArgs e)
     {
         this.m_healthBar.maxValue = e.NewValue;
     }
@@ -35,8 +81,12 @@ public class PlayerHud : MonoBehaviour
         this.m_ammoText.text = $"{this.m_player.QuiverController.CurrentValue}/{this.m_player.QuiverController.MaxValue}";
     }
 
-    private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
+    private void PlayerHealthChanged(object sender, ResourceValueChangedEventArgs e)
     {
         this.m_healthBar.value = e.NewValue;
+        if (e.NewValue <= 0)
+        {
+            this.m_youDiedPanel.SetActive(true);
+        }
     }
 }

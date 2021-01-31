@@ -19,7 +19,53 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="" />
+    <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/AudioPlayerSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/AudioPlayerSettings.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Lord Magma Health.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Lord Magma Health.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Lord Magma.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Lord Magma.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Arrow Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Arrow Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Health Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Health Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Spike Enemy Health.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Spike Enemy Health.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Spike Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Spike Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music/Overworld_example.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music/Overworld_example.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Arrow shot.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Boss Encounter Growl.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Boss Firebreath Roar.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Boss Firebreath.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Boss Jump Attack Roar.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Boss Punch.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Boss Swipe 2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Boss Swipe.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Bow reload.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Death Sound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Enemy hits you.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Game Over Theme.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Hit by arrow.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Hitting normal enemy.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Overworld theme.wav" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,34 +82,41 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/Upgrade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/ReloadUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/AimCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.4.0/Runtime/Core/TriggerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealthController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/ResourceData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventArgs/ResourceValueChangedEventArgs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SimpleVcamCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Foo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/UpgradeData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/HealthUpgradeData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox.cs" />
@@ -73,18 +126,34 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/HealthUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/MovementSpeedUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/QuiverUpgrade.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/Minifox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/AttackUpgrade.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/ReloadUpgradeFox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/ReloadUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossAttackCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerBossFight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/Minifox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/AudioPlayerSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
       </list>
     </option>
   </component>
@@ -103,6 +172,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Manio Build\Game.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="G:\Unity\GGJ2021\Game\Builds\Manio Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -112,10 +189,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="44428">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="39048">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="44428" />
+      <option name="pid" value="39048" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -160,7 +237,35 @@
       <option name="project" value="LOCAL" />
       <updated>1612014850287</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed enemy">
+      <created>1612015070457</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612015070457</updated>
+    </task>
+    <task id="LOCAL-00006" summary="assets imported">
+      <created>1612015409272</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612015409272</updated>
+    </task>
+    <task id="LOCAL-00007" summary="lord magma boss implemented&#10;boss fight trigger&#10;boss damage">
+      <created>1612037932061</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612037932061</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Skyboxes&#10;Spikey&#10;Boss in World">
+      <created>1612050572868</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612050572868</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,100 +291,160 @@
     <MESSAGE value="chasing Enemy&#10;animations" />
     <MESSAGE value="bow and Arrow&#10;die animation" />
     <MESSAGE value="enemy and boss" />
-    <option name="LAST_COMMIT_MESSAGE" value="enemy and boss" />
+    <MESSAGE value="fixed enemy" />
+    <MESSAGE value="assets imported" />
+    <MESSAGE value="lord magma boss implemented&#10;boss fight trigger&#10;boss damage" />
+    <MESSAGE value="Skyboxes&#10;Spikey&#10;Boss in World" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skyboxes&#10;Spikey&#10;Boss in World" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2505" height="484" key="GridCell.Tab.0.bottom" timestamp="1612004787613">
+    <state width="513" height="797" key="DebuggerActiveHint" timestamp="1612042336061">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.0.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787613" />
-    <state width="2505" height="484" key="GridCell.Tab.0.center" timestamp="1612004787613">
+    <state width="513" height="797" key="DebuggerActiveHint/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612042336061" />
+    <state width="2505" height="484" key="GridCell.Tab.0.bottom" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.0.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787613" />
-    <state width="2505" height="484" key="GridCell.Tab.0.left" timestamp="1612004787613">
+    <state width="2505" height="484" key="GridCell.Tab.0.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.0.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
+    <state width="2505" height="484" key="GridCell.Tab.0.center" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.0.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787613" />
-    <state width="2505" height="484" key="GridCell.Tab.0.right" timestamp="1612004787613">
+    <state width="2505" height="484" key="GridCell.Tab.0.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.0.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
+    <state width="2505" height="484" key="GridCell.Tab.0.left" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.0.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787613" />
-    <state width="2505" height="484" key="GridCell.Tab.1.bottom" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.0.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.0.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
+    <state width="2505" height="484" key="GridCell.Tab.0.right" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.1.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.1.center" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.0.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.0.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
+    <state width="2505" height="484" key="GridCell.Tab.1.bottom" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.1.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.1.left" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.1.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.1.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state width="2505" height="484" key="GridCell.Tab.1.center" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.1.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.1.right" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.1.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.1.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
+    <state width="2505" height="484" key="GridCell.Tab.1.left" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.1.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.2.bottom" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.1.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.1.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
+    <state width="2505" height="484" key="GridCell.Tab.1.right" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.2.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.2.center" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.1.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.1.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
+    <state width="2505" height="484" key="GridCell.Tab.2.bottom" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.2.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.2.left" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.2.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.2.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state width="2505" height="484" key="GridCell.Tab.2.center" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.2.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.2.right" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.2.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.2.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state width="2505" height="484" key="GridCell.Tab.2.left" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.2.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.3.bottom" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.2.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.2.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state width="2505" height="484" key="GridCell.Tab.2.right" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.3.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.3.center" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.2.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.2.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state width="2505" height="484" key="GridCell.Tab.3.bottom" timestamp="1612058639624">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.3.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.3.left" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.3.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639624" />
+    <state width="2505" height="484" key="GridCell.Tab.3.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state width="2505" height="484" key="GridCell.Tab.3.center" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.3.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state width="2505" height="484" key="GridCell.Tab.3.right" timestamp="1612004787444">
+    <state width="2505" height="484" key="GridCell.Tab.3.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.3.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state width="2505" height="484" key="GridCell.Tab.3.left" timestamp="1612058639623">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="484" key="GridCell.Tab.3.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612004787444" />
-    <state x="-1534" y="172" key="RiderGenerateDialog" timestamp="1612011908260">
+    <state width="2505" height="484" key="GridCell.Tab.3.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
+    <state width="2505" height="484" key="GridCell.Tab.3.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state width="2505" height="484" key="GridCell.Tab.3.right" timestamp="1612058639624">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1534" y="172" key="RiderGenerateDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612011908260" />
+    <state width="2505" height="484" key="GridCell.Tab.3.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639624" />
+    <state width="2505" height="484" key="GridCell.Tab.3.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
+    <state x="-1741" y="389" key="MultipleFileMergeDialog" timestamp="1612014876430">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1741" y="389" key="MultipleFileMergeDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612014876430" />
+    <state x="-1534" y="172" key="RiderGenerateDialog" timestamp="1612057258390">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1534" y="172" key="RiderGenerateDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612057258390" />
+    <state x="1026" y="172" key="RiderGenerateDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612025447108" />
     <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog" timestamp="1612013508059">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612013508059" />
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612014851345">
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612050574682">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612014851345" />
-    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612014863198">
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612050574682" />
+    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612053151983">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612014863198" />
+    <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612053151983" />
     <state x="-1338" y="510" width="1881" height="1367" key="dock-window-1" timestamp="1611961834960">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-1338" y="510" width="1881" height="1367" key="dock-window-1/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1611961834960" />
-    <state x="-1708" y="327" key="run.anything.popup" timestamp="1612003927127">
+    <state x="-1770" y="-18" width="1881" height="1367" maximized="true" key="dock-window-2" timestamp="1612022859026">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1708" y="327" key="run.anything.popup/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612003927127" />
-    <state x="-1701" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1611997767741">
+    <state x="-1770" y="-18" width="1881" height="1367" maximized="true" key="dock-window-2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612022859026" />
+    <state x="130" y="394" width="1881" height="882" key="dock-window-3" timestamp="1612046101785">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="130" y="394" width="1881" height="882" key="dock-window-3/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612046101785" />
+    <state x="2454" y="-8" width="1881" height="1367" maximized="true" key="dock-window-4" timestamp="1612058631763">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2454" y="-8" width="1881" height="1367" maximized="true" key="dock-window-4/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058631763" />
+    <state x="-1708" y="327" key="run.anything.popup" timestamp="1612056784339">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1701" y="308" width="840" height="1034" key="search.everywhere.popup/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1611997767741" />
+    <state x="-1708" y="327" key="run.anything.popup/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612056784339" />
+    <state x="-1701" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1612044903031">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1701" y="308" width="840" height="1034" key="search.everywhere.popup/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612044903031" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs</url>
+          <line>115</line>
+          <properties documentPath="G:\Unity\GGJ2021\Game\Assets\Scripts\Enemy\Enemy.cs" initialLine="89">
+            <startOffsets>
+              <option value="3720" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3770" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

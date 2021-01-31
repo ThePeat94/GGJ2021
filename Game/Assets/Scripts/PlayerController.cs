@@ -7,7 +7,9 @@ using Cinemachine;
 using EventArgs;
 using Scriptables;
 using UI;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -100,6 +102,7 @@ public class PlayerController : MonoBehaviour
             this.m_isDead = true;
             this.StopAiming();
             this.m_animator.SetTrigger("Die");
+            MusicPlayer.Instance.PlayInstant(this.m_playerData.GameOverTheme, false);
         }
     }
 
@@ -107,7 +110,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (this.m_isDead)
+        {
+            if (this.m_inputProcessor.ReloadTriggered)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            else if (this.m_inputProcessor.QuitTriggered)
+                Application.Quit();
+            
             return;
+        }
+
 
         if(this.m_currentShootcooldown > 0f)
             this.m_currentShootcooldown -= Time.deltaTime;
@@ -121,11 +132,10 @@ public class PlayerController : MonoBehaviour
         {
             this.MoveSidewards();
             this.AimRotate();
-        }
-
-        if (this.m_inputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f)
-        {
-            this.Shoot();
+            if (this.m_inputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f)
+            {
+                this.Shoot();
+            }
         }
 
         if (this.m_inputProcessor.ReloadTriggered && this.m_reloadCoroutine == null)
@@ -144,7 +154,7 @@ public class PlayerController : MonoBehaviour
         this.m_moveDirection = this.m_camera.forward * this.m_inputProcessor.Movement.y;
         this.m_moveDirection += this.m_camera.right * this.m_inputProcessor.Movement.x;
         this.m_moveDirection.y = 0;
-        this.m_characterController.Move(this.m_moveDirection * Time.deltaTime * this.MovementSpeed);
+        this.m_characterController.SimpleMove(this.m_moveDirection  * this.MovementSpeed);
     }
 
     private void MoveSidewards()
@@ -152,7 +162,7 @@ public class PlayerController : MonoBehaviour
         this.m_moveDirection = this.transform.forward * this.m_inputProcessor.Movement.y;
         this.m_moveDirection += this.transform.right * this.m_inputProcessor.Movement.x;
         this.m_moveDirection.y = 0;
-        this.m_characterController.Move(this.m_moveDirection * Time.deltaTime * this.m_playerData.AimingMovementSpeed);
+        this.m_characterController.SimpleMove(this.m_moveDirection * this.m_playerData.AimingMovementSpeed);
     }
     
     private void Rotate()
@@ -174,7 +184,7 @@ public class PlayerController : MonoBehaviour
 
     private void AimRotate()
     {
-        this.transform.Rotate(Vector3.up, this.m_inputProcessor.MouseDelta.x);
+        this.transform.Rotate(Vector3.up, this.m_inputProcessor.MouseDelta.x * this.m_playerData.MouseSensivity);
     }
 
     private void UpdateAnimator()
@@ -188,6 +198,7 @@ public class PlayerController : MonoBehaviour
 
     private void StartAiming()
     {
+        this.transform.rotation = Quaternion.LookRotation(this.m_camera.forward);
         this.m_isAiming = true;
         this.m_aimCamera.enabled = true;
         this.m_freeLookCamera.enabled = false;
@@ -240,11 +251,12 @@ public class PlayerController : MonoBehaviour
         instantiatedArrow.Damage = this.AttackDamage;
         var rig = instantiatedArrow.GetComponent<Rigidbody>();
         rig.AddForce(shootdirection.normalized * this.m_playerData.ShootForce, ForceMode.Impulse);
-
+        CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.ArrowShootSound, 1f);
     }
 
     private IEnumerator Reload()
     {
+        CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.ReloadSound);
         yield return new WaitForSeconds(this.ReloadTime);
         this.QuiverController.ResetValue();
         this.m_reloadCoroutine = null;
@@ -252,18 +264,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var enemy = other.GetComponentInParent<Enemy>();
-        if (enemy != null)
-        {
-            this.HealthController.UseResource(enemy.Damage);
-            return;
-        }
-        
         var minifox = other.GetComponent<Minifox>();
         if (minifox != null)
         {
             minifox.Upgrade.ApplyUpgrade();
+            minifox.ShowDialogue();
             Destroy(minifox.gameObject);
+            CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.CollectFoxSound);
             return;
         }
     }
