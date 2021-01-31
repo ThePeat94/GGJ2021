@@ -17,6 +17,7 @@ public class MagmaBoss : MonoBehaviour
     [SerializeField] private BossRoarAttackCollider m_roarAttackCollider;
     [SerializeField] private ParticleSystem m_roarParticles;
     [SerializeField] private AudioSource m_audioSource;
+    [SerializeField] private PlayerHud m_playerHud;
 
     private Transform m_targetTransform;
     private NavMeshAgent m_navMeshAgent;
@@ -79,19 +80,33 @@ public class MagmaBoss : MonoBehaviour
         
         if (e.NewValue <= 0)
         {
-            this.m_isDead = true;
-            if (this.m_attackCoroutine != null)
-            {
-                StopCoroutine(this.m_attackCoroutine);
-                this.m_attackCoroutine = null;
-            }
-            this.m_animator.SetBool("IsIdle", false);
-            this.m_animator.SetBool("IsRunning", false);
-            this.m_animator.SetTrigger("Die");
-            this.m_isDead = true;
+            this.Die();
+            this.m_playerHud.ShowWinScreen();
             MusicPlayer.Instance.PlayDefault();
         }
     }
+
+    private void Die()
+    {
+        this.m_isDead = true;
+        if (this.m_attackCoroutine != null)
+        {
+            StopCoroutine(this.m_attackCoroutine);
+            this.m_attackCoroutine = null;
+        }
+
+        this.m_jumpAttackCollider.gameObject.SetActive(false);
+        this.m_roarAttackCollider.gameObject.SetActive(false);
+        this.m_punchAttackCollider.gameObject.SetActive(false);
+        this.m_swipeAttackCollider.gameObject.SetActive(false);
+        this.m_roarParticles.Stop();
+
+        this.m_animator.SetBool("IsIdle", false);
+        this.m_animator.SetBool("IsRunning", false);
+        this.m_animator.SetTrigger("Die");
+        this.m_isDead = true;
+    }
+
     private void Update()
     {
         if (this.m_isDead || !this.m_isInFight)

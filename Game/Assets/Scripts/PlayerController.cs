@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject m_arrowPrefab;
     [SerializeField] private GameObject m_spawnPoint;
     [SerializeField] private GameObject m_crossHair;
+    [SerializeField] private PlayerHud m_playerHud;
 
     private Vector3 m_moveDirection;
     private CharacterController m_characterController;
@@ -256,6 +257,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Reload()
     {
+        this.m_playerHud.ShowReloadUI(this.ReloadTime);
         CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.ReloadSound);
         yield return new WaitForSeconds(this.ReloadTime);
         this.QuiverController.ResetValue();

@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dfc8bfb13487ef24c9c65bb78104ac36, type: 2}
+  m_sharedMaterial: {fileID: 3290227668467029135, guid: dfc8bfb13487ef24c9c65bb78104ac36, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2986095105091660353, guid: f71768f2a08711b49a252285a3e10120, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 48962ef52c65e4f4ab61a197e938f863, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}

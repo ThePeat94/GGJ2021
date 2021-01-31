@@ -77,6 +77,9 @@ public class Enemy : MonoBehaviour
             
             this.StopWandering();
 
+            this.m_navMeshAgent.destination = this.transform.position;
+            this.m_navMeshAgent.isStopped = true;
+
             this.m_animator.SetBool("IsWalking", false);
             this.m_animator.ResetTrigger("Attack");
             this.m_animator.SetTrigger("Die");
