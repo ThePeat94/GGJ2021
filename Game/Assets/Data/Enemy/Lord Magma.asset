@@ -35,6 +35,7 @@ MonoBehaviour:
   m_swipeSound: {fileID: 8300000, guid: 4e50c22f09379f04d90d06713916c104, type: 3}
   m_jumpAttackSound: {fileID: 8300000, guid: 40a7a88c6ced87741a60e0ee8eff0a21, type: 3}
   m_encounterSound: {fileID: 8300000, guid: 605ad40f530e87a4bb0e79973c05c9c3, type: 3}
-  m_bossIntro: {fileID: 8300000, guid: 1ac9bca9be00a5e498800120ea078444, type: 3}
+  m_bossIntro: {fileID: 8300000, guid: 24fdd2a199549044195f675bcec5fe2b, type: 3}
   m_bossTheme: {fileID: 8300000, guid: e8319e69f9365e542835b1968a93ec05, type: 3}
   m_hitByArrowSound: {fileID: 8300000, guid: 2027e2c152ecdd548978c26b51ba29f3, type: 3}
+  m_deathSound: {fileID: 8300000, guid: 72d5953af3513d74fbfcca95d632aa4e, type: 3}

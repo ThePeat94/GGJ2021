@@ -105,6 +105,7 @@ public class MagmaBoss : MonoBehaviour
         this.m_animator.SetBool("IsRunning", false);
         this.m_animator.SetTrigger("Die");
         this.m_isDead = true;
+        this.m_audioSource.PlayOneShot(this.m_bossData.DeathSound);
     }
 
     private void Update()
