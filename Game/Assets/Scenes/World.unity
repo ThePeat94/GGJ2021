@@ -4218,10 +4218,6 @@ PrefabInstance:
       propertyPath: m_player
       value: 
       objectReference: {fileID: 1485550356}
-    - target: {fileID: 2224061880350367589, guid: 7decd828f83fefc468bfb993358b3789, type: 3}
-      propertyPath: m_youDiedPanel
-      value: 
-      objectReference: {fileID: 2000561524}
     - target: {fileID: 2224061881306382548, guid: 7decd828f83fefc468bfb993358b3789, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12219,15 +12215,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7470424042677402135, guid: 655f84128fc24b744a3d099f9a130136, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12650454
+      value: 0.12650457
       objectReference: {fileID: 0}
     - target: {fileID: 7470424042677402135, guid: 655f84128fc24b744a3d099f9a130136, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.3229737
+      value: -0.32297373
       objectReference: {fileID: 0}
     - target: {fileID: 7470424042677402135, guid: 655f84128fc24b744a3d099f9a130136, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.04360936
+      value: 0.04360937
       objectReference: {fileID: 0}
     - target: {fileID: 7470424042920698104, guid: 655f84128fc24b744a3d099f9a130136, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12235,7 +12231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7470424042920698104, guid: 655f84128fc24b744a3d099f9a130136, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.10944188
+      value: 0.10944187
       objectReference: {fileID: 0}
     - target: {fileID: 7470424042920698104, guid: 655f84128fc24b744a3d099f9a130136, type: 3}
       propertyPath: m_LocalRotation.y
@@ -12507,7 +12503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1530295567459782850, guid: d8201412324073547b3745a198399d87, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1530295567459782853, guid: d8201412324073547b3745a198399d87, type: 3}
       propertyPath: m_Enabled
@@ -13224,11 +13220,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 872b8966f98a52946873820a810fb5d7, type: 3}
---- !u!1 &2000561524 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8484738534428284377, guid: 7decd828f83fefc468bfb993358b3789, type: 3}
-  m_PrefabInstance: {fileID: 551660937}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2004734133
 PrefabInstance:
   m_ObjectHideFlags: 0

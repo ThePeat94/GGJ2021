@@ -20,54 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Boss/Mutant Roaring.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Boss/Mutant Roaring.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Mini Fox/Mini Fox.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Mini Fox/Mini Fox.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Dummy Enemy Data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Dummy Enemy Data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Dummy Enemy Health.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Dummy Enemy Health.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Lord Magma.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Lord Magma.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Player Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/standing aim walk left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/standing aim walk left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DummyEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DummyEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/AttackUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/AttackUpgradeFox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/HealthUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/HealthUpgradeFox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/MovementSpeedUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/MovementSpeedUpgradeFox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/QuiverUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/QuiverUpgradeFox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/ReloadUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/ReloadUpgradeFox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_Dumb.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_Dumb.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThirdPersonCam.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ThirdPersonCam.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minifox/Minifox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Minifox/Minifox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerBossFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerBossFight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +42,9 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/ReloadUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/AimCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
@@ -252,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612037932061</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Skyboxes&#10;Spikey&#10;Boss in World">
+      <created>1612050572868</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612050572868</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +244,8 @@
     <MESSAGE value="fixed enemy" />
     <MESSAGE value="assets imported" />
     <MESSAGE value="lord magma boss implemented&#10;boss fight trigger&#10;boss damage" />
-    <option name="LAST_COMMIT_MESSAGE" value="lord magma boss implemented&#10;boss fight trigger&#10;boss damage" />
+    <MESSAGE value="Skyboxes&#10;Spikey&#10;Boss in World" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skyboxes&#10;Spikey&#10;Boss in World" />
   </component>
   <component name="WindowStateProjectService">
     <state width="513" height="797" key="DebuggerActiveHint" timestamp="1612042336061">
@@ -381,10 +345,10 @@
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612013508059" />
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612037933586">
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612050574682">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612037933586" />
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612050574682" />
     <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612037961550">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
@@ -401,10 +365,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="130" y="394" width="1881" height="882" key="dock-window-3/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612046101785" />
-    <state x="2492" y="-10" width="1881" height="1367" maximized="true" key="dock-window-4" timestamp="1612046798588">
+    <state x="2492" y="-10" width="1881" height="1367" key="dock-window-4" timestamp="1612052476203">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="2492" y="-10" width="1881" height="1367" maximized="true" key="dock-window-4/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612046798588" />
+    <state x="2492" y="-10" width="1881" height="1367" key="dock-window-4/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612052476203" />
     <state x="-1708" y="327" key="run.anything.popup" timestamp="1612003927127">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
