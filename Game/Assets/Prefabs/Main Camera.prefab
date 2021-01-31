@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6031044863281445125}
   - component: {fileID: 6031044863281445129}
   - component: {fileID: 6031044863281445134}
+  - component: {fileID: 438161147}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -35,7 +36,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 60, y: -179.999, z: 0.001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &6031044863281445130
 Camera:
   m_ObjectHideFlags: 0
@@ -166,8 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_playerInput: {fileID: 0}
-  m_maxUpwardsAngle: 10
-  m_maxDownwardsAngle: -20
+  m_maxUpwardsAngle: 20
+  m_maxDownwardsAngle: -30
+  m_sensivity: 0.33
 --- !u!82 &6031044863281445134
 AudioSource:
   m_ObjectHideFlags: 0
@@ -178,7 +180,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7b5b40ee7478a5b48b087a9ffb8ade8c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -264,3 +266,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &438161147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031044863281445127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa8d947c9119c6468d598964e1bd602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioSource: {fileID: 6031044863281445134}
+  m_defaultTheme: {fileID: 8300000, guid: fe5391f1486e6d341b3e8266a89fb802, type: 3}
