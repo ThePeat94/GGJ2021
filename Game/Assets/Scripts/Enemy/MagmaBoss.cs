@@ -17,6 +17,7 @@ public class MagmaBoss : MonoBehaviour
     [SerializeField] private BossRoarAttackCollider m_roarAttackCollider;
     [SerializeField] private ParticleSystem m_roarParticles;
     [SerializeField] private AudioSource m_audioSource;
+    [SerializeField] private PlayerHud m_playerHud;
 
     private Transform m_targetTransform;
     private NavMeshAgent m_navMeshAgent;
@@ -80,6 +81,7 @@ public class MagmaBoss : MonoBehaviour
         if (e.NewValue <= 0)
         {
             this.Die();
+            this.m_playerHud.ShowWinScreen();
             MusicPlayer.Instance.PlayDefault();
         }
     }

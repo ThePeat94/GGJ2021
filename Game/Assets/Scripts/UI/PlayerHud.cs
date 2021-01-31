@@ -16,8 +16,11 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private GameObject m_dialogueBox;
     [SerializeField] private TextMeshProUGUI m_dialogueText;
     [SerializeField] private GameObject m_youDiedPanel;
+    [SerializeField] private GameObject m_youWonPanel;
+    [SerializeField] private Image m_reloadImage;
 
     private Coroutine m_hideCoroutine;
+    private Coroutine m_reloadCoroutine;
     
     public void ShowBossHud(MagmaBoss boss)
     {
@@ -38,6 +41,34 @@ public class PlayerHud : MonoBehaviour
         this.m_dialogueBox.SetActive(true);
 
         this.m_hideCoroutine = this.StartCoroutine(this.HideDialogue());
+    }
+
+    public void ShowReloadUI(float duration)
+    {
+        this.StartCoroutine(ShowReloadAnimation(duration));
+    }
+
+    public void ShowWinScreen()
+    {
+        this.m_youWonPanel.SetActive(true);
+    }
+
+    private IEnumerator HideWinScreen()
+    {
+        yield return new WaitForSeconds(5f);
+        this.m_youWonPanel.SetActive(false);
+    }
+
+    private IEnumerator ShowReloadAnimation(float duration)
+    {
+        var currentDuration = 0f;
+        while(currentDuration < duration)
+        {
+            m_reloadImage.fillAmount = 1f - currentDuration / duration;
+            yield return new WaitForEndOfFrame();
+            currentDuration += Time.deltaTime;
+        }
+        m_reloadImage.fillAmount = 0f;
     }
 
     private IEnumerator HideDialogue()
