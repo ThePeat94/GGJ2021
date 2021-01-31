@@ -8,6 +8,7 @@ public class MusicPlayer : MonoBehaviour
 {
     [SerializeField] private AudioSource m_audioSource;
     [SerializeField] private AudioClip m_defaultTheme;
+    [SerializeField] private AudioClip m_victoryTheme;
     
     private static MusicPlayer s_instance;
 
@@ -77,6 +78,15 @@ public class MusicPlayer : MonoBehaviour
     {
         this.m_clipQueue.Clear();
         this.m_audioSource.clip = this.m_defaultTheme;
+        this.m_shallLoop = true;
+        this.m_audioSource.Play();
+    }
+
+    public void PlayGameWon()
+    {
+        this.m_clipQueue.Clear();
+        this.m_audioSource.clip = this.m_victoryTheme;
+        this.m_clipQueue.Enqueue(this.m_defaultTheme);
         this.m_shallLoop = true;
         this.m_audioSource.Play();
     }

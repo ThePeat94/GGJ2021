@@ -31,7 +31,7 @@ namespace Scriptables
         [SerializeField] private AudioClip m_bossIntro;
         [SerializeField] private AudioClip m_bossTheme;
         [SerializeField] private AudioClip m_hitByArrowSound;
-        
+
         public string Name => this.m_name;
         public float MovementSpeed => this.m_movementSpeed;
         public int AttackDamage => this.m_attackDamage;

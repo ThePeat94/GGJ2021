@@ -82,7 +82,7 @@ public class MagmaBoss : MonoBehaviour
         {
             this.Die();
             this.m_playerHud.ShowWinScreen();
-            MusicPlayer.Instance.PlayDefault();
+            MusicPlayer.Instance.PlayGameWon();
         }
     }
 

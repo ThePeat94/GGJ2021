@@ -183,6 +183,8 @@ public class Enemy : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(this.transform.position, this.m_enemyData.DetectionRadius);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(this.transform.position, this.m_enemyData.WanderRadius);
     }
     private void OnCollisionEnter(Collision other)
     {

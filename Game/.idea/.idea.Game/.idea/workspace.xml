@@ -21,21 +21,46 @@
   <component name="ChangeListManager">
     <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SFX/Death Sound.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Enemy/Lord Magma.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Enemy/Lord Magma.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player/Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Player/Player Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNature-Rppe6 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNature-Rppe6 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss/Material Base Color.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Boss/Material Base Color.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Boss/Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerHud.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerHud.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikey.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikey.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld_example.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld_example.mp3.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World/NavMesh.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Flamethrower.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Fox Collect.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Overworld Battle Theme.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Overworld Theme v.2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Title Theme.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/Victory Theme.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Music/boss theme final.wav" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="programming" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="programming" />
+        <entry key="$PROJECT_DIR$/.." value="ui" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -53,7 +78,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
@@ -109,16 +134,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStart.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/AudioPlayerSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -364,9 +389,10 @@
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-2468" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612013508059" />
-    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612050574682">
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2" timestamp="1612095429758">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612095429758" />
     <state x="-1788" y="343" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612050574682" />
     <state x="-1511" y="591" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612085406938">
       <screen x="-2560" y="0" width="2560" height="1400" />

@@ -199,7 +199,9 @@ public class PlayerController : MonoBehaviour
 
     private void StartAiming()
     {
-        this.transform.rotation = Quaternion.LookRotation(this.m_camera.forward);
+        var aimDirection = this.m_camera.forward;
+        aimDirection.y = 0f;
+        this.transform.rotation = Quaternion.LookRotation(aimDirection);
         this.m_isAiming = true;
         this.m_aimCamera.enabled = true;
         this.m_freeLookCamera.enabled = false;
