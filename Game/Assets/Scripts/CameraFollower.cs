@@ -1,14 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CameraFollower : MonoBehaviour
+namespace Nidavellir.FoxIt
 {
-    [SerializeField] private Transform m_target;
-
-    // Update is called once per frame
-    void LateUpdate()
+    public class CameraFollower : MonoBehaviour
     {
-        this.transform.position = new Vector3(this.m_target.transform.position.x + 2, this.transform.position.y, this.m_target.position.z);
+        [SerializeField] private Transform m_target;
+
+        // Update is called once per frame
+        private void LateUpdate()
+        {
+            this.transform.position = new Vector3(this.m_target.transform.position.x + 2, this.transform.position.y, this.m_target.position.z);
+        }
     }
 }

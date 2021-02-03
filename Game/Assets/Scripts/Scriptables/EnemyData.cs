@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Scriptables
+namespace Nidavellir.FoxIt.Scriptables
 {
     [CreateAssetMenu(menuName = "Data/Enemy Data", order = 0)]
     public class EnemyData : ScriptableObject
@@ -14,7 +14,7 @@ namespace Scriptables
         [SerializeField] private AnimationClip m_attackClip;
         [SerializeField] private AudioClip m_hitByArrowSound;
         [SerializeField] private AudioClip m_attackSound;
-        
+
         public float MovementSpeed => this.m_movementSpeed;
         public float WanderRadius => this.m_wanderRadius;
         public AnimationClip AttackClip => this.m_attackClip;
@@ -26,6 +26,5 @@ namespace Scriptables
         public ResourceData HealthData => this.m_healthData;
         public AudioClip HitByArrowSound => this.m_hitByArrowSound;
         public AudioClip AttackSound => this.m_attackSound;
-
     }
 }

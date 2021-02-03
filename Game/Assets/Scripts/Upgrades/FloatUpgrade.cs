@@ -1,10 +1,13 @@
-﻿public abstract class FloatUpgrade : Upgrade
+﻿namespace Nidavellir.FoxIt.Upgrades
 {
-    protected float m_upgradeValue;
-
-
-    public FloatUpgrade(PlayerController playerController, float upgradeValue) : base(playerController)
+    public abstract class FloatUpgrade : Upgrade
     {
-        this.m_upgradeValue = upgradeValue;
+        protected float m_upgradeValue;
+
+
+        public FloatUpgrade(PlayerController playerController, float upgradeValue) : base(playerController)
+        {
+            this.m_upgradeValue = upgradeValue;
+        }
     }
 }

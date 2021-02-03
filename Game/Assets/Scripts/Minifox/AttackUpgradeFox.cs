@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using Nidavellir.FoxIt.Upgrades;
 using UnityEngine;
 
-public class AttackUpgradeFox : Minifox
+namespace Nidavellir.FoxIt.Minifox
 {
-    [SerializeField] private int m_upgradeValue;
-
-    private void Awake()
+    public class AttackUpgradeFox : Minifox
     {
-        this.Upgrade = new AttackUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        [SerializeField] private int m_upgradeValue;
+
+        private void Awake()
+        {
+            this.Upgrade = new AttackUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        }
     }
 }

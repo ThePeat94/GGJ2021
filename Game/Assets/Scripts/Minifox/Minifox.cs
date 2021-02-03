@@ -1,32 +1,31 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Nidavellir.FoxIt.UI;
+using Nidavellir.FoxIt.Upgrades;
 using UnityEngine;
 
-public abstract class Minifox : MonoBehaviour
+namespace Nidavellir.FoxIt.Minifox
 {
-    [SerializeField] protected PlayerHud m_playerHud;
-    [SerializeField] protected string m_upgradeText;
-
-    protected string m_baseText = "Yahaha! You found me!";
-    protected string m_remainingFoxesText = "There are {0} foxes left. Find us all and you will defeat the evil more easily.";
-    protected string m_foundAll = "You have found us all! You are now perfectly prepared for the last fight.";
-
-    protected string GetBaseDialogueText()
+    public abstract class Minifox : MonoBehaviour
     {
-        var activeCount = FindObjectsOfType<Minifox>().Length - 1;
-        if (activeCount > 0)
+        [SerializeField] protected PlayerHud m_playerHud;
+        [SerializeField] protected string m_upgradeText;
+
+        protected string m_baseText = "Yahaha! You found me!";
+        protected string m_foundAll = "You have found us all! You are now perfectly prepared for the last fight.";
+        protected string m_remainingFoxesText = "There are {0} foxes left. Find us all and you will defeat the evil more easily.";
+
+        public Upgrade Upgrade { get; protected set; }
+
+        public void ShowDialogue()
         {
-            return string.Format(this.m_baseText + " " + this.m_remainingFoxesText, activeCount);
+            this.m_playerHud.ShowDialogue(this.GetBaseDialogueText() + " " + this.m_upgradeText);
         }
 
-        return this.m_baseText + " " + this.m_foundAll;
-    }
+        protected string GetBaseDialogueText()
+        {
+            var activeCount = FindObjectsOfType<Minifox>().Length - 1;
+            if (activeCount > 0) return string.Format(this.m_baseText + " " + this.m_remainingFoxesText, activeCount);
 
-    public Upgrade Upgrade { get; protected set; }
-
-    public void ShowDialogue()
-    {
-        this.m_playerHud.ShowDialogue(this.GetBaseDialogueText() + " " + this.m_upgradeText);
+            return this.m_baseText + " " + this.m_foundAll;
+        }
     }
 }

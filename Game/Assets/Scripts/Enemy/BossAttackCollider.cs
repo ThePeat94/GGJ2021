@@ -1,19 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BossAttackCollider : MonoBehaviour
+namespace Nidavellir.FoxIt.Enemy
 {
-    public int Damage { get; set; }
-
-    private void OnTriggerEnter(Collider other)
+    public class BossAttackCollider : MonoBehaviour
     {
-        var hitPlayer = other.GetComponent<PlayerController>();
-        if (hitPlayer != null)
+        public int Damage { get; set; }
+
+        private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("BOSS HIT PLAYER");
-            hitPlayer.HealthController.UseResource(this.Damage);
+            var hitPlayer = other.GetComponent<PlayerController>();
+            if (hitPlayer != null)
+            {
+                Debug.Log("BOSS HIT PLAYER");
+                hitPlayer.HealthController.UseResource(this.Damage);
+            }
         }
     }
 }

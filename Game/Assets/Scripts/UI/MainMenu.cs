@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace UI
+namespace Nidavellir.FoxIt.UI
 {
     public class MainMenu : MonoBehaviour
     {
         [SerializeField] private GameObject m_StartMenu;
         [SerializeField] private GameObject m_credits;
 
-        public void BtnPlay_Click()
+        public void BtnBackToMenu_Click()
         {
-            SceneManager.LoadScene(1);
+            this.m_credits.SetActive(false);
+            this.m_StartMenu.SetActive(true);
         }
 
         public void BtnCredits_Click()
@@ -19,10 +20,9 @@ namespace UI
             this.m_StartMenu.SetActive(false);
         }
 
-        public void BtnBackToMenu_Click()
+        public void BtnPlay_Click()
         {
-            this.m_credits.SetActive(false);
-            this.m_StartMenu.SetActive(true);
+            SceneManager.LoadScene(1);
         }
 
         public void BtnQuit_Click()

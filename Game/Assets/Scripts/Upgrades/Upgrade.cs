@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public abstract class Upgrade
+namespace Nidavellir.FoxIt.Upgrades
 {
-    protected PlayerController m_playerController;
-
-    public Upgrade(PlayerController playerController)
+    public abstract class Upgrade
     {
-        this.m_playerController = playerController;
+        protected PlayerController m_playerController;
+
+        public Upgrade(PlayerController playerController)
+        {
+            this.m_playerController = playerController;
+        }
+
+        public abstract void ApplyUpgrade();
     }
-    
-    public abstract void ApplyUpgrade();
 }

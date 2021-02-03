@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using Nidavellir.FoxIt.Upgrades;
 using UnityEngine;
 
-public class QuiverUpgradeFox : Minifox
+namespace Nidavellir.FoxIt.Minifox
 {
-    [SerializeField] private int m_upgradeValue;
-
-    private void Awake()
+    public class QuiverUpgradeFox : Minifox
     {
-        this.Upgrade = new QuiverUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        [SerializeField] private int m_upgradeValue;
+
+        private void Awake()
+        {
+            this.Upgrade = new QuiverUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        }
     }
 }

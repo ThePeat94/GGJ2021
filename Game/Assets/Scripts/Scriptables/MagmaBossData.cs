@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Scriptables
+namespace Nidavellir.FoxIt.Scriptables
 {
     [CreateAssetMenu(fileName = "Magma Boss Data", menuName = "Data/Bosses/Magma", order = 0)]
     public class MagmaBossData : ScriptableObject
@@ -51,7 +51,7 @@ namespace Scriptables
         public AnimationClip RoarAttackAnimation => this.m_roarAttackAnimation;
         public AnimationClip SwipeAttackAnimation => this.m_swipeAttackAnimation;
         public AnimationClip PunchAttackAnimation => this.m_punchAttackAnimation;
-        
+
         public AudioClip RoarSound => this.m_roarSound;
         public AudioClip PunchSound => this.m_punchSound;
         public AudioClip SwipeSound => this.m_swipeSound;

@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using Nidavellir.FoxIt.Upgrades;
 using UnityEngine;
 
-public class MovementSpeedUpgradeFox : Minifox
+namespace Nidavellir.FoxIt.Minifox
 {
-    [SerializeField] private float m_upgradeValue;
-
-    private void Awake()
+    public class MovementSpeedUpgradeFox : Minifox
     {
-        this.Upgrade = new MovementSpeedUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        [SerializeField] private float m_upgradeValue;
+
+        private void Awake()
+        {
+            this.Upgrade = new MovementSpeedUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        }
     }
 }

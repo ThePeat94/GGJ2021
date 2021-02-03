@@ -1,50 +1,43 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BossRoarAttackCollider : MonoBehaviour
+namespace Nidavellir.FoxIt.Enemy
 {
-
-    [SerializeField] private float m_ticksPerSecond = 1f;
-
-    private float m_currentTickCoolDown;
-
-    private PlayerController m_hitPlayer;
-    
-    
-    public int Damage { get; set; }
-
-    private void Update()
+    public class BossRoarAttackCollider : MonoBehaviour
     {
-        if (this.m_currentTickCoolDown > 0f)
-            this.m_currentTickCoolDown -= Time.deltaTime;
-    }
+        [SerializeField] private float m_ticksPerSecond = 1f;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        var hitPlayer = other.GetComponent<PlayerController>();
-        if (hitPlayer != null)
+        private float m_currentTickCoolDown;
+
+        private PlayerController m_hitPlayer;
+
+
+        public int Damage { get; set; }
+
+        private void Update()
         {
-            this.m_hitPlayer = hitPlayer;
+            if (this.m_currentTickCoolDown > 0f)
+                this.m_currentTickCoolDown -= Time.deltaTime;
         }
-    }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (this.m_currentTickCoolDown <= 0f && this.m_hitPlayer != null)
+        private void OnTriggerEnter(Collider other)
         {
-            this.m_hitPlayer.HealthController.UseResource(Damage);
-            this.m_currentTickCoolDown = 1f;
+            var hitPlayer = other.GetComponent<PlayerController>();
+            if (hitPlayer != null) this.m_hitPlayer = hitPlayer;
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        var hitPlayer = other.GetComponent<PlayerController>();
-        if (hitPlayer != null)
+        private void OnTriggerExit(Collider other)
         {
-            this.m_hitPlayer = null;
+            var hitPlayer = other.GetComponent<PlayerController>();
+            if (hitPlayer != null) this.m_hitPlayer = null;
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (this.m_currentTickCoolDown <= 0f && this.m_hitPlayer != null)
+            {
+                this.m_hitPlayer.HealthController.UseResource(this.Damage);
+                this.m_currentTickCoolDown = 1f;
+            }
         }
     }
 }
