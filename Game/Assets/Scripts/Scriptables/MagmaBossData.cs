@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Scriptables
+namespace Nidavellir.FoxIt.Scriptables
 {
     [CreateAssetMenu(fileName = "Magma Boss Data", menuName = "Data/Bosses/Magma", order = 0)]
     public class MagmaBossData : ScriptableObject
@@ -31,7 +31,8 @@ namespace Scriptables
         [SerializeField] private AudioClip m_bossIntro;
         [SerializeField] private AudioClip m_bossTheme;
         [SerializeField] private AudioClip m_hitByArrowSound;
-        
+        [SerializeField] private AudioClip m_deathSound;
+
         public string Name => this.m_name;
         public float MovementSpeed => this.m_movementSpeed;
         public int AttackDamage => this.m_attackDamage;
@@ -50,7 +51,7 @@ namespace Scriptables
         public AnimationClip RoarAttackAnimation => this.m_roarAttackAnimation;
         public AnimationClip SwipeAttackAnimation => this.m_swipeAttackAnimation;
         public AnimationClip PunchAttackAnimation => this.m_punchAttackAnimation;
-        
+
         public AudioClip RoarSound => this.m_roarSound;
         public AudioClip PunchSound => this.m_punchSound;
         public AudioClip SwipeSound => this.m_swipeSound;
@@ -59,5 +60,6 @@ namespace Scriptables
         public AudioClip BossIntro => this.m_bossIntro;
         public AudioClip BossTheme => this.m_bossTheme;
         public AudioClip HitByArrowSound => this.m_hitByArrowSound;
+        public AudioClip DeathSound => this.m_deathSound;
     }
 }

@@ -1004,8 +1004,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_playerHud: {fileID: 0}
-  m_upgradeText: I increased your attack, so you inflict more damage-
-  m_upgradeValue: 25
+  m_upgradeText: I increased your attack, so you inflict more damage.
+  m_upgradeValue: 35
 --- !u!1 &6111101672385132983
 GameObject:
   m_ObjectHideFlags: 0

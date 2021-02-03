@@ -1,33 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Scriptables;
+using Nidavellir.FoxIt.Scriptables;
 using UnityEngine;
 
-public class CameraSoundPlayer : MonoBehaviour
+namespace Nidavellir.FoxIt
 {
-    [SerializeField] private AudioPlayerSettings m_settings;
-
-    private static CameraSoundPlayer s_instance;
-
-    public static CameraSoundPlayer Instance
+    public class CameraSoundPlayer : MonoBehaviour
     {
-        get
+        private static CameraSoundPlayer s_instance;
+        [SerializeField] private AudioPlayerSettings m_settings;
+        [SerializeField] private AudioSource m_audioSource;
+
+        public static CameraSoundPlayer Instance
         {
-            if (s_instance == null)
-                s_instance = FindObjectOfType<CameraSoundPlayer>();
+            get
+            {
+                if (s_instance == null)
+                    s_instance = FindObjectOfType<CameraSoundPlayer>();
 
-            return s_instance;
+                return s_instance;
+            }
         }
-    }
 
-    public void PlayClipAtCam(AudioClip clip)
-    {
-        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, this.m_settings.Volume);
-    }
-    
-    public void PlayClipAtCam(AudioClip clip, float volume)
-    {
-        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, volume);
+        public void PlayClipAtCam(AudioClip clip)
+        {
+            this.m_audioSource.clip = clip;
+            this.m_audioSource.volume = this.m_settings.Volume;
+            this.m_audioSource.Play();
+        }
+
+        public void PlayClipAtCam(AudioClip clip, float volume)
+        {
+            this.m_audioSource.clip = clip;
+            this.m_audioSource.volume = volume;
+            this.m_audioSource.Play();
+        }
     }
 }

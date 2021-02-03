@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783be2340ab04209ba1e94957dc687a7, type: 3}
   m_Name: Camera Sound Player
   m_EditorClassIdentifier: 
-  m_volume: 0.5
+  m_volume: 0.75

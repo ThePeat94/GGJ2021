@@ -1,14 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Nidavellir.FoxIt.Upgrades;
 using UnityEngine;
 
-public class HealthUpgradeFox : Minifox
+namespace Nidavellir.FoxIt.Minifox
 {
-    [SerializeField] private int m_upgradeValue;
-
-    private void Awake()
+    public class HealthUpgradeFox : Minifox
     {
-        this.Upgrade = new HealthUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        [SerializeField] private int m_upgradeValue;
+
+        private void Awake()
+        {
+            this.Upgrade = new HealthUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        }
     }
 }

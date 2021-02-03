@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Scriptables
+namespace Nidavellir.FoxIt.Scriptables
 {
     [CreateAssetMenu(fileName = "Resource Data", menuName = "Data/Resource Data", order = 0)]
     public class ResourceData : ScriptableObject

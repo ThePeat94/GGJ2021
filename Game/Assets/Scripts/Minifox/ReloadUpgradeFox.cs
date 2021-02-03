@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using Nidavellir.FoxIt.Upgrades;
 using UnityEngine;
 
-public class ReloadUpgradeFox : Minifox
+namespace Nidavellir.FoxIt.Minifox
 {
-    [SerializeField] private float m_upgradeValue;
-
-    private void Awake()
+    public class ReloadUpgradeFox : Minifox
     {
-        this.Upgrade = new ReloadUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        [SerializeField] private float m_upgradeValue;
+
+        private void Awake()
+        {
+            this.Upgrade = new ReloadUpgrade(PlayerController.Instance, this.m_upgradeValue);
+        }
     }
 }

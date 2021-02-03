@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Scriptables
+namespace Nidavellir.FoxIt.Scriptables
 {
     [CreateAssetMenu(fileName = "Player Data", menuName = "Data/Player Data", order = 0)]
     public class PlayerData : ScriptableObject
@@ -31,7 +31,7 @@ namespace Scriptables
         public int AttackDamage => this.m_attackDamage;
         public float ShootCooldown => this.m_shootCooldown;
         public float ShootForce => this.m_shootForce;
-        
+
         public AudioClip ArrowShootSound => this.m_arrowShootSound;
         public AudioClip ReloadSound => this.m_reloadSound;
         public AudioClip GameOverTheme => this.m_gameOverTheme;

@@ -1,10 +1,13 @@
-﻿public abstract class IntUpgrade : Upgrade
+﻿namespace Nidavellir.FoxIt.Upgrades
 {
-    protected int m_upgradeValue;
-
-
-    public IntUpgrade(PlayerController playerController, int upgradeValue) : base(playerController)
+    public abstract class IntUpgrade : Upgrade
     {
-        this.m_upgradeValue = upgradeValue;
+        protected int m_upgradeValue;
+
+
+        public IntUpgrade(PlayerController playerController, int upgradeValue) : base(playerController)
+        {
+            this.m_upgradeValue = upgradeValue;
+        }
     }
 }

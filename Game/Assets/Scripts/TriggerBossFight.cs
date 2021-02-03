@@ -1,26 +1,22 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Nidavellir.FoxIt.Enemy;
+using Nidavellir.FoxIt.UI;
 using UnityEngine;
 
-public class TriggerBossFight : MonoBehaviour
+namespace Nidavellir.FoxIt
 {
-    [SerializeField] private MagmaBoss m_magmaBoss;
-    [SerializeField] private PlayerHud m_playerHud;
-
-    private void Start()
+    public class TriggerBossFight : MonoBehaviour
     {
-        this.m_magmaBoss.gameObject.SetActive(false);
-    }
+        [SerializeField] private MagmaBoss m_magmaBoss;
+        [SerializeField] private PlayerHud m_playerHud;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<PlayerController>() != null)
+        private void OnTriggerEnter(Collider other)
         {
-            this.m_magmaBoss.gameObject.SetActive(true);
-            this.m_magmaBoss.StartFight();
-            this.m_playerHud.ShowBossHud(this.m_magmaBoss);
-            Destroy(this.gameObject);
+            if (other.GetComponent<PlayerController>() != null)
+            {
+                this.m_magmaBoss.StartFight();
+                this.m_playerHud.ShowBossHud(this.m_magmaBoss);
+                Destroy(this.gameObject);
+            }
         }
     }
 }
