@@ -83,6 +83,7 @@ public class Enemy : MonoBehaviour
             this.m_animator.SetBool("IsWalking", false);
             this.m_animator.ResetTrigger("Attack");
             this.m_animator.SetTrigger("Die");
+            Destroy(this.gameObject, 5f);
         }
     }
 
@@ -111,8 +112,9 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
+            var randomWaitTime = UnityEngine.Random.Range(1.5f, 7f);
             this.m_animator.SetBool("IsWalking", true);
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(randomWaitTime);
             var rndPoint = UnityEngine.Random.insideUnitSphere * this.m_enemyData.WanderRadius + this.m_origin;
             NavMeshHit navHit;
             NavMesh.SamplePosition(rndPoint, out navHit, this.m_enemyData.WanderRadius, this.m_wanderMasksToHit);

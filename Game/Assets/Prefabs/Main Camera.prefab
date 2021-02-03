@@ -280,3 +280,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_audioSource: {fileID: 6031044863281445134}
   m_defaultTheme: {fileID: 8300000, guid: fe5391f1486e6d341b3e8266a89fb802, type: 3}
+  m_victoryTheme: {fileID: 8300000, guid: 53f6ddd6fff4bfd468d6fad6b4b3568d, type: 3}

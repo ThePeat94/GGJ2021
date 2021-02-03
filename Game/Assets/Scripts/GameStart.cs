@@ -11,5 +11,9 @@ public class GameStart : MonoBehaviour
     {
         MusicPlayer.Instance.QueueClips(this.m_startingClipQueue);
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+#if UNITY_EDITOR
+        Cursor.lockState = CursorLockMode.None;
+#endif
     }
 }

@@ -18,6 +18,7 @@ public class MagmaBoss : MonoBehaviour
     [SerializeField] private ParticleSystem m_roarParticles;
     [SerializeField] private AudioSource m_audioSource;
     [SerializeField] private PlayerHud m_playerHud;
+    [SerializeField] private BossCollider m_collider;
 
     private Transform m_targetTransform;
     private NavMeshAgent m_navMeshAgent;
@@ -45,6 +46,7 @@ public class MagmaBoss : MonoBehaviour
         this.m_audioSource.PlayOneShot(this.m_bossData.EncounterSound);
         MusicPlayer.Instance.PlayInstant(this.m_bossData.BossIntro);
         MusicPlayer.Instance.QueueClip(this.m_bossData.BossTheme);
+        this.m_collider.enabled = true;
     }
     
     private void Awake()
@@ -192,42 +194,54 @@ public class MagmaBoss : MonoBehaviour
 
     private IEnumerator JumpAttack()
     {
+        this.m_navMeshAgent.velocity = Vector3.zero;
+        this.m_navMeshAgent.isStopped = true;
         this.m_currentAttackCooldown = this.m_bossData.GeneralAttackCooldown;
         this.m_currentJumpAttackCooldown = this.m_bossData.JumpAttackCooldown;
         this.m_animator.SetTrigger("JumpAttack");
         yield return new WaitForSeconds(this.m_bossData.JumpAttackAnimation.length);
+        this.m_navMeshAgent.isStopped = false;
     }
 
     private IEnumerator RoarAttack()
     {
+        this.m_navMeshAgent.velocity = Vector3.zero;
+        this.m_navMeshAgent.isStopped = true;
         this.m_currentAttackCooldown = this.m_bossData.GeneralAttackCooldown;
         this.m_currentRoarAttackCooldown = this.m_bossData.RoarCooldown;
         this.m_animator.SetTrigger("Roar");
-
         yield return new WaitForSeconds(this.m_bossData.RoarAttackAnimation.length);
-
+        this.m_navMeshAgent.isStopped = false;
     }
 
     private IEnumerator Swipe()
     {
+        this.m_navMeshAgent.velocity = Vector3.zero;
+        this.m_navMeshAgent.isStopped = true;
         this.m_currentAttackCooldown = this.m_bossData.GeneralAttackCooldown;
         this.m_animator.SetTrigger("Swipe");
         yield return new WaitForSeconds(this.m_bossData.SwipeAttackAnimation.length);
-
+        this.m_navMeshAgent.isStopped = false;
     }
 
     private IEnumerator Punch()
     {
+        this.m_navMeshAgent.velocity = Vector3.zero;
+        this.m_navMeshAgent.isStopped = true;
         this.m_currentAttackCooldown = this.m_bossData.GeneralAttackCooldown;
         this.m_animator.SetTrigger("Punch");
         yield return new WaitForSeconds(this.m_bossData.PunchAttackAnimation.length);
+        this.m_navMeshAgent.isStopped = false;
     }
 
     private IEnumerator SwipePunchCombo()
     {
+        this.m_navMeshAgent.velocity = Vector3.zero;
+        this.m_navMeshAgent.isStopped = true;
         this.m_currentAttackCooldown = this.m_bossData.GeneralAttackCooldown;
         this.m_animator.SetTrigger("Combo");
         yield return new WaitForSeconds(this.m_bossData.PunchAttackAnimation.length + this.m_bossData.SwipeAttackAnimation.length);
+        this.m_navMeshAgent.isStopped = false;
     }
 
     public void ActivateJumpAttackCollider()

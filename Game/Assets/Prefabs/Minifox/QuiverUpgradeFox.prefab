@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_playerHud: {fileID: 0}
   m_upgradeText: I increased your quiver capacity, so you can shoot more.
-  m_upgradeValue: 10
+  m_upgradeValue: 5
 --- !u!1 &6111101672385132983
 GameObject:
   m_ObjectHideFlags: 0

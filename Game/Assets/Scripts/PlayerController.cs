@@ -260,7 +260,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Reload()
     {
         this.m_playerHud.ShowReloadUI(this.ReloadTime);
-        CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.ReloadSound);
+        CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.ReloadSound, 1f);
         yield return new WaitForSeconds(this.ReloadTime);
         this.QuiverController.ResetValue();
         this.m_reloadCoroutine = null;
@@ -275,6 +275,7 @@ public class PlayerController : MonoBehaviour
             minifox.ShowDialogue();
             Destroy(minifox.gameObject);
             CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.CollectFoxSound);
+            this.HealthController.ResetValue();
             return;
         }
     }

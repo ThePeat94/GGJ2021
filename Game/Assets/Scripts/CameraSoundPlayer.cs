@@ -7,6 +7,7 @@ using UnityEngine;
 public class CameraSoundPlayer : MonoBehaviour
 {
     [SerializeField] private AudioPlayerSettings m_settings;
+    [SerializeField] private AudioSource m_audioSource;
 
     private static CameraSoundPlayer s_instance;
 
@@ -23,11 +24,15 @@ public class CameraSoundPlayer : MonoBehaviour
 
     public void PlayClipAtCam(AudioClip clip)
     {
-        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, this.m_settings.Volume);
+        this.m_audioSource.clip = clip;
+        this.m_audioSource.volume = this.m_settings.Volume;
+        this.m_audioSource.Play();
     }
     
     public void PlayClipAtCam(AudioClip clip, float volume)
     {
-        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, volume);
+        this.m_audioSource.clip = clip;
+        this.m_audioSource.volume = volume;
+        this.m_audioSource.Play();
     }
 }

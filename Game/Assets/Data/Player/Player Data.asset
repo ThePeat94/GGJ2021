@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player Data
   m_EditorClassIdentifier: 
   m_aimingMovementSpeed: 3
-  m_movementSpeed: 10
+  m_movementSpeed: 16
   m_rotationSpeed: 50
   m_reloadingDuration: 1.5
   m_healthData: {fileID: 11400000, guid: bbba444a40904cf4da183e8ae4daaaff, type: 2}
@@ -23,6 +23,6 @@ MonoBehaviour:
   m_shootForce: 50
   m_mouseSensivity: 0.33
   m_arrowShootSound: {fileID: 8300000, guid: 43b82fda96656fd4eba524e9017d9199, type: 3}
-  m_reloadSound: {fileID: 8300000, guid: bc644ed9a90f8944e855cb1425fa2afb, type: 3}
+  m_reloadSound: {fileID: 8300000, guid: 056ad77f02074bb49ab88f6102a8c59f, type: 3}
   m_gameOverTheme: {fileID: 8300000, guid: 56711b89b3359e541bb7647b28a4e35b, type: 3}
   m_collectFoxSound: {fileID: 8300000, guid: 47e33b82727212042afdd717dd23dcba, type: 3}

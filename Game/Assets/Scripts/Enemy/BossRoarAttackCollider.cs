@@ -19,8 +19,6 @@ public class BossRoarAttackCollider : MonoBehaviour
     {
         if (this.m_currentTickCoolDown > 0f)
             this.m_currentTickCoolDown -= Time.deltaTime;
-        else
-            this.m_currentTickCoolDown = 1f / this.m_ticksPerSecond;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,6 +35,7 @@ public class BossRoarAttackCollider : MonoBehaviour
         if (this.m_currentTickCoolDown <= 0f && this.m_hitPlayer != null)
         {
             this.m_hitPlayer.HealthController.UseResource(Damage);
+            this.m_currentTickCoolDown = 1f;
         }
     }
 

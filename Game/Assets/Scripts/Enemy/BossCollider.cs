@@ -6,6 +6,17 @@ using UnityEngine;
 public class BossCollider : MonoBehaviour
 {
     [SerializeField] private MagmaBoss m_magmaboss;
+    [SerializeField] private Collider m_collider;
+
+    private void OnEnable()
+    {
+        this.m_collider.enabled = true;
+    }
+    
+    private void OnDisable()
+    {
+        this.m_collider.enabled = false;
+    }
 
     private void OnCollisionEnter(Collision other)
     {

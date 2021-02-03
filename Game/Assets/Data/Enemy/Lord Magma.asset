@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lord Magma
   m_EditorClassIdentifier: 
   m_name: Lord Magma, Reign of the first Flame
-  m_movementSpeed: 5
+  m_movementSpeed: 20
   m_attackDamage: 25
   m_attackRange: 10
   m_healthData: {fileID: 11400000, guid: 68a9541ca9269534db8e99f8865e7f2f, type: 2}

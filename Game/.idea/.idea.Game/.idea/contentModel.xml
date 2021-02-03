@@ -10,6 +10,13 @@
         <e p="Fantasy Skybox FREE" t="Include">
           <e p="Readme.txt" t="Include" />
         </e>
+        <e p="Fonts" t="Include">
+          <e p="love-nature-font" t="Include">
+            <e p="misc" t="Include">
+              <e p="license.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Grass And Flowers Pack 1" t="Include">
           <e p="Example Scene" t="Include">
             <e p="SimpleTextureDrawing.cs" t="Include" />

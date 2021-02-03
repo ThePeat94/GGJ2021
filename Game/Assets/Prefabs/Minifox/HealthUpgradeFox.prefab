@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_playerHud: {fileID: 0}
   m_upgradeText: I increased and refreshed your health, so you can endure fights
     longer.
-  m_upgradeValue: 50
+  m_upgradeValue: 100
 --- !u!1 &6111101672385132983
 GameObject:
   m_ObjectHideFlags: 0

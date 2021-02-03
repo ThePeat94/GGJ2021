@@ -20,17 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8993d8a-b400-44cd-b8a3-bf0b616358ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Audio/Camera Sound Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Audio/Camera Sound Player.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Enemy/Lord Magma Health.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Enemy/Lord Magma Health.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Enemy/Lord Magma.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Enemy/Lord Magma.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player/Player Arrow Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Player/Player Arrow Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player/Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Player/Player Data.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNature-Rppe6 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNature-Rppe6 SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNatureItalic-BWW98 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/love-nature-font/LoveNatureItalic-BWW98 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Boss/boss_rigged.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Boss/boss_rigged.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/AttackUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/AttackUpgradeFox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/HealthUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/HealthUpgradeFox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/MovementSpeedUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/MovementSpeedUpgradeFox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/QuiverUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/QuiverUpgradeFox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Minifox/ReloadUpgradeFox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Minifox/ReloadUpgradeFox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerHud.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerHud.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SFX/Title Theme.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SFX/Title Theme.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld Intro.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SFX/Overworld Intro.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld Theme v.2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld Theme v.2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SFX/Overworld theme.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_724f6e5d-6795-44f4-9c84-6399d0488bb7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainData_724f6e5d-6795-44f4-9c84-6399d0488bb7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameStart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerBossFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerBossFight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
@@ -52,46 +72,26 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.4.0/Runtime/Core/TriggerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/ReloadUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptables/AudioPlayerSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Minifox/QuiverUpgradeFox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/TriggerBossFight.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Tree 2.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/AimCamera.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Enemy/Lord Magma.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Arrow.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.4.0/Runtime/Core/TriggerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Data/Dummy Enemy Data.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStart.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Prefabs/Boss.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/Upgrade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossAttackCollider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/MagmaBoss.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://G:/Unity/GGJ2021/Game/Assets/Scripts/Enemy/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -107,7 +107,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/Upgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/FloatUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/IntUpgrade.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/HealthUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/MovementSpeedUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/QuiverUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/HealthUpgradeFox.cs" />
@@ -119,25 +118,27 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossAttackCollider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerBossFight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/AttackUpgradeFox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minifox/Minifox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AimCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputProcessor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameStart.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/EnemyData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/AudioPlayerSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/PlayerData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scriptables/MagmaBossData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHud.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerBossFight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Upgrades/HealthUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossRoarAttackCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSoundPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagmaBoss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MenuStart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStart.cs" />
       </list>
     </option>
   </component>
@@ -192,6 +193,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611784847881</updated>
       <workItem from="1611784852752" duration="744000" />
+      <workItem from="1612108957761" duration="2680000" />
+      <workItem from="1612357935311" duration="281000" />
     </task>
     <task id="LOCAL-00001" summary="game">
       <created>1611976360221</created>
@@ -249,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612050572868</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="small adjustments">
+      <created>1612102709076</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612102709076</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,91 +289,108 @@
     <MESSAGE value="assets imported" />
     <MESSAGE value="lord magma boss implemented&#10;boss fight trigger&#10;boss damage" />
     <MESSAGE value="Skyboxes&#10;Spikey&#10;Boss in World" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skyboxes&#10;Spikey&#10;Boss in World" />
+    <MESSAGE value="small adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="small adjustments" />
   </component>
   <component name="WindowStateProjectService">
     <state width="513" height="797" key="DebuggerActiveHint" timestamp="1612042336061">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state width="513" height="797" key="DebuggerActiveHint/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612042336061" />
-    <state width="2505" height="484" key="GridCell.Tab.0.bottom" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.0.bottom" timestamp="1612107766098">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766098" />
     <state width="2505" height="484" key="GridCell.Tab.0.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.0.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
-    <state width="2505" height="484" key="GridCell.Tab.0.center" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.0.center" timestamp="1612107766098">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.0.center/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766098" />
     <state width="2505" height="484" key="GridCell.Tab.0.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.0.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
-    <state width="2505" height="484" key="GridCell.Tab.0.left" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.0.left" timestamp="1612107766097">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.0.left/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766097" />
     <state width="2505" height="484" key="GridCell.Tab.0.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.0.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
-    <state width="2505" height="484" key="GridCell.Tab.0.right" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.0.right" timestamp="1612107766098">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.0.right/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766098" />
     <state width="2505" height="484" key="GridCell.Tab.0.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.0.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
-    <state width="2505" height="484" key="GridCell.Tab.1.bottom" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.1.bottom" timestamp="1612107766098">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766098" />
     <state width="2505" height="484" key="GridCell.Tab.1.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.1.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
-    <state width="2505" height="484" key="GridCell.Tab.1.center" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.1.center" timestamp="1612107766098">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.1.center/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766098" />
     <state width="2505" height="484" key="GridCell.Tab.1.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.1.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
-    <state width="2505" height="484" key="GridCell.Tab.1.left" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.1.left" timestamp="1612107766098">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.1.left/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766098" />
     <state width="2505" height="484" key="GridCell.Tab.1.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.1.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
-    <state width="2505" height="484" key="GridCell.Tab.1.right" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.1.right" timestamp="1612107766098">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.1.right/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766098" />
     <state width="2505" height="484" key="GridCell.Tab.1.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.1.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619369" />
-    <state width="2505" height="484" key="GridCell.Tab.2.bottom" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.2.bottom" timestamp="1612107766101">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.2.bottom/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766101" />
     <state width="2505" height="484" key="GridCell.Tab.2.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.2.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
-    <state width="2505" height="484" key="GridCell.Tab.2.center" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.2.center" timestamp="1612107766099">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.2.center/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766099" />
     <state width="2505" height="484" key="GridCell.Tab.2.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.2.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
-    <state width="2505" height="484" key="GridCell.Tab.2.left" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.2.left" timestamp="1612107766099">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.2.left/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766099" />
     <state width="2505" height="484" key="GridCell.Tab.2.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.2.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
-    <state width="2505" height="484" key="GridCell.Tab.2.right" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.2.right" timestamp="1612107766100">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.2.right/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766100" />
     <state width="2505" height="484" key="GridCell.Tab.2.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.2.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
-    <state width="2505" height="484" key="GridCell.Tab.3.bottom" timestamp="1612058639624">
+    <state width="2505" height="484" key="GridCell.Tab.3.bottom" timestamp="1612107766101">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.3.bottom/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766101" />
     <state width="2505" height="484" key="GridCell.Tab.3.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639624" />
     <state width="2505" height="484" key="GridCell.Tab.3.bottom/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
-    <state width="2505" height="484" key="GridCell.Tab.3.center" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.3.center" timestamp="1612107766101">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.3.center/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766101" />
     <state width="2505" height="484" key="GridCell.Tab.3.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.3.center/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
-    <state width="2505" height="484" key="GridCell.Tab.3.left" timestamp="1612058639623">
+    <state width="2505" height="484" key="GridCell.Tab.3.left" timestamp="1612107766101">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.3.left/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766101" />
     <state width="2505" height="484" key="GridCell.Tab.3.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639623" />
     <state width="2505" height="484" key="GridCell.Tab.3.left/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
-    <state width="2505" height="484" key="GridCell.Tab.3.right" timestamp="1612058639624">
+    <state width="2505" height="484" key="GridCell.Tab.3.right" timestamp="1612107766101">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
+    <state width="2505" height="484" key="GridCell.Tab.3.right/-2560.0.2560.1400/2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612107766101" />
     <state width="2505" height="484" key="GridCell.Tab.3.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1612058639624" />
     <state width="2505" height="484" key="GridCell.Tab.3.right/2560.0.2560.1400/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1612038619370" />
     <state x="-1741" y="389" key="MultipleFileMergeDialog" timestamp="1612014876430">
@@ -423,13 +450,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs</url>
-          <line>115</line>
+          <line>117</line>
           <properties documentPath="G:\Unity\GGJ2021\Game\Assets\Scripts\Enemy\Enemy.cs" initialLine="89">
             <startOffsets>
-              <option value="3720" />
+              <option value="3843" />
             </startOffsets>
             <endOffsets>
-              <option value="3770" />
+              <option value="3893" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

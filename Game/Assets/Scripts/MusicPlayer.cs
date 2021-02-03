@@ -64,6 +64,8 @@ public class MusicPlayer : MonoBehaviour
     {
         foreach (var clipToQueue in clipsToQueue)
             this.m_clipQueue.Enqueue(clipToQueue);
+
+        this.m_shallLoop = true;
     }
 
     public void PlayInstant(AudioClip clip, bool shallLoop = true)
