@@ -4,7 +4,7 @@ namespace Nidavellir.FoxIt.Enemy
 {
     public class BossCollider : MonoBehaviour
     {
-        [SerializeField] private MagmaBoss m_magmaboss;
+        [SerializeField] private MagmaBoss m_magmaBoss;
         [SerializeField] private Collider m_collider;
 
         private void OnEnable()
@@ -22,8 +22,8 @@ namespace Nidavellir.FoxIt.Enemy
             var arrow = other.gameObject.GetComponent<Arrow>();
             if (arrow != null)
             {
-                AudioSource.PlayClipAtPoint(this.m_magmaboss.Data.HitByArrowSound, this.m_magmaboss.transform.position, 0.33f);
-                this.m_magmaboss.HealthController.UseResource(arrow.Damage);
+                AudioSource.PlayClipAtPoint(this.m_magmaBoss.Data.HitByArrowSound, this.m_magmaBoss.transform.position, 0.33f);
+                this.m_magmaBoss.HealthController.UseResource(arrow.Damage);
                 Destroy(arrow.gameObject);
             }
         }
