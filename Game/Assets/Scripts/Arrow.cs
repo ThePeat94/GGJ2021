@@ -5,7 +5,6 @@ namespace Nidavellir.FoxIt
     public class Arrow : MonoBehaviour
     {
         private Collider m_collider;
-
         private bool m_hasHit;
         private Rigidbody m_rigidbody;
 
@@ -32,6 +31,11 @@ namespace Nidavellir.FoxIt
             this.transform.SetParent(other.transform);
             this.m_hasHit = true;
             this.m_collider.enabled = false;
+        }
+
+        public void ShootAt(Vector3 shootDirection, float force)
+        {
+            this.m_rigidbody.AddForce(shootDirection.normalized * force, ForceMode.Impulse);
         }
     }
 }

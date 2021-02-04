@@ -3,6 +3,7 @@ using Cinemachine;
 using Nidavellir.FoxIt.EventArgs;
 using Nidavellir.FoxIt.Scriptables;
 using Nidavellir.FoxIt.UI;
+using Nidavellir.FoxIt.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,31 +25,24 @@ namespace Nidavellir.FoxIt
         [SerializeField] private GameObject m_spawnPoint;
         [SerializeField] private GameObject m_crossHair;
         [SerializeField] private PlayerHud m_playerHud;
+        [SerializeField] private Transform m_cameraLookForward;
         private Animator m_animator;
         private Transform m_camera;
         private CharacterController m_characterController;
-
         private float m_currentShootcooldown;
         private InputProcessor m_inputProcessor;
-
         private bool m_isAiming;
         private bool m_isDead;
-
         private Vector3 m_moveDirection;
-
         private Coroutine m_reloadCoroutine;
 
         public static PlayerController Instance { get; private set; }
-
+        
         public ResourceController HealthController { get; set; }
         public ResourceController QuiverController { get; set; }
-
         public float MovementSpeed { get; set; }
-
         public float ReloadTime { get; set; }
-
         public int AttackDamage { get; set; }
-
 
         private void Awake()
         {
@@ -61,7 +55,7 @@ namespace Nidavellir.FoxIt
                 Destroy(this.gameObject);
                 return;
             }
-
+            
             this.HealthController = new ResourceController(this.m_playerData.HealthData);
             this.QuiverController = new ResourceController(this.m_playerData.QuiverData);
             this.m_inputProcessor = this.GetComponent<InputProcessor>();
@@ -89,7 +83,6 @@ namespace Nidavellir.FoxIt
                 return;
             }
 
-
             if (this.m_currentShootcooldown > 0f)
                 this.m_currentShootcooldown -= Time.deltaTime;
 
@@ -102,10 +95,13 @@ namespace Nidavellir.FoxIt
             {
                 this.MoveSidewards();
                 this.AimRotate();
-                if (this.m_inputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f) this.Shoot();
+                if (this.m_inputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f) 
+                    this.Shoot();
             }
 
-            if (this.m_inputProcessor.ReloadTriggered && this.m_reloadCoroutine == null) this.m_reloadCoroutine = this.StartCoroutine(this.Reload());
+            var canReload = this.QuiverController.CurrentValue < this.QuiverController.MaxValue && this.m_inputProcessor.ReloadTriggered && this.m_reloadCoroutine == null;
+            if (canReload)
+                this.m_reloadCoroutine = this.StartCoroutine(this.Reload());
         }
 
         private void LateUpdate()
@@ -147,10 +143,15 @@ namespace Nidavellir.FoxIt
 
         private void Move()
         {
-            this.m_moveDirection = this.m_camera.forward * this.m_inputProcessor.Movement.y;
-            this.m_moveDirection += this.m_camera.right * this.m_inputProcessor.Movement.x;
+            this.m_moveDirection = this.m_cameraLookForward.forward * this.m_inputProcessor.Movement.y;
+            this.m_moveDirection += this.m_cameraLookForward.right * this.m_inputProcessor.Movement.x;
             this.m_moveDirection.y = 0;
-            this.m_characterController.SimpleMove(this.m_moveDirection * this.MovementSpeed);
+            
+            if (!this.m_characterController.isGrounded)
+                this.m_moveDirection.y = Physics.gravity.y * 100f;
+
+            this.m_characterController.Move(this.m_moveDirection * (this.MovementSpeed * Time.deltaTime));
+            Debug.Log(this.m_characterController.velocity.sqrMagnitude);
         }
 
         private void MoveSidewards()
@@ -195,10 +196,10 @@ namespace Nidavellir.FoxIt
             this.m_currentShootcooldown = this.m_playerData.ShootCooldown;
             this.QuiverController.UseResource(1);
 
-            var shootdirection = Vector3.zero;
+            Vector3 shootDirection;
             if (!this.m_isAiming)
             {
-                shootdirection = this.transform.forward;
+                shootDirection = this.transform.forward;
             }
             else
             {
@@ -208,15 +209,14 @@ namespace Nidavellir.FoxIt
                 var ray = Camera.main.ScreenPointToRay(new Vector3(x, y, 0));
 
                 if (Physics.Raycast(this.m_camera.position, this.m_camera.forward, out var hit))
-                    shootdirection = hit.point - this.m_spawnPoint.transform.position;
+                    shootDirection = hit.point - this.m_spawnPoint.transform.position;
                 else
-                    shootdirection = ray.direction;
+                    shootDirection = ray.direction;
             }
 
             var instantiatedArrow = Instantiate(this.m_arrowPrefab, this.m_spawnPoint.transform.position, Quaternion.identity).GetComponent<Arrow>();
             instantiatedArrow.Damage = this.AttackDamage;
-            var rig = instantiatedArrow.GetComponent<Rigidbody>();
-            rig.AddForce(shootdirection.normalized * this.m_playerData.ShootForce, ForceMode.Impulse);
+            instantiatedArrow.ShootAt(shootDirection, this.m_playerData.ShootForce);
             CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.ArrowShootSound, 1f);
         }
 

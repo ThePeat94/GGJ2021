@@ -1,5 +1,6 @@
 using System.Collections;
 using Nidavellir.FoxIt.Enemy;
+using Nidavellir.FoxIt.Enemy.Lord_Magma;
 using Nidavellir.FoxIt.EventArgs;
 using TMPro;
 using UnityEngine;
