@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Nidavellir.FoxIt.Enemy
+namespace Nidavellir.FoxIt.Enemy.Lord_Magma
 {
     public class BossCollider : MonoBehaviour
     {

@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Linq;
+using Nidavellir.FoxIt.Enemy.Colliders;
+using Nidavellir.FoxIt.Enemy.Lord_Magma;
 using Nidavellir.FoxIt.EventArgs;
 using Nidavellir.FoxIt.Scriptables;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Nidavellir.FoxIt.Enemy
+namespace Nidavellir.FoxIt.Enemy.Turtoise_McHog
 {
-    public class Enemy : MonoBehaviour
+    public class TurtoiseMcHog : MonoBehaviour
     {
         private static readonly WaitForSeconds s_delayDetection = new WaitForSeconds(0.5f);
         [SerializeField] private EnemyData m_enemyData;
-        [SerializeField] private BossAttackCollider m_attackCollider;
+        [SerializeField] private AttackCollider m_attackCollider;
         [SerializeField] private LayerMask m_wanderMasksToHit;
         private Animator m_animator;
         private Coroutine m_attackCoroutine;
@@ -38,6 +40,7 @@ namespace Nidavellir.FoxIt.Enemy
             this.m_origin = this.transform.position;
 
             this.m_attackCollider.Damage = this.m_enemyData.AttackDamage;
+            this.m_attackCollider.HitPlayerClip = this.m_enemyData.AttackSound;
         }
 
         private void Start()
@@ -80,7 +83,6 @@ namespace Nidavellir.FoxIt.Enemy
 
         public void ActivateAttackCollider()
         {
-            CameraSoundPlayer.Instance.PlayClipAtCam(this.m_enemyData.AttackSound);
             this.StartCoroutine(this.TriggerAttackCollider());
         }
 

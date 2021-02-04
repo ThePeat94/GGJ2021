@@ -1,21 +1,22 @@
 ﻿using System.Collections;
+using Nidavellir.FoxIt.Enemy.Colliders;
 using Nidavellir.FoxIt.EventArgs;
 using Nidavellir.FoxIt.Scriptables;
 using Nidavellir.FoxIt.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Nidavellir.FoxIt.Enemy
+namespace Nidavellir.FoxIt.Enemy.Lord_Magma
 {
     public class MagmaBoss : MonoBehaviour
     {
         private static WaitForSeconds s_delayDetection = new WaitForSeconds(0.5f);
 
         [SerializeField] private MagmaBossData m_bossData;
-        [SerializeField] private BossAttackCollider m_jumpAttackCollider;
-        [SerializeField] private BossAttackCollider m_swipeAttackCollider;
-        [SerializeField] private BossAttackCollider m_punchAttackCollider;
-        [SerializeField] private BossRoarAttackCollider m_roarAttackCollider;
+        [SerializeField] private AttackCollider m_jumpAttackCollider;
+        [SerializeField] private AttackCollider m_swipeAttackCollider;
+        [SerializeField] private AttackCollider m_punchAttackCollider;
+        [SerializeField] private RepeatingAttackCollider m_roarAttackCollider;
         [SerializeField] private ParticleSystem m_roarParticles;
         [SerializeField] private AudioSource m_audioSource;
         [SerializeField] private PlayerHud m_playerHud;

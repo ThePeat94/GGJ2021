@@ -1,17 +1,14 @@
 using UnityEngine;
 
-namespace Nidavellir.FoxIt.Enemy
+namespace Nidavellir.FoxIt.Enemy.Colliders
 {
-    public class BossRoarAttackCollider : MonoBehaviour
+    public class RepeatingAttackCollider : MonoBehaviour
     {
-        [SerializeField] private float m_ticksPerSecond = 1f;
-
         private float m_currentTickCoolDown;
-
         private PlayerController m_hitPlayer;
-
-
+        
         public int Damage { get; set; }
+        public AudioClip AttackSound { get; set; }
 
         private void Update()
         {

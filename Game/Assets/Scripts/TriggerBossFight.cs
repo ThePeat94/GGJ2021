@@ -1,4 +1,4 @@
-using Nidavellir.FoxIt.Enemy;
+using Nidavellir.FoxIt.Enemy.Lord_Magma;
 using Nidavellir.FoxIt.UI;
 using UnityEngine;
 
