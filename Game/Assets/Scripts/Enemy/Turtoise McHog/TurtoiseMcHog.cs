@@ -111,7 +111,7 @@ namespace Nidavellir.FoxIt.Enemy.Turtoise_McHog
             this.m_attackCoroutine = null;
         }
 
-        private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
+        private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEvent e)
         {
             if (this.m_isDead)
                 return;

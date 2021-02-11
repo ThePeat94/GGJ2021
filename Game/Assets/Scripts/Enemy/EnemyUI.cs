@@ -23,7 +23,7 @@ namespace Nidavellir.FoxIt.Enemy
             this.transform.LookAt(Camera.main.transform);
         }
 
-        private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
+        private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEvent e)
         {
             this.m_healthBar.value = e.NewValue;
         }

@@ -1,7 +1,9 @@
 using System.Collections;
+using Nidavellir.FoxIt.Dialogue;
 using Nidavellir.FoxIt.Enemy;
 using Nidavellir.FoxIt.Enemy.Lord_Magma;
 using Nidavellir.FoxIt.EventArgs;
+using Nidavellir.FoxIt.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +23,7 @@ namespace Nidavellir.FoxIt.UI
         [SerializeField] private GameObject m_youDiedPanel;
         [SerializeField] private GameObject m_youWonPanel;
         [SerializeField] private Image m_reloadImage;
+        [SerializeField] private DialogueUI m_dialogueUI;
 
         private Coroutine m_hideCoroutine;
         private Coroutine m_reloadCoroutine;
@@ -49,16 +52,6 @@ namespace Nidavellir.FoxIt.UI
             this.m_playerBossHud.SetActive(true);
         }
 
-        public void ShowDialogue(string text)
-        {
-            if (this.m_hideCoroutine != null) this.StopCoroutine(this.m_hideCoroutine);
-
-            this.m_dialogueText.text = text;
-            this.m_dialogueBox.SetActive(true);
-
-            this.m_hideCoroutine = this.StartCoroutine(this.HideDialogue());
-        }
-
         public void ShowReloadUI(float duration)
         {
             this.StartCoroutine(this.ShowReloadAnimation(duration));
@@ -70,12 +63,12 @@ namespace Nidavellir.FoxIt.UI
             this.StartCoroutine(this.HideWinScreen());
         }
 
-        private void ArrowControllerValueChanged(object sender, ResourceValueChangedEventArgs e)
+        private void ArrowControllerValueChanged(object sender, ResourceValueChangedEvent e)
         {
             this.m_ammoText.text = $"{this.m_player.QuiverController.CurrentValue}/{this.m_player.QuiverController.MaxValue}";
         }
 
-        private void BossHealthChanged(object sender, ResourceValueChangedEventArgs e)
+        private void BossHealthChanged(object sender, ResourceValueChangedEvent e)
         {
             this.m_bossHealthBar.value = e.NewValue;
 
@@ -95,13 +88,13 @@ namespace Nidavellir.FoxIt.UI
             this.m_youWonPanel.SetActive(false);
         }
 
-        private void PlayerHealthChanged(object sender, ResourceValueChangedEventArgs e)
+        private void PlayerHealthChanged(object sender, ResourceValueChangedEvent e)
         {
             this.m_healthBar.value = e.NewValue;
             if (e.NewValue <= 0) this.m_youDiedPanel.SetActive(true);
         }
 
-        private void PlayerMaxHealthChanged(object sender, ResourceValueChangedEventArgs e)
+        private void PlayerMaxHealthChanged(object sender, ResourceValueChangedEvent e)
         {
             this.m_healthBar.maxValue = e.NewValue;
         }

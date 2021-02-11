@@ -13,7 +13,8 @@ namespace Nidavellir.FoxIt.Dialogue
 
         public IEnumerable<DialogueNode> Nodes => this.m_nodes;
         public Dictionary<string, DialogueNode> IdToNode { get; private set; }
-
+        public DialogueNode Root => this.m_nodes.Where(n => n.IsRoot).FirstOrDefault();
+        
         private void OnValidate()
         {
             this.IdToNode = this.m_nodes.ToDictionary(n => n.Id, n => n);
@@ -35,8 +36,8 @@ namespace Nidavellir.FoxIt.Dialogue
             newNode.Init();
             if (parent != null)
             {                
-                var offset = parent.Position.center;
-                offset.x += parent.Position.width / 2 + 50f;
+                var offset = parent.Rect.center;
+                offset.x += parent.Rect.width / 2 + 50f;
                 newNode.MoveRect(offset);
                 parent.AddChild(newNode.Id);
                 newNode.IsPlayerSpeaking = !parent.IsPlayerSpeaking;

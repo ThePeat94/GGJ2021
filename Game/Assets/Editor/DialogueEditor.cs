@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Nidavellir.FoxIt.Dialogue;
 using UnityEditor;
@@ -21,7 +22,7 @@ namespace Nidavellir.FoxIt.Editor
         [NonSerialized] private DialogueNode m_toLink;
         [NonSerialized] private bool m_isDraggingScrollView;
         [NonSerialized] private Vector2 m_draggingOffset;
-        
+        [NonSerialized] private Dictionary<string, Vector2> m_idToScrollPosition;
         private Vector2 m_scrollPosition;
         private Texture2D m_backgroundTexture;
         private Rect m_texCoords;
@@ -56,6 +57,8 @@ namespace Nidavellir.FoxIt.Editor
                 GUI.DrawTextureWithTexCoords(rect, this.m_backgroundTexture, this.m_texCoords);
                 foreach (var node in this.m_currentSelected.Nodes)
                 {
+                    if(!this.m_idToScrollPosition.ContainsKey(node.Id))
+                        this.m_idToScrollPosition[node.Id] = Vector2.zero;
                     this.RenderNode(node);
                     this.RenderConnections(node);
                 }
@@ -81,7 +84,7 @@ namespace Nidavellir.FoxIt.Editor
         {
             if (Event.current.type == EventType.MouseDown && this.m_draggedNode == null)
             {
-                this.m_draggedNode = this.m_currentSelected.Nodes.LastOrDefault(n => n.Position.Contains(Event.current.mousePosition + this.m_scrollPosition));
+                this.m_draggedNode = this.m_currentSelected.Nodes.LastOrDefault(n => n.Rect.Contains(Event.current.mousePosition + this.m_scrollPosition));
                 this.m_lastMousePosition = Event.current.mousePosition;
 
                 if (this.m_draggedNode == null)
@@ -123,8 +126,30 @@ namespace Nidavellir.FoxIt.Editor
         
         private void RenderNode(DialogueNode node)
         {
-            GUILayout.BeginArea(node.Position, node.IsPlayerSpeaking ? this.m_playerNodeStyle : this.m_nodeStyle);
-            node.Text = EditorGUILayout.TextField(node.Text);
+            var textFieldWidth = GUILayout.Width(node.Rect.width * 0.9f);
+            var deleteButtonWidth = GUILayout.Width(node.Rect.width * 0.05f);
+            GUILayout.BeginArea(node.Rect, node.IsPlayerSpeaking ? this.m_playerNodeStyle : this.m_nodeStyle);
+
+            this.m_idToScrollPosition[node.Id] = EditorGUILayout.BeginScrollView(this.m_idToScrollPosition[node.Id], false, true);
+
+            var toDeleteIndex = -1;
+            for (int i = 0; i < node.Texts.Count; i++)
+            {
+                GUILayout.BeginHorizontal();
+                node.UpdateText(i, GUILayout.TextArea(node.Texts[i], textFieldWidth));
+                if (GUILayout.Button("X", deleteButtonWidth))
+                    toDeleteIndex = i;
+                GUILayout.EndHorizontal();
+            }
+
+            if (toDeleteIndex > -1)
+                node.RemoveText(toDeleteIndex);
+            
+            if(GUILayout.Button("Add Text"))
+                node.AddText("");
+            
+            EditorGUILayout.EndScrollView();
+
             GUILayout.BeginHorizontal();
 
             if (GUILayout.Button("+"))
@@ -178,13 +203,13 @@ namespace Nidavellir.FoxIt.Editor
 
         private void RenderConnections(DialogueNode node)
         {
-            var start = node.Position.center;
-            start.x = node.Position.xMax;
+            var start = node.Rect.center;
+            start.x = node.Rect.xMax;
             foreach (var childNodeId in node.ChildrenIds)
             {
                 var childNode = this.m_currentSelected.IdToNode[childNodeId];
-                var end = childNode.Position.center;
-                end.x = childNode.Position.xMin;
+                var end = childNode.Rect.center;
+                end.x = childNode.Rect.xMin;
                 var offset = end - start;
                 offset.y = 0f;
                 Handles.DrawBezier(start, end, start + offset, end - offset, Color.white, null, 5f);
@@ -201,11 +226,14 @@ namespace Nidavellir.FoxIt.Editor
         {
             this.m_nodeStyle = new GUIStyle();
             this.m_nodeStyle.normal.background = Texture2D.linearGrayTexture;
-            this.m_nodeStyle.border = new RectOffset(12, 12, 12, 12);
+            this.m_nodeStyle.border = new RectOffset(5, 5, 5, 5);
+            this.m_nodeStyle.padding = new RectOffset(5, 5, 5, 5);
             
             this.m_playerNodeStyle = new GUIStyle();
             this.m_playerNodeStyle.normal.background = Texture2D.whiteTexture;
-            this.m_playerNodeStyle.border = new RectOffset(12, 12, 12, 12);
+            this.m_playerNodeStyle.border = new RectOffset(5, 5, 5, 5);
+            this.m_playerNodeStyle.padding = new RectOffset(5, 5, 5, 5);
+
         }
 
         private void SelectionChanged()
@@ -214,6 +242,7 @@ namespace Nidavellir.FoxIt.Editor
             if (activeDialogueData != null)
             {
                 this.m_currentSelected = activeDialogueData;
+                this.m_idToScrollPosition = new Dictionary<string, Vector2>();
                 this.Repaint();
             }
         }

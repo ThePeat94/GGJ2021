@@ -1,9 +1,12 @@
 ﻿using System.Collections;
+using System.Linq;
 using Cinemachine;
 using Nidavellir.FoxIt.EventArgs;
+using Nidavellir.FoxIt.Interfaces;
 using Nidavellir.FoxIt.Scriptables;
 using Nidavellir.FoxIt.UI;
 using Nidavellir.FoxIt.Utils;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -35,6 +38,8 @@ namespace Nidavellir.FoxIt
         private bool m_isDead;
         private Vector3 m_moveDirection;
         private Coroutine m_reloadCoroutine;
+        
+        private ITalkable m_currentTalkable;
 
         public static PlayerController Instance { get; private set; }
         
@@ -108,26 +113,13 @@ namespace Nidavellir.FoxIt
         {
             this.UpdateAnimator();
         }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            var minifox = other.GetComponent<Minifox.Minifox>();
-            if (minifox != null)
-            {
-                minifox.Upgrade.ApplyUpgrade();
-                minifox.ShowDialogue();
-                Destroy(minifox.gameObject);
-                CameraSoundPlayer.Instance.PlayClipAtCam(this.m_playerData.CollectFoxSound);
-                this.HealthController.ResetValue();
-            }
-        }
-
+        
         private void AimRotate()
         {
             this.transform.Rotate(Vector3.up, this.m_inputProcessor.MouseDelta.x * this.m_playerData.MouseSensivity);
         }
 
-        private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEventArgs e)
+        private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEvent e)
         {
             if (this.m_isDead)
                 return;
@@ -151,7 +143,6 @@ namespace Nidavellir.FoxIt
                 this.m_moveDirection.y = Physics.gravity.y * 100f;
 
             this.m_characterController.Move(this.m_moveDirection * (this.MovementSpeed * Time.deltaTime));
-            Debug.Log(this.m_characterController.velocity.sqrMagnitude);
         }
 
         private void MoveSidewards()

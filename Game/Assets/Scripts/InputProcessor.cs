@@ -17,6 +17,7 @@ namespace Nidavellir.FoxIt
         public bool ShootTriggered => this.m_playerInput.MainGame.Attack.triggered;
         public bool ReloadTriggered => this.m_playerInput.MainGame.Reload.triggered;
         public bool QuitTriggered => this.m_playerInput.MainGame.Quit.triggered;
+        public bool InteractTriggered => this.m_playerInput.MainGame.Interact.triggered;
 
         private void Awake()
         {

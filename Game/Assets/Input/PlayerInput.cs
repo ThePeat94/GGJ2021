@@ -65,6 +65,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""9314767f-5567-4b81-aa9a-6f981f51c98c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -177,6 +185,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""Quit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6bdfbb0b-7342-44d8-a98a-c2933ffd5e51"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -191,6 +210,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_MainGame_Aim = m_MainGame.FindAction("Aim", throwIfNotFound: true);
         m_MainGame_Reload = m_MainGame.FindAction("Reload", throwIfNotFound: true);
         m_MainGame_Quit = m_MainGame.FindAction("Quit", throwIfNotFound: true);
+        m_MainGame_Interact = m_MainGame.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -246,6 +266,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_MainGame_Aim;
     private readonly InputAction m_MainGame_Reload;
     private readonly InputAction m_MainGame_Quit;
+    private readonly InputAction m_MainGame_Interact;
     public struct MainGameActions
     {
         private @PlayerInput m_Wrapper;
@@ -256,6 +277,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Aim => m_Wrapper.m_MainGame_Aim;
         public InputAction @Reload => m_Wrapper.m_MainGame_Reload;
         public InputAction @Quit => m_Wrapper.m_MainGame_Quit;
+        public InputAction @Interact => m_Wrapper.m_MainGame_Interact;
         public InputActionMap Get() { return m_Wrapper.m_MainGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -283,6 +305,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Quit.started -= m_Wrapper.m_MainGameActionsCallbackInterface.OnQuit;
                 @Quit.performed -= m_Wrapper.m_MainGameActionsCallbackInterface.OnQuit;
                 @Quit.canceled -= m_Wrapper.m_MainGameActionsCallbackInterface.OnQuit;
+                @Interact.started -= m_Wrapper.m_MainGameActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_MainGameActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_MainGameActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_MainGameActionsCallbackInterface = instance;
             if (instance != null)
@@ -305,6 +330,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Quit.started += instance.OnQuit;
                 @Quit.performed += instance.OnQuit;
                 @Quit.canceled += instance.OnQuit;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -317,5 +345,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnAim(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
         void OnQuit(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }

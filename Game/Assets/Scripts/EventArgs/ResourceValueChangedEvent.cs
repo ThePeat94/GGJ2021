@@ -1,8 +1,8 @@
 ﻿namespace Nidavellir.FoxIt.EventArgs
 {
-    public class ResourceValueChangedEventArgs : System.EventArgs
+    public class ResourceValueChangedEvent : System.EventArgs
     {
-        public ResourceValueChangedEventArgs(int newValue)
+        public ResourceValueChangedEvent(int newValue)
         {
             this.NewValue = newValue;
         }
