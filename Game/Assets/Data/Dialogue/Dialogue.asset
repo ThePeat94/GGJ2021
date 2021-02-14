@@ -18,14 +18,15 @@ MonoBehaviour:
   m_childrenIds: []
   m_rect:
     serializedVersion: 2
-    x: 963
-    y: 362
-    width: 200
-    height: 200
+    x: 1499
+    y: 386
+    width: 500
+    height: 300
   m_texts:
   - Hello there!
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
+  m_isRoot: 0
 --- !u!114 &-3584158046328139247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,16 +45,17 @@ MonoBehaviour:
   m_childrenIds: []
   m_rect:
     serializedVersion: 2
-    x: 955
-    y: 106
-    width: 200
-    height: 200
+    x: 1525
+    y: 25
+    width: 500
+    height: 300
   m_texts:
   - Yes, whats so weird about it?
   - Anyway...
   - Take my power!
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: IS IT REALLIFE
+  m_isRoot: 0
 --- !u!114 &-3024769576230351720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,8 +77,8 @@ MonoBehaviour:
   - 3523cc80-c309-4016-a8df-719f9e4b8d59
   m_rect:
     serializedVersion: 2
-    x: 49
-    y: 300
+    x: 28
+    y: 286
     width: 500
     height: 300
   m_texts:
@@ -85,7 +87,8 @@ MonoBehaviour:
   - What do you expect?
   - A deep story abouzt my life? GTFO already.
   m_nodeEnteredTrigger: 
-  m_nodeExitedTrigger: 
+  m_nodeExitedTrigger: ApplyUpgrade
+  m_isRoot: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,14 +128,15 @@ MonoBehaviour:
   - 32cf2562-9bcb-4191-b9e6-cb97efa32a68
   m_rect:
     serializedVersion: 2
-    x: 627
-    y: 628
-    width: 200
-    height: 200
+    x: 669
+    y: 736
+    width: 500
+    height: 300
   m_texts:
   - I am gay
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
+  m_isRoot: 0
 --- !u!114 &913513976651275693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,14 +156,15 @@ MonoBehaviour:
   - c685ce01-4785-4d26-8db9-d6f0d0a3e622
   m_rect:
     serializedVersion: 2
-    x: 660
-    y: 368
-    width: 200
-    height: 200
+    x: 696
+    y: 353
+    width: 500
+    height: 300
   m_texts:
   - Hello tiny fox :)
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
+  m_isRoot: 0
 --- !u!114 &6314815540888841182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,15 +183,16 @@ MonoBehaviour:
   m_childrenIds: []
   m_rect:
     serializedVersion: 2
-    x: 936
-    y: 684
-    width: 200
-    height: 200
+    x: 1586
+    y: 754
+    width: 500
+    height: 300
   m_texts:
   - Brah, we in 2021, I dont care
   - Placeholder xddd
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
+  m_isRoot: 0
 --- !u!114 &8581437305971870380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,11 +212,12 @@ MonoBehaviour:
   - 0aac1443-54c0-4297-9359-eccd39d14814
   m_rect:
     serializedVersion: 2
-    x: 667
-    y: 121
-    width: 200
-    height: 200
+    x: 675
+    y: -33
+    width: 500
+    height: 300
   m_texts:
   - Why can you speak? Weird...
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
+  m_isRoot: 0

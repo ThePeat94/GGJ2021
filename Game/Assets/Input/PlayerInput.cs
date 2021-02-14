@@ -198,6 +198,33 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Dialogue"",
+            ""id"": ""c07bc030-68ee-4522-abc3-f0de8c6e729a"",
+            ""actions"": [
+                {
+                    ""name"": ""ContinueConversation"",
+                    ""type"": ""Button"",
+                    ""id"": ""7e7f9f86-7da8-419c-8229-e2731da1a742"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""48a9b5f5-435c-45ea-ac07-d680bb00ac84"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ContinueConversation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -211,6 +238,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_MainGame_Reload = m_MainGame.FindAction("Reload", throwIfNotFound: true);
         m_MainGame_Quit = m_MainGame.FindAction("Quit", throwIfNotFound: true);
         m_MainGame_Interact = m_MainGame.FindAction("Interact", throwIfNotFound: true);
+        // Dialogue
+        m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
+        m_Dialogue_ContinueConversation = m_Dialogue.FindAction("ContinueConversation", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -337,6 +367,39 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         }
     }
     public MainGameActions @MainGame => new MainGameActions(this);
+
+    // Dialogue
+    private readonly InputActionMap m_Dialogue;
+    private IDialogueActions m_DialogueActionsCallbackInterface;
+    private readonly InputAction m_Dialogue_ContinueConversation;
+    public struct DialogueActions
+    {
+        private @PlayerInput m_Wrapper;
+        public DialogueActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ContinueConversation => m_Wrapper.m_Dialogue_ContinueConversation;
+        public InputActionMap Get() { return m_Wrapper.m_Dialogue; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DialogueActions set) { return set.Get(); }
+        public void SetCallbacks(IDialogueActions instance)
+        {
+            if (m_Wrapper.m_DialogueActionsCallbackInterface != null)
+            {
+                @ContinueConversation.started -= m_Wrapper.m_DialogueActionsCallbackInterface.OnContinueConversation;
+                @ContinueConversation.performed -= m_Wrapper.m_DialogueActionsCallbackInterface.OnContinueConversation;
+                @ContinueConversation.canceled -= m_Wrapper.m_DialogueActionsCallbackInterface.OnContinueConversation;
+            }
+            m_Wrapper.m_DialogueActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ContinueConversation.started += instance.OnContinueConversation;
+                @ContinueConversation.performed += instance.OnContinueConversation;
+                @ContinueConversation.canceled += instance.OnContinueConversation;
+            }
+        }
+    }
+    public DialogueActions @Dialogue => new DialogueActions(this);
     public interface IMainGameActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -346,5 +409,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnReload(InputAction.CallbackContext context);
         void OnQuit(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface IDialogueActions
+    {
+        void OnContinueConversation(InputAction.CallbackContext context);
     }
 }

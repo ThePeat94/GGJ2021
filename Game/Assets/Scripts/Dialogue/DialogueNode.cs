@@ -61,7 +61,7 @@ namespace Nidavellir.FoxIt.Dialogue
 
         public void Init()
         {
-            this.m_rect = new Rect(10, 10, 200, 200);
+            this.m_rect = new Rect(10, 10, 500, 300);
             this.m_id = System.Guid.NewGuid().ToString();
             this.name = this.m_id;
             this.m_childrenIds = new List<string>();

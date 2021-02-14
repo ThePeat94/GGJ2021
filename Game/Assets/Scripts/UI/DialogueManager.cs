@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Cinemachine;
 using Nidavellir.FoxIt.Dialogue;
 using Nidavellir.FoxIt.EventArgs;
 using Nidavellir.FoxIt.Interfaces;
@@ -14,12 +15,15 @@ namespace Nidavellir.FoxIt.UI
         private static WaitForSeconds s_waitForSeconds = new WaitForSeconds(0.2f);
         
         [SerializeField] private DialogueUI m_dialogueUI;
-        [SerializeField] private InputProcessor m_inputProcessor;
+        [SerializeField] private GameInputProcessor m_gameInputProcessor;
+        [SerializeField] private DialogueInputProcessor m_dialogueInputProcessor;
         [SerializeField] private BoxCollider m_dialogueCollider;
         [SerializeField] private int m_rayCount;
+        [SerializeField] private CinemachineFreeLook m_freeLookCam;
 
         private float m_anglePerRay;
-        
+
+        private Transform m_camera;
         private ITalkable m_currentTalkable;
         private Coroutine m_detectionCoroutine;
 
@@ -60,11 +64,12 @@ namespace Nidavellir.FoxIt.UI
         private void Start()
         {
             this.m_detectionCoroutine = this.StartCoroutine(this.DetectTalkables());
+            this.m_camera = Camera.main.transform;
         }
 
         private void Update()
         {
-            if (!this.m_inputProcessor.InteractTriggered)
+            if (!this.m_gameInputProcessor.InteractTriggered)
                 return;
 
             if (this.m_currentDialogueNode != null && this.m_currentDialogueNode.IsPlayerSpeaking)
@@ -87,6 +92,12 @@ namespace Nidavellir.FoxIt.UI
             this.m_currentTalkable = current;
             this.m_currentDialogueData = data;
             this.m_currentDialogueNode = data.Root;
+            
+            this.m_freeLookCam.enabled = false;
+            this.m_camera.SetParent(current.Viewpoint);
+            this.m_camera.localRotation = Quaternion.identity;
+            this.m_camera.localPosition = Vector3.zero;
+            
             this.ShowNewNode();
         }
 
@@ -125,6 +136,9 @@ namespace Nidavellir.FoxIt.UI
             this.m_dialogueEnded?.Invoke(this, System.EventArgs.Empty);
             this.m_isConversating = false;
             this.m_dialogueUI.Close();
+            
+            this.m_freeLookCam.enabled = true;
+            this.m_camera.SetParent(null);
         }
         
         public event EventHandler DialogueStarted

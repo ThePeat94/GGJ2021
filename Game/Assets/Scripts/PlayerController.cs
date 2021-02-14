@@ -29,13 +29,15 @@ namespace Nidavellir.FoxIt
         [SerializeField] private GameObject m_crossHair;
         [SerializeField] private PlayerHud m_playerHud;
         [SerializeField] private Transform m_cameraLookForward;
+        [SerializeField] private DialogueManager m_dialogueManager;
         private Animator m_animator;
         private Transform m_camera;
         private CharacterController m_characterController;
         private float m_currentShootcooldown;
-        private InputProcessor m_inputProcessor;
+        private GameInputProcessor m_gameInputProcessor;
         private bool m_isAiming;
         private bool m_isDead;
+        private bool m_isConversating;
         private Vector3 m_moveDirection;
         private Coroutine m_reloadCoroutine;
         
@@ -63,26 +65,44 @@ namespace Nidavellir.FoxIt
             
             this.HealthController = new ResourceController(this.m_playerData.HealthData);
             this.QuiverController = new ResourceController(this.m_playerData.QuiverData);
-            this.m_inputProcessor = this.GetComponent<InputProcessor>();
+            this.m_gameInputProcessor = this.GetComponent<GameInputProcessor>();
             this.m_characterController = this.GetComponent<CharacterController>();
             this.m_animator = this.GetComponent<Animator>();
             this.m_camera = Camera.main.transform;
-            this.m_inputProcessor.AimingStarted += (sender, args) => this.StartAiming();
-            this.m_inputProcessor.AimingEnded += (sender, args) => this.StopAiming();
+            this.m_gameInputProcessor.AimingStarted += (sender, args) => this.StartAiming();
+            this.m_gameInputProcessor.AimingEnded += (sender, args) => this.StopAiming();
             this.HealthController.ResourceValueChanged += this.HealthControllerOnResourceValueChanged;
             this.MovementSpeed = this.m_playerData.MovementSpeed;
             this.ReloadTime = this.m_playerData.ReloadingDuration;
             this.AttackDamage = this.m_playerData.AttackDamage;
+            
+            this.m_dialogueManager.DialogueStarted += this.DialogueStarted;
+            this.m_dialogueManager.DialogueEnded += this.DialogueEnded;
+        }
+
+        private void DialogueEnded(object sender, System.EventArgs e)
+        {
+            this.m_gameInputProcessor.enabled = false;
+            this.m_isConversating = false;
+        }
+
+        private void DialogueStarted(object sender, System.EventArgs e)
+        {
+            this.m_isConversating = true;
+            this.m_gameInputProcessor.enabled = true;
         }
 
         // Update is called once per frame
         private void Update()
         {
+            if (this.m_isConversating)
+                return;
+            
             if (this.m_isDead)
             {
-                if (this.m_inputProcessor.ReloadTriggered)
+                if (this.m_gameInputProcessor.ReloadTriggered)
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                else if (this.m_inputProcessor.QuitTriggered)
+                else if (this.m_gameInputProcessor.QuitTriggered)
                     Application.Quit();
 
                 return;
@@ -100,11 +120,11 @@ namespace Nidavellir.FoxIt
             {
                 this.MoveSidewards();
                 this.AimRotate();
-                if (this.m_inputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f) 
+                if (this.m_gameInputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f) 
                     this.Shoot();
             }
 
-            var canReload = this.QuiverController.CurrentValue < this.QuiverController.MaxValue && this.m_inputProcessor.ReloadTriggered && this.m_reloadCoroutine == null;
+            var canReload = this.QuiverController.CurrentValue < this.QuiverController.MaxValue && this.m_gameInputProcessor.ReloadTriggered && this.m_reloadCoroutine == null;
             if (canReload)
                 this.m_reloadCoroutine = this.StartCoroutine(this.Reload());
         }
@@ -116,7 +136,7 @@ namespace Nidavellir.FoxIt
         
         private void AimRotate()
         {
-            this.transform.Rotate(Vector3.up, this.m_inputProcessor.MouseDelta.x * this.m_playerData.MouseSensivity);
+            this.transform.Rotate(Vector3.up, this.m_gameInputProcessor.MouseDelta.x * this.m_playerData.MouseSensivity);
         }
 
         private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEvent e)
@@ -135,8 +155,8 @@ namespace Nidavellir.FoxIt
 
         private void Move()
         {
-            this.m_moveDirection = this.m_cameraLookForward.forward * this.m_inputProcessor.Movement.y;
-            this.m_moveDirection += this.m_cameraLookForward.right * this.m_inputProcessor.Movement.x;
+            this.m_moveDirection = this.m_cameraLookForward.forward * this.m_gameInputProcessor.Movement.y;
+            this.m_moveDirection += this.m_cameraLookForward.right * this.m_gameInputProcessor.Movement.x;
             this.m_moveDirection.y = 0;
             
             if (!this.m_characterController.isGrounded)
@@ -147,8 +167,8 @@ namespace Nidavellir.FoxIt
 
         private void MoveSidewards()
         {
-            this.m_moveDirection = this.transform.forward * this.m_inputProcessor.Movement.y;
-            this.m_moveDirection += this.transform.right * this.m_inputProcessor.Movement.x;
+            this.m_moveDirection = this.transform.forward * this.m_gameInputProcessor.Movement.y;
+            this.m_moveDirection += this.transform.right * this.m_gameInputProcessor.Movement.x;
             this.m_moveDirection.y = 0;
             this.m_characterController.SimpleMove(this.m_moveDirection * this.m_playerData.AimingMovementSpeed);
         }
@@ -237,10 +257,10 @@ namespace Nidavellir.FoxIt
         private void UpdateAnimator()
         {
             this.m_animator.SetBool(s_isAimingHash, this.m_isAiming);
-            this.m_animator.SetFloat(s_dirXHash, this.m_inputProcessor.Movement.x);
-            this.m_animator.SetFloat(s_dirZHash, this.m_inputProcessor.Movement.y);
-            this.m_animator.SetBool(s_isRunningHash, !this.m_isAiming && this.m_inputProcessor.Movement != Vector2.zero);
-            this.m_animator.SetBool(s_isIdleHash, !this.m_isAiming && this.m_inputProcessor.Movement == Vector2.zero);
+            this.m_animator.SetFloat(s_dirXHash, this.m_gameInputProcessor.Movement.x);
+            this.m_animator.SetFloat(s_dirZHash, this.m_gameInputProcessor.Movement.y);
+            this.m_animator.SetBool(s_isRunningHash, !this.m_isAiming && this.m_gameInputProcessor.Movement != Vector2.zero);
+            this.m_animator.SetBool(s_isIdleHash, !this.m_isAiming && this.m_gameInputProcessor.Movement == Vector2.zero);
         }
     }
 }

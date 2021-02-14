@@ -185,6 +185,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Dialogue",
+            "id": "c07bc030-68ee-4522-abc3-f0de8c6e729a",
+            "actions": [
+                {
+                    "name": "ContinueConversation",
+                    "type": "Button",
+                    "id": "7e7f9f86-7da8-419c-8229-e2731da1a742",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "48a9b5f5-435c-45ea-ac07-d680bb00ac84",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ContinueConversation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

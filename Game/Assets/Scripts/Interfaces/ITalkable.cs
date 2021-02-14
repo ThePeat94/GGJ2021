@@ -7,6 +7,7 @@ namespace Nidavellir.FoxIt.Interfaces
     {
         public string Name { get; }
         public Sprite Icon { get; }
+        public Transform Viewpoint { get; }
         
         public DialogueData GetDiaglogueData();
         public void TriggerAction(string actionName);

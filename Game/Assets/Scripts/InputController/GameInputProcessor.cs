@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Nidavellir.FoxIt
 {
-    public class InputProcessor : MonoBehaviour
+    public class GameInputProcessor : MonoBehaviour
     {
         private EventHandler m_aimingEnded;
 
