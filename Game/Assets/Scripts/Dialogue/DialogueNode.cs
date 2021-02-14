@@ -1,7 +1,5 @@
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using TMPro;
-using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,7 +9,6 @@ namespace Nidavellir.FoxIt.Dialogue
     {
         [SerializeField] private bool m_isPlayerSpeaking;
         [SerializeField] private string m_id;
-        [SerializeField] private string m_text;
         [SerializeField] private List<string> m_childrenIds;
         [SerializeField] private Rect m_rect;
         [SerializeField] private List<string> m_texts;
@@ -21,24 +18,9 @@ namespace Nidavellir.FoxIt.Dialogue
 
         public string Id => this.m_id;
 
-        public string Text
-        {
-            get => this.m_text;
-#if UNITY_EDITOR
-            set
-            {
-                if (this.m_text != value)
-                {
-                    Undo.RecordObject(this, "Update Node Text");
-                    this.m_text = value;
-                    EditorUtility.SetDirty(this);
-                }
-            }
-#endif
-        }
-
         public IReadOnlyList<string> ChildrenIds => this.m_childrenIds;
         public Rect Rect => this.m_rect;
+
         public bool IsPlayerSpeaking
         {
             get => this.m_isPlayerSpeaking;
@@ -46,9 +28,9 @@ namespace Nidavellir.FoxIt.Dialogue
             set
             {
                 Undo.RecordObject(this, "Update Node Text");
-                this.m_isPlayerSpeaking = value;  
+                this.m_isPlayerSpeaking = value;
                 EditorUtility.SetDirty(this);
-            } 
+            }
 #endif
         }
 
@@ -62,12 +44,12 @@ namespace Nidavellir.FoxIt.Dialogue
         public void Init()
         {
             this.m_rect = new Rect(10, 10, 500, 300);
-            this.m_id = System.Guid.NewGuid().ToString();
+            this.m_id = Guid.NewGuid().ToString();
             this.name = this.m_id;
             this.m_childrenIds = new List<string>();
             this.m_texts = new List<string>();
         }
-        
+
 #if UNITY_EDITOR
         public void MoveRect(Vector2 offset)
         {
@@ -81,7 +63,6 @@ namespace Nidavellir.FoxIt.Dialogue
             Undo.RecordObject(this, "Link Dialogue");
             this.m_childrenIds.Add(id);
             EditorUtility.SetDirty(this);
-
         }
 
         public void RemoveChild(string id)
@@ -97,7 +78,7 @@ namespace Nidavellir.FoxIt.Dialogue
             this.m_texts.Add(text);
             EditorUtility.SetDirty(this);
         }
-        
+
         public void RemoveText(int index)
         {
             Undo.RecordObject(this, "Remove Text from Dialogue");

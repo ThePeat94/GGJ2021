@@ -4,44 +4,40 @@ using System.Linq;
 using Nidavellir.FoxIt.Dialogue;
 using UnityEditor;
 using UnityEditor.Callbacks;
-using UnityEditor.Experimental.TerrainAPI;
 using UnityEngine;
 
 namespace Nidavellir.FoxIt.Editor
 {
     public class DialogueEditor : EditorWindow
     {
-        private DialogueData m_currentSelected = null;
-        [NonSerialized] private GUIStyle m_nodeStyle;
-        [NonSerialized] private GUIStyle m_playerNodeStyle;
-
-        [NonSerialized] private Vector2 m_lastMousePosition;
-        [NonSerialized] private DialogueNode m_draggedNode;
-        [NonSerialized] private DialogueNode m_newNodeParent;
-        [NonSerialized] private DialogueNode m_toDelete;
-        [NonSerialized] private DialogueNode m_toLink;
-        [NonSerialized] private bool m_isDraggingScrollView;
-        [NonSerialized] private Vector2 m_draggingOffset;
-        [NonSerialized] private Dictionary<string, Vector2> m_idToScrollPosition;
-        private Vector2 m_scrollPosition;
-        private Texture2D m_backgroundTexture;
-        private Rect m_texCoords;
-        
         private const float CANVAS_SIZE = 4000f;
         private const float BACKGROUND_SIZE = 50f;
+        private Texture2D m_backgroundTexture;
+        private DialogueData m_currentSelected;
+        [NonSerialized] private DialogueNode m_draggedNode;
+        [NonSerialized] private Vector2 m_draggingOffset;
+        [NonSerialized] private Dictionary<string, Vector2> m_idToScrollPosition;
+        [NonSerialized] private bool m_isDraggingScrollView;
 
-        [MenuItem("Window/Dialogue Editor")]
-        private static void ShowWindow()
-        {
-            var window = GetWindow<DialogueEditor>();
-            window.titleContent = new GUIContent("Dialogue Editor");
-            window.Show();
-        }
+        [NonSerialized] private Vector2 m_lastMousePosition;
+        [NonSerialized] private DialogueNode m_newNodeParent;
+        [NonSerialized] private GUIStyle m_nodeStyle;
+        [NonSerialized] private GUIStyle m_playerNodeStyle;
+        private Vector2 m_scrollPosition;
+        private Rect m_texCoords;
+        [NonSerialized] private DialogueNode m_toDelete;
+        [NonSerialized] private DialogueNode m_toLink;
 
         private void Awake()
         {
             this.m_backgroundTexture = Resources.Load("background") as Texture2D;
             this.m_texCoords = new Rect(0, 0, CANVAS_SIZE / BACKGROUND_SIZE, CANVAS_SIZE / BACKGROUND_SIZE);
+        }
+
+        private void OnEnable()
+        {
+            Selection.selectionChanged += this.SelectionChanged;
+            this.InitNodeStyle();
         }
 
         private void OnGUI()
@@ -57,11 +53,12 @@ namespace Nidavellir.FoxIt.Editor
                 GUI.DrawTextureWithTexCoords(rect, this.m_backgroundTexture, this.m_texCoords);
                 foreach (var node in this.m_currentSelected.Nodes)
                 {
-                    if(!this.m_idToScrollPosition.ContainsKey(node.Id))
+                    if (!this.m_idToScrollPosition.ContainsKey(node.Id))
                         this.m_idToScrollPosition[node.Id] = Vector2.zero;
                     this.RenderNode(node);
                     this.RenderConnections(node);
                 }
+
                 GUILayout.EndScrollView();
 
                 if (this.m_newNodeParent != null)
@@ -76,8 +73,32 @@ namespace Nidavellir.FoxIt.Editor
                     this.m_toDelete = null;
                 }
             }
-            
+
             this.ProcessMouseEvents();
+        }
+
+        [OnOpenAsset(1)]
+        public static bool OpenAsset(int instanceId, int line)
+        {
+            var assetObject = EditorUtility.InstanceIDToObject(instanceId) as DialogueData;
+            if (assetObject == null)
+                return false;
+
+            ShowWindow();
+            return true;
+        }
+
+        private void InitNodeStyle()
+        {
+            this.m_nodeStyle = new GUIStyle();
+            this.m_nodeStyle.normal.background = Texture2D.linearGrayTexture;
+            this.m_nodeStyle.border = new RectOffset(5, 5, 5, 5);
+            this.m_nodeStyle.padding = new RectOffset(5, 5, 5, 5);
+
+            this.m_playerNodeStyle = new GUIStyle();
+            this.m_playerNodeStyle.normal.background = Texture2D.whiteTexture;
+            this.m_playerNodeStyle.border = new RectOffset(5, 5, 5, 5);
+            this.m_playerNodeStyle.padding = new RectOffset(5, 5, 5, 5);
         }
 
         private void ProcessMouseEvents()
@@ -98,7 +119,7 @@ namespace Nidavellir.FoxIt.Editor
                     Selection.activeObject = this.m_draggedNode;
                 }
             }
-            else if (Event.current.type == EventType.MouseDrag  && this.m_draggedNode != null)
+            else if (Event.current.type == EventType.MouseDrag && this.m_draggedNode != null)
             {
                 this.m_draggedNode.MoveRect(Event.current.mousePosition - this.m_lastMousePosition);
                 this.Repaint();
@@ -109,7 +130,7 @@ namespace Nidavellir.FoxIt.Editor
                 this.m_scrollPosition = this.m_draggingOffset - Event.current.mousePosition;
                 this.Repaint();
             }
-            else if(Event.current.type == EventType.MouseUp && this.m_draggedNode != null)
+            else if (Event.current.type == EventType.MouseUp && this.m_draggedNode != null)
             {
                 this.m_draggedNode = null;
             }
@@ -119,11 +140,21 @@ namespace Nidavellir.FoxIt.Editor
             }
         }
 
-        private void ProcessKeyboardEvents()
+        private void RenderConnections(DialogueNode node)
         {
-            
+            var start = node.Rect.center;
+            start.x = node.Rect.xMax;
+            foreach (var childNodeId in node.ChildrenIds)
+            {
+                var childNode = this.m_currentSelected.IdToNode[childNodeId];
+                var end = childNode.Rect.center;
+                end.x = childNode.Rect.xMin;
+                var offset = end - start;
+                offset.y = 0f;
+                Handles.DrawBezier(start, end, start + offset, end - offset, Color.white, null, 5f);
+            }
         }
-        
+
         private void RenderNode(DialogueNode node)
         {
             var textFieldWidth = GUILayout.Width(node.Rect.width * 0.9f);
@@ -133,7 +164,7 @@ namespace Nidavellir.FoxIt.Editor
             this.m_idToScrollPosition[node.Id] = EditorGUILayout.BeginScrollView(this.m_idToScrollPosition[node.Id], false, true);
 
             var toDeleteIndex = -1;
-            for (int i = 0; i < node.Texts.Count; i++)
+            for (var i = 0; i < node.Texts.Count; i++)
             {
                 GUILayout.BeginHorizontal();
                 node.UpdateText(i, GUILayout.TextArea(node.Texts[i], textFieldWidth));
@@ -144,34 +175,28 @@ namespace Nidavellir.FoxIt.Editor
 
             if (toDeleteIndex > -1)
                 node.RemoveText(toDeleteIndex);
-            
-            if(GUILayout.Button("Add Text"))
+
+            if (GUILayout.Button("Add Text"))
                 node.AddText("");
-            
+
             EditorGUILayout.EndScrollView();
 
             GUILayout.BeginHorizontal();
 
             if (GUILayout.Button("+"))
-            {
                 this.m_newNodeParent = node;
-            }
-            
+
             if (this.m_toLink == null)
             {
                 if (GUILayout.Button("Link"))
-                {
                     this.m_toLink = node;
-                }
             }
             else
             {
                 if (node == this.m_toLink)
                 {
                     if (GUILayout.Button("Cancel"))
-                    {
                         this.m_toLink = null;
-                    }
                 }
                 else if (this.m_toLink.ChildrenIds.Contains(node.Id))
                 {
@@ -192,48 +217,11 @@ namespace Nidavellir.FoxIt.Editor
             }
 
             if (GUILayout.Button("x"))
-            {
                 this.m_toDelete = node;
-            }
-            
+
             GUILayout.EndHorizontal();
-            
+
             GUILayout.EndArea();
-        }
-
-        private void RenderConnections(DialogueNode node)
-        {
-            var start = node.Rect.center;
-            start.x = node.Rect.xMax;
-            foreach (var childNodeId in node.ChildrenIds)
-            {
-                var childNode = this.m_currentSelected.IdToNode[childNodeId];
-                var end = childNode.Rect.center;
-                end.x = childNode.Rect.xMin;
-                var offset = end - start;
-                offset.y = 0f;
-                Handles.DrawBezier(start, end, start + offset, end - offset, Color.white, null, 5f);
-            }
-        }
-
-        private void OnEnable()
-        {
-            Selection.selectionChanged += this.SelectionChanged;
-            this.InitNodeStyle();
-        }
-
-        private void InitNodeStyle()
-        {
-            this.m_nodeStyle = new GUIStyle();
-            this.m_nodeStyle.normal.background = Texture2D.linearGrayTexture;
-            this.m_nodeStyle.border = new RectOffset(5, 5, 5, 5);
-            this.m_nodeStyle.padding = new RectOffset(5, 5, 5, 5);
-            
-            this.m_playerNodeStyle = new GUIStyle();
-            this.m_playerNodeStyle.normal.background = Texture2D.whiteTexture;
-            this.m_playerNodeStyle.border = new RectOffset(5, 5, 5, 5);
-            this.m_playerNodeStyle.padding = new RectOffset(5, 5, 5, 5);
-
         }
 
         private void SelectionChanged()
@@ -247,15 +235,12 @@ namespace Nidavellir.FoxIt.Editor
             }
         }
 
-        [OnOpenAsset(1)]
-        public static bool OpenAsset(int instanceId, int line)
+        [MenuItem("Window/Dialogue Editor")]
+        private static void ShowWindow()
         {
-            var assetObject = EditorUtility.InstanceIDToObject(instanceId) as DialogueData;
-            if (assetObject == null)
-                return false;
-            
-            ShowWindow();
-            return true;
+            var window = GetWindow<DialogueEditor>();
+            window.titleContent = new GUIContent("Dialogue Editor");
+            window.Show();
         }
     }
 }
