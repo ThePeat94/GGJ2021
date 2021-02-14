@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Nidavellir.FoxIt
+namespace Nidavellir.FoxIt.InputController
 {
     public class DialogueInputProcessor : MonoBehaviour
     {
@@ -13,7 +12,7 @@ namespace Nidavellir.FoxIt
         {
             this.m_playerInput = new PlayerInput();
         }
-        
+
         private void OnEnable()
         {
             this.m_playerInput?.Enable();

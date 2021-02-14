@@ -1,12 +1,10 @@
 ﻿using System.Collections;
-using System.Linq;
 using Cinemachine;
 using Nidavellir.FoxIt.EventArgs;
+using Nidavellir.FoxIt.InputController;
 using Nidavellir.FoxIt.Interfaces;
 using Nidavellir.FoxIt.Scriptables;
 using Nidavellir.FoxIt.UI;
-using Nidavellir.FoxIt.Utils;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,16 +32,16 @@ namespace Nidavellir.FoxIt
         private Transform m_camera;
         private CharacterController m_characterController;
         private float m_currentShootcooldown;
+
+        private ITalkable m_currentTalkable;
         private GameInputProcessor m_gameInputProcessor;
         private bool m_isAiming;
         private bool m_isDead;
         private Vector3 m_moveDirection;
         private Coroutine m_reloadCoroutine;
-        
-        private ITalkable m_currentTalkable;
 
         public static PlayerController Instance { get; private set; }
-        
+
         public ResourceController HealthController { get; set; }
         public ResourceController QuiverController { get; set; }
         public float MovementSpeed { get; set; }
@@ -61,7 +59,7 @@ namespace Nidavellir.FoxIt
                 Destroy(this.gameObject);
                 return;
             }
-            
+
             this.HealthController = new ResourceController(this.m_playerData.HealthData);
             this.QuiverController = new ResourceController(this.m_playerData.QuiverData);
             this.m_gameInputProcessor = this.GetComponent<GameInputProcessor>();
@@ -74,19 +72,9 @@ namespace Nidavellir.FoxIt
             this.MovementSpeed = this.m_playerData.MovementSpeed;
             this.ReloadTime = this.m_playerData.ReloadingDuration;
             this.AttackDamage = this.m_playerData.AttackDamage;
-            
+
             this.m_dialogueManager.DialogueStarted += this.DialogueStarted;
             this.m_dialogueManager.DialogueEnded += this.DialogueEnded;
-        }
-
-        private void DialogueEnded(object sender, System.EventArgs e)
-        {
-            this.m_gameInputProcessor.enabled = true;
-        }
-
-        private void DialogueStarted(object sender, System.EventArgs e)
-        {
-            this.m_gameInputProcessor.enabled = false;
         }
 
         // Update is called once per frame
@@ -114,7 +102,7 @@ namespace Nidavellir.FoxIt
             {
                 this.MoveSidewards();
                 this.AimRotate();
-                if (this.m_gameInputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f) 
+                if (this.m_gameInputProcessor.ShootTriggered && this.m_reloadCoroutine == null && this.m_currentShootcooldown <= 0f)
                     this.Shoot();
             }
 
@@ -127,10 +115,20 @@ namespace Nidavellir.FoxIt
         {
             this.UpdateAnimator();
         }
-        
+
         private void AimRotate()
         {
             this.transform.Rotate(Vector3.up, this.m_gameInputProcessor.MouseDelta.x * this.m_playerData.MouseSensivity);
+        }
+
+        private void DialogueEnded(object sender, System.EventArgs e)
+        {
+            this.m_gameInputProcessor.enabled = true;
+        }
+
+        private void DialogueStarted(object sender, System.EventArgs e)
+        {
+            this.m_gameInputProcessor.enabled = false;
         }
 
         private void HealthControllerOnResourceValueChanged(object sender, ResourceValueChangedEvent e)
@@ -152,7 +150,7 @@ namespace Nidavellir.FoxIt
             this.m_moveDirection = this.m_cameraLookForward.forward * this.m_gameInputProcessor.Movement.y;
             this.m_moveDirection += this.m_cameraLookForward.right * this.m_gameInputProcessor.Movement.x;
             this.m_moveDirection.y = 0;
-            
+
             if (!this.m_characterController.isGrounded)
                 this.m_moveDirection.y = Physics.gravity.y * 100f;
 

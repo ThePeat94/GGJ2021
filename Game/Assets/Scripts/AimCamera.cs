@@ -1,3 +1,4 @@
+using Nidavellir.FoxIt.InputController;
 using UnityEngine;
 
 namespace Nidavellir.FoxIt
