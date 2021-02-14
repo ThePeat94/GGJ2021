@@ -9,6 +9,7 @@
         public override void ApplyUpgrade()
         {
             this.m_playerController.HealthController.IncreaseMaximum(this.m_upgradeValue);
+            base.ApplyUpgrade();
         }
     }
 }

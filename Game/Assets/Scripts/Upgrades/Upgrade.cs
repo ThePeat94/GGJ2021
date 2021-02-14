@@ -9,6 +9,9 @@ namespace Nidavellir.FoxIt.Upgrades
             this.m_playerController = playerController;
         }
 
-        public abstract void ApplyUpgrade();
+        public virtual void ApplyUpgrade()
+        {
+            this.m_playerController.HealthController.ResetValue();
+        }
     }
 }

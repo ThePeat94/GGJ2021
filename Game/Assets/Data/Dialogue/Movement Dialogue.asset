@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7890036446737702154
+--- !u!114 &-8012015546497292779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,24 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
-  m_Name: c685ce01-4785-4d26-8db9-d6f0d0a3e622
+  m_Name: 1434f63b-b7db-4ab5-b11f-e7d66d30fd04
   m_EditorClassIdentifier: 
   m_isPlayerSpeaking: 0
-  m_id: c685ce01-4785-4d26-8db9-d6f0d0a3e622
+  m_id: 1434f63b-b7db-4ab5-b11f-e7d66d30fd04
   m_text: 
   m_childrenIds: []
   m_rect:
     serializedVersion: 2
-    x: 1499
-    y: 386
+    x: 1436
+    y: 202
     width: 500
     height: 300
   m_texts:
-  - Hello there!
+  - I've heard that in each corner one of us has hid...
+  - One of us is a little bit more hidden, he was scared the most...
+  - He seeked shelter in a small valley...
+  - Good luck!
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
   m_isRoot: 0
---- !u!114 &-3584158046328139247
+--- !u!114 &-7203676845308862746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,24 +40,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
-  m_Name: 0aac1443-54c0-4297-9359-eccd39d14814
+  m_Name: 5ca16144-f7e2-4053-9917-211d2838ca8f
   m_EditorClassIdentifier: 
-  m_isPlayerSpeaking: 0
-  m_id: 0aac1443-54c0-4297-9359-eccd39d14814
+  m_isPlayerSpeaking: 1
+  m_id: 5ca16144-f7e2-4053-9917-211d2838ca8f
   m_text: 
-  m_childrenIds: []
+  m_childrenIds:
+  - 1434f63b-b7db-4ab5-b11f-e7d66d30fd04
   m_rect:
     serializedVersion: 2
-    x: 1525
-    y: 25
+    x: 877
+    y: 263
     width: 500
     height: 300
   m_texts:
-  - Yes, whats so weird about it?
-  - Anyway...
-  - Take my power!
+  - Where are the others?
   m_nodeEnteredTrigger: 
-  m_nodeExitedTrigger: IS IT REALLIFE
+  m_nodeExitedTrigger: 
   m_isRoot: 0
 --- !u!114 &-3024769576230351720
 MonoBehaviour:
@@ -72,20 +74,21 @@ MonoBehaviour:
   m_id: e2afa78b-e75a-4fbe-ab02-ed8608d70020
   m_text: 
   m_childrenIds:
-  - 9b0171e2-95ff-4831-8e19-3256afc3a941
-  - 2a88e2d0-df00-4cb4-8c16-3131649af08a
-  - 3523cc80-c309-4016-a8df-719f9e4b8d59
+  - 5ca16144-f7e2-4053-9917-211d2838ca8f
+  - a5faed29-cf76-40b8-97fe-a3afa8e80248
+  - d4d86063-23a2-46d4-b2cc-78ad03722e80
   m_rect:
     serializedVersion: 2
-    x: 28
-    y: 286
+    x: 325
+    y: 526
     width: 500
     height: 300
   m_texts:
   - Yahaha! You found me!
-  - I am a placeholdertext, hhiiihihihihi
-  - What do you expect?
-  - A deep story abouzt my life? GTFO already.
+  - The spikey enemies and the great Lord Magma are really terrifying...
+  - Now that you have found me I am save again.
+  - Also you regained strength and I increased your movement speed.
+  - Please find my siblings... They are also hid in this area...
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: ApplyUpgrade
   m_isRoot: 1
@@ -99,17 +102,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 514a114152c34f8087e4f24dec6c5565, type: 3}
-  m_Name: Dialogue
+  m_Name: Movement Dialogue
   m_EditorClassIdentifier: 
   m_nodes:
   - {fileID: -3024769576230351720}
-  - {fileID: 8581437305971870380}
-  - {fileID: 474150841439385344}
-  - {fileID: 913513976651275693}
-  - {fileID: -3584158046328139247}
-  - {fileID: -7890036446737702154}
-  - {fileID: 6314815540888841182}
---- !u!114 &474150841439385344
+  - {fileID: -7203676845308862746}
+  - {fileID: -8012015546497292779}
+  - {fileID: 3163549691372167617}
+  - {fileID: 5251214865196092824}
+  - {fileID: 3920470511713305890}
+--- !u!114 &3163549691372167617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,25 +121,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
-  m_Name: 2a88e2d0-df00-4cb4-8c16-3131649af08a
+  m_Name: a5faed29-cf76-40b8-97fe-a3afa8e80248
   m_EditorClassIdentifier: 
   m_isPlayerSpeaking: 1
-  m_id: 2a88e2d0-df00-4cb4-8c16-3131649af08a
+  m_id: a5faed29-cf76-40b8-97fe-a3afa8e80248
   m_text: 
   m_childrenIds:
-  - 32cf2562-9bcb-4191-b9e6-cb97efa32a68
+  - 8d2b8a85-cd90-4a61-9b64-01c5a1e9884a
   m_rect:
     serializedVersion: 2
-    x: 669
-    y: 736
+    x: 888
+    y: 622
     width: 500
     height: 300
   m_texts:
-  - I am gay
+  - Where is Lord Magma?
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
   m_isRoot: 0
---- !u!114 &913513976651275693
+--- !u!114 &3920470511713305890
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,53 +149,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
-  m_Name: 3523cc80-c309-4016-a8df-719f9e4b8d59
+  m_Name: d4d86063-23a2-46d4-b2cc-78ad03722e80
   m_EditorClassIdentifier: 
   m_isPlayerSpeaking: 1
-  m_id: 3523cc80-c309-4016-a8df-719f9e4b8d59
-  m_text: 
-  m_childrenIds:
-  - c685ce01-4785-4d26-8db9-d6f0d0a3e622
-  m_rect:
-    serializedVersion: 2
-    x: 696
-    y: 353
-    width: 500
-    height: 300
-  m_texts:
-  - Hello tiny fox :)
-  m_nodeEnteredTrigger: 
-  m_nodeExitedTrigger: 
-  m_isRoot: 0
---- !u!114 &6314815540888841182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
-  m_Name: 32cf2562-9bcb-4191-b9e6-cb97efa32a68
-  m_EditorClassIdentifier: 
-  m_isPlayerSpeaking: 0
-  m_id: 32cf2562-9bcb-4191-b9e6-cb97efa32a68
+  m_id: d4d86063-23a2-46d4-b2cc-78ad03722e80
   m_text: 
   m_childrenIds: []
   m_rect:
     serializedVersion: 2
-    x: 1586
-    y: 754
+    x: 885
+    y: 967
     width: 500
     height: 300
   m_texts:
-  - Brah, we in 2021, I dont care
-  - Placeholder xddd
+  - Bye
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
   m_isRoot: 0
---- !u!114 &8581437305971870380
+--- !u!114 &5251214865196092824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,21 +176,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
-  m_Name: 9b0171e2-95ff-4831-8e19-3256afc3a941
+  m_Name: 8d2b8a85-cd90-4a61-9b64-01c5a1e9884a
   m_EditorClassIdentifier: 
-  m_isPlayerSpeaking: 1
-  m_id: 9b0171e2-95ff-4831-8e19-3256afc3a941
+  m_isPlayerSpeaking: 0
+  m_id: 8d2b8a85-cd90-4a61-9b64-01c5a1e9884a
   m_text: 
-  m_childrenIds:
-  - 0aac1443-54c0-4297-9359-eccd39d14814
+  m_childrenIds: []
   m_rect:
     serializedVersion: 2
-    x: 675
-    y: -33
+    x: 1486
+    y: 648
     width: 500
     height: 300
   m_texts:
-  - Why can you speak? Weird...
+  - Leave this valley, head back to the path and go left.
+  - On an intersection turn left and you will see a canyon, which you can go through.
+  - There you will find Lord Magma.
+  - Good Luck!
   m_nodeEnteredTrigger: 
   m_nodeExitedTrigger: 
   m_isRoot: 0
