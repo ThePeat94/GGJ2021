@@ -37,7 +37,6 @@ namespace Nidavellir.FoxIt
         private GameInputProcessor m_gameInputProcessor;
         private bool m_isAiming;
         private bool m_isDead;
-        private bool m_isConversating;
         private Vector3 m_moveDirection;
         private Coroutine m_reloadCoroutine;
         
@@ -82,22 +81,17 @@ namespace Nidavellir.FoxIt
 
         private void DialogueEnded(object sender, System.EventArgs e)
         {
-            this.m_gameInputProcessor.enabled = false;
-            this.m_isConversating = false;
+            this.m_gameInputProcessor.enabled = true;
         }
 
         private void DialogueStarted(object sender, System.EventArgs e)
         {
-            this.m_isConversating = true;
-            this.m_gameInputProcessor.enabled = true;
+            this.m_gameInputProcessor.enabled = false;
         }
 
         // Update is called once per frame
         private void Update()
         {
-            if (this.m_isConversating)
-                return;
-            
             if (this.m_isDead)
             {
                 if (this.m_gameInputProcessor.ReloadTriggered)

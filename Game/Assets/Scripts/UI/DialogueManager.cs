@@ -15,7 +15,6 @@ namespace Nidavellir.FoxIt.UI
         private static WaitForSeconds s_waitForSeconds = new WaitForSeconds(0.2f);
         
         [SerializeField] private DialogueUI m_dialogueUI;
-        [SerializeField] private GameInputProcessor m_gameInputProcessor;
         [SerializeField] private DialogueInputProcessor m_dialogueInputProcessor;
         [SerializeField] private BoxCollider m_dialogueCollider;
         [SerializeField] private int m_rayCount;
@@ -69,7 +68,7 @@ namespace Nidavellir.FoxIt.UI
 
         private void Update()
         {
-            if (!this.m_gameInputProcessor.InteractTriggered)
+            if (!this.m_dialogueInputProcessor.ContinueDialogueTriggered)
                 return;
 
             if (this.m_currentDialogueNode != null && this.m_currentDialogueNode.IsPlayerSpeaking)

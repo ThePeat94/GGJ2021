@@ -2835,10 +2835,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_dialogueUI: {fileID: 412629140}
-  m_inputProcessor: {fileID: 1485550355}
+  m_gameInputProcessor: {fileID: 1485550355}
+  m_dialogueInputProcessor: {fileID: 140477304}
   m_dialogueCollider: {fileID: 507432254}
   m_rayCount: 10
   m_freeLookCam: {fileID: 301392949}
+--- !u!114 &140477304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140477299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7fbe5a2c67a4dc6879aaf97732f9c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &140825140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7665,7 +7678,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 360454185}
         m_TargetAssemblyTypeName: Nidavellir.FoxIt.Minifox.Minifox, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ApplyUpgradeTrigger
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29479,6 +29492,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6031044863281445129, guid: 7284ca74f6f15dd4897a68384d56de85, type: 3}
       propertyPath: m_playerInput
+      value: 
+      objectReference: {fileID: 1485550355}
+    - target: {fileID: 6031044863281445129, guid: 7284ca74f6f15dd4897a68384d56de85, type: 3}
+      propertyPath: m_playerGameInput
       value: 
       objectReference: {fileID: 1485550355}
     - target: {fileID: 6031044863281445130, guid: 7284ca74f6f15dd4897a68384d56de85, type: 3}
