@@ -103,12 +103,22 @@ namespace Nidavellir.FoxIt.UI
                 if (this.m_currentTextIndex == this.m_currentNodeTexts.Count - 1)
                     this.m_currentTalkable.TriggerAction(this.m_currentDialogueNode.NodeExitedTrigger);
             }
+            else if (this.m_currentDialogueNode.ChildrenIds.Count == 1)
+            {
+                var followingNode = this.m_currentDialogueData.IdToNode[this.m_currentDialogueNode.ChildrenIds[0]];
+                if (followingNode.IsPlayerSpeaking)
+                    this.m_dialogueUI.ShowPlayerChoices(new[] {followingNode});
+                else
+                    this.ShowNewNode(followingNode);
+            }
             else if (this.m_currentDialogueNode.ChildrenIds.Count > 0)
             {
                 var childrenNodes = new List<DialogueNode>();
                 foreach (var childrenId in this.m_currentDialogueNode.ChildrenIds)
                     childrenNodes.Add(this.m_currentDialogueData.IdToNode[childrenId]);
-                this.m_dialogueUI.ShowPlayerChoices(childrenNodes);
+
+                if (childrenNodes.All(n => n.IsPlayerSpeaking))
+                    this.m_dialogueUI.ShowPlayerChoices(childrenNodes);
             }
             else
             {
@@ -122,14 +132,13 @@ namespace Nidavellir.FoxIt.UI
             this.m_isConversating = true;
             this.m_currentTalkable = current;
             this.m_currentDialogueData = data;
-            this.m_currentDialogueNode = data.Root;
 
             this.m_freeLookCam.enabled = false;
             this.m_camera.SetParent(current.Viewpoint);
             this.m_camera.localRotation = Quaternion.identity;
             this.m_camera.localPosition = Vector3.zero;
 
-            this.ShowNewNode();
+            this.ShowNewNode(data.Root);
         }
 
         private IEnumerator DetectTalkables()
@@ -187,12 +196,12 @@ namespace Nidavellir.FoxIt.UI
             }
 
             var childrenId = node.ChildrenIds[0];
-            this.m_currentDialogueNode = this.m_currentDialogueData.IdToNode[childrenId];
-            this.ShowNewNode();
+            this.ShowNewNode(this.m_currentDialogueData.IdToNode[childrenId]);
         }
 
-        private void ShowNewNode()
+        private void ShowNewNode(DialogueNode nodeToShow)
         {
+            this.m_currentDialogueNode = nodeToShow;
             this.m_currentNodeTexts = this.m_currentDialogueNode.Texts;
             this.m_currentTextIndex = 0;
             this.m_dialogueUI.ShowDialogueText(this.m_currentNodeTexts[this.m_currentTextIndex], this.m_currentTalkable);

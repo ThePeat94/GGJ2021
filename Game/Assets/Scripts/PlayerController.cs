@@ -2,7 +2,6 @@
 using Cinemachine;
 using Nidavellir.FoxIt.EventArgs;
 using Nidavellir.FoxIt.InputController;
-using Nidavellir.FoxIt.Interfaces;
 using Nidavellir.FoxIt.Scriptables;
 using Nidavellir.FoxIt.UI;
 using UnityEngine;
@@ -33,7 +32,6 @@ namespace Nidavellir.FoxIt
         private CharacterController m_characterController;
         private float m_currentShootcooldown;
 
-        private ITalkable m_currentTalkable;
         private GameInputProcessor m_gameInputProcessor;
         private bool m_isAiming;
         private bool m_isDead;

@@ -22,7 +22,7 @@ namespace Nidavellir.FoxIt.Minifox
         public string Name => this.m_name;
         public Sprite Icon => this.m_icon;
         public Transform Viewpoint => this.m_talkableViewPoint;
-        
+
         public DialogueData GetDiaglogueData()
         {
             var activeCount = FindObjectsOfType<Minifox>().Length - 1;
@@ -35,8 +35,8 @@ namespace Nidavellir.FoxIt.Minifox
                 return;
 
             var availableTriggers = this.GetComponents<DialogueTrigger>().Where(trigger => trigger.TriggerName.Equals(actionName));
-            foreach(var availableTrigger in availableTriggers)
-                availableTrigger.Trigger?.Invoke();
+            foreach (var availableTrigger in availableTriggers)
+                availableTrigger.Trigger();
         }
 
         public void ShowUI()
