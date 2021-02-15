@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Nidavellir.FoxIt
+namespace Nidavellir.FoxIt.InputController
 {
-    public class InputProcessor : MonoBehaviour
+    public class GameInputProcessor : MonoBehaviour
     {
         private EventHandler m_aimingEnded;
 
@@ -17,6 +17,19 @@ namespace Nidavellir.FoxIt
         public bool ShootTriggered => this.m_playerInput.MainGame.Attack.triggered;
         public bool ReloadTriggered => this.m_playerInput.MainGame.Reload.triggered;
         public bool QuitTriggered => this.m_playerInput.MainGame.Quit.triggered;
+        public bool InteractTriggered => this.m_playerInput.MainGame.Interact.triggered;
+
+        public event EventHandler AimingEnded
+        {
+            add => this.m_aimingEnded += value;
+            remove => this.m_aimingEnded -= value;
+        }
+
+        public event EventHandler AimingStarted
+        {
+            add => this.m_aimingStarted += value;
+            remove => this.m_aimingStarted -= value;
+        }
 
         private void Awake()
         {
@@ -40,18 +53,6 @@ namespace Nidavellir.FoxIt
         {
             this.m_playerInput?.Disable();
             this.Movement = Vector3.zero;
-        }
-
-        public event EventHandler AimingStarted
-        {
-            add => this.m_aimingStarted += value;
-            remove => this.m_aimingStarted -= value;
-        }
-
-        public event EventHandler AimingEnded
-        {
-            add => this.m_aimingEnded += value;
-            remove => this.m_aimingEnded -= value;
         }
     }
 }

@@ -8,6 +8,7 @@
 
         public override void ApplyUpgrade()
         {
+            base.ApplyUpgrade();
             this.m_playerController.MovementSpeed += this.m_upgradeValue;
         }
     }

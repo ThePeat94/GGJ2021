@@ -1,31 +1,52 @@
-using Nidavellir.FoxIt.UI;
+using System.Linq;
+using Nidavellir.FoxIt.Dialogue;
+using Nidavellir.FoxIt.Interfaces;
 using Nidavellir.FoxIt.Upgrades;
 using UnityEngine;
 
 namespace Nidavellir.FoxIt.Minifox
 {
-    public abstract class Minifox : MonoBehaviour
+    public abstract class Minifox : MonoBehaviour, ITalkable
     {
-        [SerializeField] protected PlayerHud m_playerHud;
-        [SerializeField] protected string m_upgradeText;
-
-        protected string m_baseText = "Yahaha! You found me!";
-        protected string m_foundAll = "You have found us all! You are now perfectly prepared for the last fight.";
-        protected string m_remainingFoxesText = "There are {0} foxes left. Find us all and you will defeat the evil more easily.";
+        [SerializeField] protected string m_name;
+        [SerializeField] protected Sprite m_icon;
+        [SerializeField] protected DialogueData m_foundOneDialogueData;
+        [SerializeField] private GameObject m_ui;
+        [SerializeField] private Transform m_talkableViewPoint;
 
         public Upgrade Upgrade { get; protected set; }
+        public string Name => this.m_name;
+        public Sprite Icon => this.m_icon;
+        public Transform Viewpoint => this.m_talkableViewPoint;
 
-        public void ShowDialogue()
+        public DialogueData GetDiaglogueData()
         {
-            this.m_playerHud.ShowDialogue(this.GetBaseDialogueText() + " " + this.m_upgradeText);
+            return this.m_foundOneDialogueData;
         }
 
-        protected string GetBaseDialogueText()
+        public void TriggerAction(string actionName)
         {
-            var activeCount = FindObjectsOfType<Minifox>().Length - 1;
-            if (activeCount > 0) return string.Format(this.m_baseText + " " + this.m_remainingFoxesText, activeCount);
+            if (string.IsNullOrEmpty(actionName))
+                return;
 
-            return this.m_baseText + " " + this.m_foundAll;
+            var availableTriggers = this.GetComponents<DialogueTrigger>().Where(trigger => trigger.TriggerName.Equals(actionName));
+            foreach (var availableTrigger in availableTriggers)
+                availableTrigger.Trigger();
+        }
+
+        public void ShowUI()
+        {
+            this.m_ui.SetActive(true);
+        }
+
+        public void HideUI()
+        {
+            this.m_ui.SetActive(false);
+        }
+
+        public void ApplyUpgradeTrigger()
+        {
+            this.Upgrade.ApplyUpgrade();
         }
     }
 }

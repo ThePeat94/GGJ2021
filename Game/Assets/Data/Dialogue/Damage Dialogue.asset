@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8012015546497292779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
+  m_Name: 1434f63b-b7db-4ab5-b11f-e7d66d30fd04
+  m_EditorClassIdentifier: 
+  m_isPlayerSpeaking: 0
+  m_id: 1434f63b-b7db-4ab5-b11f-e7d66d30fd04
+  m_childrenIds: []
+  m_rect:
+    serializedVersion: 2
+    x: 1436
+    y: 202
+    width: 500
+    height: 300
+  m_texts:
+  - I've heard that in each corner one of us has hid...
+  - One of us is a little bit more hidden, he was scared the most...
+  - He seeked shelter in a small valley...
+  - Good luck!
+  m_nodeEnteredTrigger: 
+  m_nodeExitedTrigger: 
+  m_isRoot: 0
+--- !u!114 &-7203676845308862746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
+  m_Name: 5ca16144-f7e2-4053-9917-211d2838ca8f
+  m_EditorClassIdentifier: 
+  m_isPlayerSpeaking: 1
+  m_id: 5ca16144-f7e2-4053-9917-211d2838ca8f
+  m_childrenIds:
+  - 1434f63b-b7db-4ab5-b11f-e7d66d30fd04
+  m_rect:
+    serializedVersion: 2
+    x: 877
+    y: 263
+    width: 500
+    height: 300
+  m_texts:
+  - Where are the others?
+  m_nodeEnteredTrigger: 
+  m_nodeExitedTrigger: 
+  m_isRoot: 0
+--- !u!114 &-3024769576230351720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
+  m_Name: e2afa78b-e75a-4fbe-ab02-ed8608d70020
+  m_EditorClassIdentifier: 
+  m_isPlayerSpeaking: 0
+  m_id: e2afa78b-e75a-4fbe-ab02-ed8608d70020
+  m_childrenIds:
+  - 5ca16144-f7e2-4053-9917-211d2838ca8f
+  - a5faed29-cf76-40b8-97fe-a3afa8e80248
+  - d4d86063-23a2-46d4-b2cc-78ad03722e80
+  m_rect:
+    serializedVersion: 2
+    x: 325
+    y: 526
+    width: 500
+    height: 300
+  m_texts:
+  - Yahaha! You found me!
+  - The spikey enemies and the great Lord Magma are really terrifying...
+  - Now that you have found me I am save again.
+  - Also you regained strength and I increased your damage.
+  - Please find my siblings... They are also hid in this area...
+  m_nodeEnteredTrigger: 
+  m_nodeExitedTrigger: ApplyUpgrade
+  m_isRoot: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514a114152c34f8087e4f24dec6c5565, type: 3}
+  m_Name: Damage Dialogue
+  m_EditorClassIdentifier: 
+  m_nodes:
+  - {fileID: -3024769576230351720}
+  - {fileID: -7203676845308862746}
+  - {fileID: -8012015546497292779}
+  - {fileID: 3163549691372167617}
+  - {fileID: 5251214865196092824}
+  - {fileID: 3920470511713305890}
+--- !u!114 &3163549691372167617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
+  m_Name: a5faed29-cf76-40b8-97fe-a3afa8e80248
+  m_EditorClassIdentifier: 
+  m_isPlayerSpeaking: 1
+  m_id: a5faed29-cf76-40b8-97fe-a3afa8e80248
+  m_childrenIds:
+  - 8d2b8a85-cd90-4a61-9b64-01c5a1e9884a
+  m_rect:
+    serializedVersion: 2
+    x: 888
+    y: 622
+    width: 500
+    height: 300
+  m_texts:
+  - Where is Lord Magma?
+  m_nodeEnteredTrigger: 
+  m_nodeExitedTrigger: 
+  m_isRoot: 0
+--- !u!114 &3920470511713305890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
+  m_Name: d4d86063-23a2-46d4-b2cc-78ad03722e80
+  m_EditorClassIdentifier: 
+  m_isPlayerSpeaking: 1
+  m_id: d4d86063-23a2-46d4-b2cc-78ad03722e80
+  m_childrenIds: []
+  m_rect:
+    serializedVersion: 2
+    x: 892
+    y: 967
+    width: 500
+    height: 300
+  m_texts:
+  - Bye
+  m_nodeEnteredTrigger: 
+  m_nodeExitedTrigger: 
+  m_isRoot: 0
+--- !u!114 &5251214865196092824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debdd247cdbb46a9b381dd9e3eadbaf4, type: 3}
+  m_Name: 8d2b8a85-cd90-4a61-9b64-01c5a1e9884a
+  m_EditorClassIdentifier: 
+  m_isPlayerSpeaking: 0
+  m_id: 8d2b8a85-cd90-4a61-9b64-01c5a1e9884a
+  m_childrenIds: []
+  m_rect:
+    serializedVersion: 2
+    x: 1486
+    y: 648
+    width: 500
+    height: 300
+  m_texts:
+  - Head back to the path before me and go left.
+  - Follow the path until you see a canyon - walk through it.
+  - There you will find Lord Magma.
+  - Good Luck!
+  m_nodeEnteredTrigger: 
+  m_nodeExitedTrigger: 
+  m_isRoot: 0
