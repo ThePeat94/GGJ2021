@@ -15,7 +15,7 @@ namespace Nidavellir.FoxIt.Dialogue
 
         public void Trigger()
         {
-            if (this.m_isTriggered)
+            if (this.m_isTriggered && this.m_oneTimeTrigger)
                 return;
 
             this.m_isTriggered = true;

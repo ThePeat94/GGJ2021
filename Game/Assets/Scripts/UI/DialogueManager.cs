@@ -18,27 +18,19 @@ namespace Nidavellir.FoxIt.UI
         [SerializeField] private DialogueUI m_dialogueUI;
         [SerializeField] private DialogueInputProcessor m_dialogueInputProcessor;
         [SerializeField] private BoxCollider m_dialogueCollider;
-        [SerializeField] private int m_rayCount;
         [SerializeField] private CinemachineFreeLook m_freeLookCam;
 
-        private float m_anglePerRay;
-
         private Transform m_camera;
-
         private DialogueData m_currentDialogueData;
         private DialogueNode m_currentDialogueNode;
-
         private IReadOnlyList<string> m_currentNodeTexts;
         private ITalkable m_currentTalkable;
         private int m_currentTextIndex;
         private Coroutine m_detectionCoroutine;
+
         private EventHandler m_dialogueEnded;
-
         private EventHandler m_dialogueStarted;
-
         private bool m_isConversating;
-
-        private List<Ray> m_raysToDetect;
 
         public event EventHandler DialogueEnded
         {
@@ -54,7 +46,6 @@ namespace Nidavellir.FoxIt.UI
 
         private void Awake()
         {
-            this.m_anglePerRay = 180f / this.m_rayCount;
             this.m_dialogueUI.PlayerMadeChoice += this.OnPlayerMadeChoice;
         }
 
